@@ -25,3 +25,12 @@ theme:
         name: Switch to light mode
       primary: teal
       accent: lime
+      
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs
+
+copyright: © 2024 <a
+  href="https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs" target="_blank"
+  rel="noopener"> Team 2 </a>
