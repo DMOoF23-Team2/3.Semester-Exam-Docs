@@ -25,11 +25,28 @@ theme:
         name: Switch to light mode
       primary: teal
       accent: lime
-      
+
 extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: © 2024 <a
   href="https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs" target="_blank"
