@@ -1,6 +1,6 @@
 # Home
 
-Denne side fungerer som dokumentation for Rally Lydighedsprojekt. Dette projekt er Team 2's 3. semesters eksamensprojekt ved datamatiker online uddannelsen på UCL.
+Denne side fungerer som dokumentation for Rally Lydighedsprojekt `(Rally Obedience)`. Dette projekt er Team 2's 3. semesters eksamensprojekt ved datamatiker online uddannelsen på UCL.
 
 ---
 
@@ -70,7 +70,7 @@ projektet vil blive brugt som grundlag for eksamen på 3. semester.
 
 PO er underviseren Lene. </br>
 PO er instruktør i `rally lydighed`, som er en hundesport, i sin fritid.</br>
-PO er tilknyttet `Nordfyns Civile Hundeførerforening (NchH)`, som projektet udarbejdes for/til.</br>
+PO er tilknyttet `Nordfyns Civile Hundeførerforening (NcH)`, som projektet udarbejdes for/til.</br>
 
 Undervejs i projektets levetid, har Team 2 mulighed for at booke møder med PO. Disse møder anvendes til at præsentere udarbejdet materiale hvis relevant for PO, samt afklaring af spørgsmål, krav, prioriteringer mm.
 
@@ -84,7 +84,7 @@ Ved afholdelse af konkurrencer står en `landsdækkende dommer` for at designe b
 
 ### Forretningsmæssig problemstilling
 
-På  nuværende tidspunkt, er der ikke ét dedikeret værktøj som rummer alle NcH og Dommeres behov.
+På nuværende tidspunkt, er der ikke ét dedikeret værktøj som rummer alle NcH og Dommeres behov.
 
 Den nuværende praksis for planlægning, design og deling af træningsbaner står dog overfor flere væsentlige udfordringer.
 
@@ -94,6 +94,6 @@ Den eksisterende løsning baseret på PowerPoint og Facebook tilbyder begrænset
 
 Derfor ønskes der en platform, som muliggøre ovenstående.
 
-Se den udarbejde [BusinessCase](systemudvikling.md#BusinessCase-section) for mere documentation om Problemområdet og Løsningsforslag.
+Se den udarbejde [BusinessCase](systemudvikling.md#BusinessCase-section) for mere dokumentation om Problemområdet og Løsningsforslag.
 
 
