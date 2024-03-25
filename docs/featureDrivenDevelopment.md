@@ -1,7 +1,27 @@
 # Feature Driven Development
 
 ## An overall model {#An-overall-model}
-Indsæt og beskriv vores overall model her.
+Her defineres det overodnede `scope` for `Rally Obedience` projektet. Dette er både en del a best pratices og Stage 1 når FDD anvendes som systemudviklingsmetode.
+
+En systemudviklingsmetode består af en række sammenhængende teknikker, der hver især udføres ved hjælp af et eller flere værktøjer. En teknik er en generisk beskrivelse af aktiviteter, samt målet med denne aktivitet. Et værktøj er en specifik angivelse af hvad man vil benytte for at udfører aktiviteten i teknikken. For at sikre sammenhængen mellem teknikkerne i metoden, bliver `outputtet` fra den ene teknik anvendt som `input` til den næste teknik.
+
+An overall model - som teknik:
+
+*   Formål: 
+    * At skabe en fællesforståelse ramme for udviklingsteamet.
+    * At skabe en overordnet domæne model.
+    * At identificere systemkrav til at skabe en `Feature List`.
+    * At identificere interessenter/`stackholders`.
+*   Værktøjer:
+    * Use Cases - `UC`
+    * Use Case Diagram - `UCD`
+    * Objektmodel - `OM`
+    * Domænemodel - `DM`
+    * Business Case - `BC`
+    * Project Scope Description - `PSD`
+*   Output:
+    * Opnå viden om emner listet under formål
+    * At kunne skabe en [Feature List](featureDrivenDevelopment.md#feature-list) når overall model er færdig.
 
 ### Use Cases
 
