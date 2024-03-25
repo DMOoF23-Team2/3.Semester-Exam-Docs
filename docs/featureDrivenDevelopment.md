@@ -3,6 +3,12 @@
 ## An overall model {#An-overall-model}
 Indsæt og beskriv vores overall model her.
 
+### Use Cases
+
+<figure markdown="span">
+  ![Use Case: Oprettelse af træningsbane](images/UseCaseOprettelseAfTræningsbane.png){ width="600" }
+</figure>
+
 ## Feature list {#feature-list}
 beskrive vores indledende arbejde med businesscase, use cases, usecase-diagram og møde med PO i processen om at identificere og udfærdige Feature-listen.
 
