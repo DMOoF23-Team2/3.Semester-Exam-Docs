@@ -1,7 +1,7 @@
 # Systemudvikling
+Team 2 på 3. semester skal vælge og arbejde med mindst 2 systemudviklingsmetoder til deres eksamensprojekt. De vil reflektere over fordele og ulemper ved hver metode og tilpasse dem til projektet efter behov. Denne side vil give et overblik over de valgte metoder, samt dokumentere deres anvendelse i projektet `Rally Obedience`.
 
 ## Systemudviklingsmetoder
-
 
 ### FDD - Feature Driven Development
 Team 2 har valgt `Feature Driven Development`, også kaldet `FDD`, som den første systemudviklingsmetode at arbejde ud fra.
@@ -52,9 +52,26 @@ Overordnet arbejdes der i 5 faser/`(stages)` i FDD. Undervejs gennem de 5 stages
     * Se mere dokumentation af [Team 2's Design by features](featureDrivenDevelopment.md#design-by-feature)
 *   Stage 5 - Build by feature
 
+---
+## Tilpasning af FDD
+Team 2 har udfærdiget artefaktorne `Business Case` og `Use Case Diagram` som supplerende værktøjer til teknikken `Develop an overall modell`. For nærmere beskrivelse af selve teknikken se [Team 2's overall model her](featureDrivenDevelopment.md#An-overall-model).
 
-## Business Case {#BusinessCase-section}
-indsæt budinesscase her
+### Business Case {#BusinessCase-section}
+
+### Use Case Diagram {#use-case-diagram}
+
+
+
+---
+
+## Refleksioner over FDD {#relections-on-fdd}
+skriv løbende vores refleksioner ved brugen af FDD i dette afsnit. Husk både godt og mindre godt:
+
+---
+
+
+
+
 
 
 
