@@ -60,8 +60,6 @@ Team 2 har udfærdiget artefaktorne `Business Case` og `Use Case Diagram` som su
 
 ### Use Case Diagram {#use-case-diagram}
 
-
-
 ---
 
 ## Refleksioner over FDD {#relections-on-fdd}
