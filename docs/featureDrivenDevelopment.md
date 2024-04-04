@@ -1,7 +1,7 @@
 # Feature Driven Development
 
 ## An overall model {#An-overall-model}
-Her defineres det overodnede `scope` for `Rally Obedience` projektet. Dette er både en del a best pratices og Stage 1 når FDD anvendes som systemudviklingsmetode.
+Her defineres det overodnede `scope` for `Rally Obedience` projektet. Dette er både en del af best pratices og Stage 1 når FDD anvendes som systemudviklingsmetode.
 
 En systemudviklingsmetode består af en række sammenhængende teknikker, der hver især udføres ved hjælp af et eller flere værktøjer. En teknik er en generisk beskrivelse af aktiviteter, samt målet med denne aktivitet. Et værktøj er en specifik angivelse af hvad man vil benytte for at udfører aktiviteten i teknikken. For at sikre sammenhængen mellem teknikkerne i metoden, bliver `outputtet` fra den ene teknik anvendt som `input` til den næste teknik.
 
@@ -24,6 +24,9 @@ An overall model - som teknik:
     * At kunne skabe en [Feature List](featureDrivenDevelopment.md#feature-list) når overall model er færdig.
 
 ### Use Cases
+Til at hjælpe os med at identificere de features der skal til for skabe vores metode, har vi valgt at starte med nogle få use cases. De use cases brudes mere ned hvor vi udgraver de features som vi senere henne rangere og bruger som vores backlog. 
+
+Vi startede med at identificere disse følgende usecases:
 
 <figure markdown="span">
   ![Use Case: Oprettelse af træningsbane](images/UseCaseOprettelseAfTræningsbane.png){ width="600" }
