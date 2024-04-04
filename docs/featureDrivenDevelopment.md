@@ -24,13 +24,15 @@ An overall model - som teknik:
     * At kunne skabe en [Feature List](featureDrivenDevelopment.md#feature-list) når overall model er færdig.
 
 ### Use Cases
-Til at hjælpe os med at identificere de features der skal til for skabe vores metode, har vi valgt at starte med nogle få use cases. De use cases brudes mere ned hvor vi udgraver de features som vi senere henne rangere og bruger som vores backlog. 
+Til at hjælpe os med at identificere de features der skal til for skabe vores system, har vi valgt at starte med nogle få use cases. De use cases brudes mere ned hvor vi udgraver de features som vi senere henne rangere og bruger som vores backlog. 
 
 Vi startede med at identificere disse følgende usecases:
 
 <figure markdown="span">
   ![Use Case: Oprettelse af træningsbane](images/UseCaseOprettelseAfTræningsbane.png){ width="600" }
 </figure>
+
+og ud af de use cases, identificerede vi følgende features som kan ses under [link til feature listen]
 
 ## Feature list {#feature-list}
 beskrive vores indledende arbejde med businesscase, use cases, usecase-diagram og møde med PO i processen om at identificere og udfærdige Feature-listen.
