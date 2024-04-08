@@ -94,6 +94,6 @@ Den eksisterende løsning baseret på PowerPoint og Facebook tilbyder begrænset
 
 Derfor ønskes der en platform, som muliggøre ovenstående.
 
-Se den udarbejde [BusinessCase](systemudvikling.md#BusinessCase-section) for mere dokumentation om Problemområdet og Løsningsforslag.
+Se den udarbejde [BusinessCase](businessCase.md) for mere dokumentation om Problemområdet og Løsningsforslag.
 
 
