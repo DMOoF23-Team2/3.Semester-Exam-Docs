@@ -56,8 +56,6 @@ Overordnet arbejdes der i 5 faser/`(stages)` i FDD. Undervejs gennem de 5 stages
 ## Tilpasning af FDD
 Team 2 har udfærdiget artefaktorne `Business Case` og `Use Case Diagram` som supplerende værktøjer til teknikken `Develop an overall modell`. For nærmere beskrivelse af selve teknikken se [Team 2's overall model her](featureDrivenDevelopment.md#An-overall-model).
 
-### Business Case {#BusinessCase-section}
-
 ### Use Case Diagram {#use-case-diagram}
 
 ---

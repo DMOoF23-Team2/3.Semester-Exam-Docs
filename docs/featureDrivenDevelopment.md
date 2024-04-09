@@ -30,7 +30,98 @@ An overall model - som teknik:
 </figure>
 
 ## Feature list {#feature-list}
-beskrive vores indledende arbejde med businesscase, use cases, usecase-diagram og møde med PO i processen om at identificere og udfærdige Feature-listen.
+*Note: beskrive vores indledende arbejde med businesscase, use cases, usecase-diagram og møde med PO i processen om at identificere og udfærdige Feature-listen.*
+
+Igennem problemstillingen ved [BusinessCase](businessCase.md) er der blevet fundet frem til en række features, der kan opfylde NcHs behov.
+Feature listen er blevet prioriteret PO.
+Listen i prioriteret rækkefølge:
+
+| Opret trænings bane | klik på opret bane --> klik på til træning --> |
+| ----------- | ----------- |
+| Feature | Viser en tom template. |
+| Feature | Vise alle skilte og elementer (kegler, pile med betydning som gå i ring mm.). |
+| Feature | Trække og slippe skilte og andre elementer ind i som udgør bane designet. |
+| Feature | Systemet generer automatisk skilte numre "på banen". |
+| Feature | Systemet genere automatisk en tabel med skilterækkefølgen og deres ID |
+| Feature | Systemet generer automatisk pile som viser vejen gennem banen. |
+
+| Opret bane til reglement | klik på opret bane --> klik på efter reglement--> Vælg klasse banen skal være til --> |
+| ----------- | ----------- |
+| Feature | Viser en tom template. |
+| Feature | Vise alle skilte og elementer (kegler, pile med betydning som gå i ring mm.) til den valgte klasse. |
+| Feature | Systemet validere antal skilte, rækkefølgen af skilte ift. reglement |
+| Feature | Systemet generer automatisk skilte numre "på banen". |
+| Feature | Systemet genere automatisk en tabel med skilterækkefølgen og deres ID |
+| Feature | Systemet generer automatisk pile som viser vejen gennem banen. |
+
+| Deling af træningsbane med anden instruktør | klik på del bane --> |
+| ----------- | ----------- |
+| Feature | Viser en liste med alle instruktører |
+| Feature | Del knap - systemet håndtere/opretter associationer |
+| Feature | En notifikationer om en bane er blevet del med dig |
+
+| Tilgå og kommentere en delt bane | klik på baner --> Delte baner |
+| ----------- | ----------- |
+| Feature | Viser en liste med alle baner der er delt med useren (instruktøren). |
+| Feature | en valgte bane vises. |
+| Feature | En notifikationer om en bane er blevet del med dig |
+| Feature | Tilføje en kommentar til banen. |
+| Feature | Vise kommentar historikken i et kommentarspor. |	
+
+| Live samarbejde ved oprettelse af træningsbane | Klik på opret bane --> klik på til træning --> |
+| ----------- | ----------- |
+| Feature | Viser en tom template. |
+| Feature | Viser alle skilte og elementer (kegler, pile med betydning som gå i ring mm.). |
+| Feature | Viser en "Live share" knap. |
+| Feature | Systemet skal kunne håndtere RealTime samarbejde mellem to users (muligvis gennem et link der bliver delt) |
+
+| Chat mellem to instruktører | Klik på Instruktører --> Vælg instruktør --> Klik start chat |
+| ----------- | ----------- |
+| Feature | Liste over instruktør |
+| Feature | Vælg start chat med en instruktør |
+| Feature | Vis tom chat vindue |
+| Feature | Skriv besked |
+| Feature | Send besked |
+| Feature | Chat historik bliver gemt |
+| Feature | Slet en besked - systemet skal kunne fjerne en besked fra visningen (måske skal den gemmes i en log - sikkerhed). |
+| Feature | Rediger en besked - systemet skal kunne håndtere at en user ønsker at redigere i sin egen allerede postede besked. |
+
+| Chat mellem to instruktører | Klik på Instruktører --> Vælg instruktør --> Klik start chat |
+| ----------- | ----------- |
+| Feature | Liste over instruktører |
+| Feature | Vælg start chat med en instruktør |
+| Feature | Vis tom chat vindue |
+| Feature | Skriv besked |
+| Feature | Send besked |
+| Feature | Chat historik bliver gemt |
+| Feature | Slet en besked - systemet skal kunne fjerne en besked fra visningen (måske skal den gemmes i en log - sikkerhed) |
+| Feature | Rediger en besked - systemet skal kunne håndtere at en bruger ønsker at redigere i sin egen allerede postede besked |
+
+| Opret gruppechat for instruktører | |
+| ----------- | ----------- |
+| Feature | Viser en liste med alle instruktører |
+| Feature | Systemet tilknytter en bruger til den oprettede gruppe |
+| Feature | Tilføj bruger efter gruppechatten er oprettet |
+| Feature | Forlad gruppen |
+| Feature | Slet gruppechat |
+| Feature | Visning over alle medlemmer af gruppechatten |
+| Feature | Visning over alle "mine" grupper |
+| Feature | Viser et tekstfelt til oprettelse af besked |
+| Feature | Send/post besked - systemet gemmer beskeden, så den er synlig for de andre medlemmer af gruppen |
+| Feature | Systemet viser beskedhistorikken, så der er styr på hvem der skrev hvad hvornår i visningen af alle beskeder |
+| Feature | Slet en besked - systemet skal kunne fjerne en besked fra visningen (måske skal den gemmes i en log - sikkerhed) |
+| Feature | Rediger en besked - systemet skal kunne håndtere at en bruger ønsker at redigere i sin egen allerede postede besked |
+
+| Kommunikation i gruppechat | |
+| ----------- | ----------- |
+| Feature | Der skal være et tekstfelt, hvor der kan skrives en besked |
+| Feature | Der skal være en 'send knap' som sender teksten i tekstfeltet til modtagerne |
+| Feature | Der skal være en feedback der viser at modtagerne har modtaget beskeden, og når modtagerne har læst beskeden |
+| Feature | Der skal være mulighed for at redigere eller slette en tidligere besked eller tekst |
+| Feature | Der skal være mulighed for at svare direkte på en besked i chatten |
+| Feature | Der skal være en visning af hvem der er afsender på de enkelte beskeder |
+| Feature | Der skal være 'time stamps' på alle de beskeder der bliver sendt |
+
 
 ## Developing by features {#Developing-by-feature}
 Indsæt dokumentation om hvordan vi har planlagt og anvender developing by features, samt hvordan vi nedbryder features til de mindste og mest håndterbare tasks/features.
