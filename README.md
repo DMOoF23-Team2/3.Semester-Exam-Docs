@@ -4,6 +4,8 @@ to see all documentation on project Rally Obedience.
 
 ## Links:
 [Inspiration kommer her fra](https://www.youtube.com/watch?v=Q-YA_dA8C20) <!-- target="_blank" -->
+<br>
+<br>
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) <!-- target="_blank" -->
 
 ### Commands:
