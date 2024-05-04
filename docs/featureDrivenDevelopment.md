@@ -24,6 +24,7 @@ An overall model - som teknik:
     * At kunne skabe en [Feature List](featureDrivenDevelopment.md#feature-list) når overall model er færdig.
 
 ### Use Cases
+**Bane-system**
 
 <figure markdown="span">
   ![Use Case: Oprettelse af træningsbane](images/UseCaseOprettelseAfTræningsbane.png){ width="600" }
@@ -34,6 +35,25 @@ An overall model - som teknik:
 <figure markdown="span">
   ![Use Case: Deling af bane med anden instruktør ](images/UseCaseDelingBaneInstruktør.png){ width="600" }
 </figure>
+<figure markdown="span">
+  ![Use Case: Tilgå og kommentere en delt bane ](images/UseCaseTilgåKommenterBane.png){ width="600" }
+</figure>
+<figure markdown="span">
+  ![Use Case: Live samarbejde ved oprettelse af bane ](images/UseCaseLiveSamarbejdeBane.png){ width="600" }
+</figure>
+
+**Chat-system**
+<figure markdown="span">
+  ![Use Case: Chat mellem to instruktører ](images/UseCaseChatToInstruktører.png){ width="600" }
+</figure>
+<figure markdown="span">
+  ![Use Case: Opret gruppechat for instruktører ](images/UseCaseOpretGruppeChatInstruktører.png){ width="600" }
+</figure>
+<figure markdown="span">
+  ![Use Case: Kommunikation i gruppechat ](images/UseCaseKommunikationGruppeChat.png){ width="600" }
+</figure>
+
+---
 
 ## Feature list {#feature-list}
 *Note: beskrive vores indledende arbejde med businesscase, use cases, usecase-diagram og møde med PO i processen om at identificere og udfærdige Feature-listen.*
