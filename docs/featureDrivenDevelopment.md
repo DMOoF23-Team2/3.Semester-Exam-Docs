@@ -28,11 +28,17 @@ An overall model - som teknik:
 <figure markdown="span">
   ![Use Case: Oprettelse af træningsbane](images/UseCaseOprettelseAfTræningsbane.png){ width="600" }
 </figure>
+<figure markdown="span">
+  ![Use Case: Oprettelse af bane ifølge DCH reglement](images/UseCaseOprettelseBaneReglement.png){ width="600" }
+</figure>
+<figure markdown="span">
+  ![Use Case: Deling af bane med anden instruktør ](images/UseCaseDelingBaneInstruktør.png){ width="600" }
+</figure>
 
 ## Feature list {#feature-list}
 *Note: beskrive vores indledende arbejde med businesscase, use cases, usecase-diagram og møde med PO i processen om at identificere og udfærdige Feature-listen.*
 
-Igennem problemstillingen ved [BusinessCase](businessCase.md) er der blevet fundet frem til en række features, der kan opfylde NcHs behov.
+Igennem problemstillingen ved [BusinessCase](systemudvikling.md#Businesscase) er der blevet fundet frem til en række features, der kan opfylde NcHs behov.
 Feature listen er blevet prioriteret PO.
 Listen i prioriteret rækkefølge:
 

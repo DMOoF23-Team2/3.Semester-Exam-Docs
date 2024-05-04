@@ -6,11 +6,13 @@ Denne side fungerer som dokumentation for Rally Lydighedsprojekt `(Rally Obedien
 
 ## Fag
 
-Projektet udarbejdes med baggrund i 3 fag:
+Projektet udarbejdes med baggrund i 3 fag. Hvordan hvert fags emner anvendes i projektet er dokumenteret og kan ses ved at klikke på nedenstående fag.
 
-* Systemudvikling
-* Programmering
-* Teknologi
+* [Systemudvikling](systemudvikling.md)
+* [Programmering](programmering.md)
+* [Teknologi](teknologi.md)
+
+---
 
 ## Læringsmål
 
@@ -63,7 +65,7 @@ af distribuerede systemer.
 
 ## Rammen for Projekt Rally Lydighed
 
-Projektet har til formål, at give de studerende et prktisk erfraingsgrundlag med de gennemgåede emner på 3. semester.
+Projektet har til formål, at give de studerende et praktisk erfraingsgrundlag med de gennemgåede emner på 3. semester.
 projektet vil blive brugt som grundlag for eksamen på 3. semester.
 
 ### Product Owner (PO)
@@ -73,27 +75,4 @@ PO er instruktør i `rally lydighed`, som er en hundesport, i sin fritid.</br>
 PO er tilknyttet `Nordfyns Civile Hundeførerforening (NcH)`, som projektet udarbejdes for/til.</br>
 
 Undervejs i projektets levetid, har Team 2 mulighed for at booke møder med PO. Disse møder anvendes til at præsentere udarbejdet materiale hvis relevant for PO, samt afklaring af spørgsmål, krav, prioriteringer mm.
-
-## Beskrivelse af Problemområdet
-
-### Forretningsmæssig baggrund
-
-`Nordfyns Civile Hundeførerforening (NcH)` er en del af organisationen `Danmarks Civile hundeførerforening (DCH)`. DcH tilbyder undervisning i forskellige typer af hundesport, heriblandt Rally lydighed. NcH har en række frivillige instruktører som står for denne undervisning af ekvipage (hund og fører). En del af instruktørens rolle er at designe baner som ekvipage skal gennemføres i træning. På nuværende tidspunkt anvender instruktørerne et `PowerPoint (PPT)` til at designe disse baner og Facebook som kommunikationsplatform.
-
-Ved afholdelse af konkurrencer står en `landsdækkende dommer` for at designe banen. Det antages at dommerne anvender samme PPT som instruktørerne i denne proces.
-
-### Forretningsmæssig problemstilling
-
-På nuværende tidspunkt, er der ikke ét dedikeret værktøj som rummer alle NcH og Dommeres behov.
-
-Den nuværende praksis for planlægning, design og deling af træningsbaner står dog overfor flere væsentlige udfordringer.
-
-Disse inkluderer indeffektivitet i oprettelse og deling af baner, manglende evne til let at tilpasse baner til specifikke niveauer eller temaer, og vanskeligheder ved at sikre overensstemmelse med officielle regler.
-
-Den eksisterende løsning baseret på PowerPoint og Facebook tilbyder begrænset funktionalitet og understøtter ikke effektivt samarbejde mellem instruktører eller kommunikation.
-
-Derfor ønskes der en platform, som muliggøre ovenstående.
-
-Se den udarbejde [BusinessCase](businessCase.md) for mere dokumentation om Problemområdet og Løsningsforslag.
-
 
