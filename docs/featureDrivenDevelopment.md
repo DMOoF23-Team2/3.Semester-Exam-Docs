@@ -78,7 +78,7 @@ Notation for Pile:
 </figure>
 
 ---
-### Objekt Modeller - OM
+### Objekt Modeller - OM {#om-fdd}
 Som tidligere beskrevet i [foranalyse 1 iteration](systemudvikling.md#Foranalyse1.iteration) kan systemet deles op i to sub-systemer `bane-system` og `chat-system`.
 
 #### OM Chat-system
@@ -93,10 +93,30 @@ Da selve bane funktionaliteterne har haft høj prioritet fra PO's side, er der i
 
 Se afsnittet [Developing by features](featureDrivenDevelopment.md#Developing-by-feature) for hvordan nedenstående OM tilpasse/ændres undervejs i udviklingsprocessen.
 
-#### 1. iterations OM Bane-system
+#### 1. iterations OM Bane-system {#1iteration-om-fdd}
 
 <figure markdown="span">
   ![Bane-system OM 1.iteration ](images/BaneSystemOM1Iteration.png){ width="800" }
+</figure>
+
+---
+### Domæne Modeller - DM {#dm-fdd}
+Ud fra de to OM's er følgende to DM's udfærdiget. 
+
+#### DM Chat-system
+Som tidligere beskrevet er Chat-systemet ikke videreudviklet under arbejdet med FDD, da disse funktionaliteter har haft lavere prioritet.
+Derfor er denne DM's formål blot at være en del af `An-overall-model` og den er med til at skabe den fælles forståelses ramme for udviklingsteamet.
+Denne DM vil blive refactoreret i en videre udviklingsproces, når udviklingen af chat funktionaliteterne påbegyndes. 
+
+<figure markdown="span">
+  ![Chat-system DM ](images/ChatSystemDM.png){ width="800" }
+</figure>
+
+#### 1. iterations DM Bane-system
+Denne DM har lige som [OM bane-system](featureDrivenDevelopment.md##1iteration-om-fdd) været itereraret hen over flere gange i forbindelse med [Developing by features](featureDrivenDevelopment.md#Developing-by-feature). Derfor kan denne `1. iterations DM Bane-system` ses som værende en del af `an-overall-model` og den har haft til formål at skabe den fælles forståelse ramme for udviklingsteamet inden selve udviklingsprocessen påbegyndes.
+
+<figure markdown="span">
+  ![Chat-system DM ](images/BaneSystemDM1Iteration.png){ width="800" }
 </figure>
 
 ---
