@@ -113,7 +113,7 @@ Denne DM vil blive refactoreret i en videre udviklingsproces, når udviklingen a
 </figure>
 
 #### 1. iterations DM Bane-system
-Denne DM har lige som [OM bane-system](featureDrivenDevelopment.md##1iteration-om-fdd) været itereraret hen over flere gange i forbindelse med [Developing by features](featureDrivenDevelopment.md#Developing-by-feature). Derfor kan denne `1. iterations DM Bane-system` ses som værende en del af `an-overall-model` og den har haft til formål at skabe den fælles forståelse ramme for udviklingsteamet inden selve udviklingsprocessen påbegyndes.
+Denne DM har lige som [OM bane-system](featureDrivenDevelopment.md#1iteration-om-fdd) været itereraret hen over flere gange i forbindelse med [Developing by features](featureDrivenDevelopment.md#Developing-by-feature). Derfor kan denne `1. iterations DM Bane-system` ses som værende en del af `an-overall-model` og den har haft til formål at skabe den fælles forståelse ramme for udviklingsteamet inden selve udviklingsprocessen påbegyndes.
 
 <figure markdown="span">
   ![Chat-system DM ](images/BaneSystemDM1Iteration.png){ width="800" }
@@ -215,14 +215,39 @@ Listen i prioriteret rækkefølge:
 | Feature | Der skal være en visning af hvem der er afsender på de enkelte beskeder |
 | Feature | Der skal være 'time stamps' på alle de beskeder der bliver sendt |
 
+---
 
 ## Developing by features {#Developing-by-feature}
-Indsæt dokumentation om hvordan vi har planlagt og anvender developing by features, samt hvordan vi nedbryder features til de mindste og mest håndterbare tasks/features.
+Den overordnede plan for at følge denne `Best pratices in FDD` er forsøgt illustreret på nedenstående billede.
 
-### 2. iterations OM Bane-system
+<figure markdown="span">
+  ![Overview Developing by features ](images/DevelopingByFeatures.png){ width="600" }
+</figure>
+
+Her skal der særligt lægges vægt på Stages 3-5. Hvor mening var for hver `Feature` som har en tilhørende `Use Case` skulle der udfærdiges 
+
+* Systemsekvensdiagram - `SSD`
+* Sekvensdiagram - `SD`
+* operationskontrakt - `OC`
+
+Dernæst kunne OM og DM fra `An-overall-model` opdateres så den fælles forståelsesramme for udviklingsteamet altid var `Aligned`.
+
+Men som det tydligt fremgår af nedenstående artefaktor lykkedes det ikke udviklingsteamet at følge denne plan. Dette vurderes at skyldes `Usikkerheder` og `Kompleksiteter` i projektet som udviklingsteamet ikke var opmærksomme på ved opstarten af projektet og valget af FDD. Læs mere om dette i refleksionsafsnittet [her](systemudvikling.md#relections-on-fdd).
+
+### 2. iterations OM og DM Bane-system
 
 <figure markdown="span">
   ![Bane-system OM 2.iteration ](images/BaneSystemOM2Iteration.png){ width="800" }
+</figure>
+
+<figure markdown="span">
+  ![Bane-system DM 2.iteration ](images/BaneSystemDM2Iteration.png){ width="800" }
+</figure>
+
+### 3. iterations DM Bane-system
+
+<figure markdown="span">
+  ![Bane-system DM 3.iteration ](images/BaneSystemDM3Iteration.png){ width="800" }
 </figure>
 
 ---
