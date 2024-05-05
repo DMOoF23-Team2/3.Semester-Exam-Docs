@@ -23,7 +23,7 @@ An overall model - som teknik:
     * Opnå viden om emner listet under formål
     * At kunne skabe en [Feature List](featureDrivenDevelopment.md#feature-list) når overall model er færdig.
 
-### Use Cases - UC
+### Use Cases - UC {#Use-case-fdd}
 **Bane-system**
 
 <figure markdown="span">
@@ -55,7 +55,7 @@ An overall model - som teknik:
 
 ---
 
-### Use Case Diagram - UCD
+### Use Case Diagram - UCD {#Use-case-diagram-fdd}
 Notationsformer i Use Case diagrammet:
 
 - **Aktør** - Aktører repræsenteres med stick-figurer.
@@ -99,15 +99,14 @@ Se afsnittet [Developing by features](featureDrivenDevelopment.md#Developing-by-
   ![Bane-system OM 1.iteration ](images/BaneSystemOM1Iteration.png){ width="800" }
 </figure>
 
-
-
 ---
 
 ## Feature list {#feature-list}
-*Note: beskrive vores indledende arbejde med businesscase, use cases, usecase-diagram og møde med PO i processen om at identificere og udfærdige Feature-listen.*
+Igennem problemstillingen ved [BusinessCase](systemudvikling.md#Businesscase) er der defineret en række features, der kan opfylde NcHs behov.
+På baggrund af denne businesscase, er der udfærdiget en række [use cases](featureDrivenDevelopment.md#Use-case-fdd) og deres sammenhæng/relationer er defineret og illustreret i [use case diagrammet](featureDrivenDevelopment.md#Use-case-diagram-fdd).
+De definerede features og deres sammenhæng illusteret gennem use case og use case diagrammet fungere som hjælpende værktøjer til at prioritere features.
+Feature listen er blevet prioriteret på et møde med PO. Denne prioriterede feature list vil fungere som udviklingsteamets `Backlog`.
 
-Igennem problemstillingen ved [BusinessCase](systemudvikling.md#Businesscase) er der blevet fundet frem til en række features, der kan opfylde NcHs behov.
-Feature listen er blevet prioriteret PO.
 Listen i prioriteret rækkefølge:
 
 | Opret trænings bane | klik på opret bane --> klik på til træning --> |
