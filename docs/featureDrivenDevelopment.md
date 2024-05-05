@@ -23,7 +23,7 @@ An overall model - som teknik:
     * Opnå viden om emner listet under formål
     * At kunne skabe en [Feature List](featureDrivenDevelopment.md#feature-list) når overall model er færdig.
 
-### Use Cases
+### Use Cases - UC
 **Bane-system**
 
 <figure markdown="span">
@@ -52,6 +52,54 @@ An overall model - som teknik:
 <figure markdown="span">
   ![Use Case: Kommunikation i gruppechat ](images/UseCaseKommunikationGruppeChat.png){ width="600" }
 </figure>
+
+---
+
+### Use Case Diagram - UCD
+Notationsformer i Use Case diagrammet:
+
+- **Aktør** - Aktører repræsenteres med stick-figurer.
+- **Use Case** - reprøsenteres med ellipser.
+- **System Boundary** - Systemgrænsen er en boks, der omgriveuse cases for at angive systemets omfang.
+
+Relationer mellem Use Cases:
+
+- **Inklusion** - Etiketten `<<include>>` - Bruges, når en use case inkludere (kalder) en anden use case for at udfører en del af dens funktionalitet. Repræsenteres med en solid linje med en trekantet pil, der peger mod den inkluderede use case.
+- **Udvidelse** - Etiketten `<<extend>>` - Bruges, når en use case kan udvides (optionelt) med ekstra funktionalitet under visse betingelser. Repræsenteres med en stiplet linje med en åben trekantet pil, der peger mod den udvidede use case.
+- **Association** - Bruges til at vise en almindelig forbindelse eller relation mellem to use cases. Repræsenteres med en simpel linje uden nogen markører eller etiketter.
+
+Notation for Pile:
+
+- **Solid linje** - Bruges til at repræsentere direktet forbindelser eller inklusioner.
+- **Stiplet linje** - Bruges til at repræsentet valgfri forbindelser eller udvidelser. 
+
+<figure markdown="span">
+  ![Use Case Diagram ](images/UseCaseDiagramFDD.png){ width="800" }
+</figure>
+
+---
+### Objekt Modeller - OM
+Som tidligere beskrevet i [foranalyse 1 iteration](systemudvikling.md#Foranalyse1.iteration) kan systemet deles op i to sub-systemer `bane-system` og `chat-system`.
+
+#### OM Chat-system
+Nedenstående viser første iteration af chat-systemets OM. Da selve chat funktionaliteterne ikke har haft særlig høj prioritet fra PO's side, se den prioriteret [Feature List her](featureDrivenDevelopment.md#feature-list). Findes der i skrivende stund (05-05-2024) kun denne udgave af chat-systemets OM.
+
+<figure markdown="span">
+  ![Chat-system OM ](images/ChatSystemOM.png){ width="800" }
+</figure>
+
+#### OM Bane-system
+Da selve bane funktionaliteterne har haft høj prioritet fra PO's side, er der itereraret hen over denne OM i forbindelse med de forskellige sprints udviklingsteamet har haft. Hvor den første iteration skal ses som værende en del af `An overall model` og derfor har været med til at skabe den fælles forståelsesramme for udviklingsteamet.
+
+Se afsnittet [Developing by features](featureDrivenDevelopment.md#Developing-by-feature) for hvordan nedenstående OM tilpasse/ændres undervejs i udviklingsprocessen.
+
+#### 1. iterations OM Bane-system
+
+<figure markdown="span">
+  ![Bane-system OM 1.iteration ](images/BaneSystemOM1Iteration.png){ width="800" }
+</figure>
+
+
 
 ---
 
@@ -151,6 +199,14 @@ Listen i prioriteret rækkefølge:
 
 ## Developing by features {#Developing-by-feature}
 Indsæt dokumentation om hvordan vi har planlagt og anvender developing by features, samt hvordan vi nedbryder features til de mindste og mest håndterbare tasks/features.
+
+### 2. iterations OM Bane-system
+
+<figure markdown="span">
+  ![Bane-system OM 2.iteration ](images/BaneSystemOM2Iteration.png){ width="800" }
+</figure>
+
+---
 
 ## Component/Class ownership {#Component-class-ownership}
 Beskriver hvordan vi har tildelt ansvaret for bestemte features til mindre teams. Nævn gerne brugen af `github Kanban eller nogle af de andre` og vores Assignet TO: ... Husk at beskriv hvordan vi anvender `Feature Teams`, lige som har delt os op i grupperne, hvor BC og KFM har feature alle skilte og JJ og KKN har vis en tom bane.
