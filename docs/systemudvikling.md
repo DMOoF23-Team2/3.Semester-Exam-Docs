@@ -186,15 +186,43 @@ Overordnet arbejdes der i 5 faser/`(stages)` i FDD. Undervejs gennem de 5 stages
 *   Stage 5 - Build by feature
 
 ---
+
 ## Tilpasning af FDD
 Team 2 har udfærdiget artefaktorne `Business Case` og `Use Case Diagram` som supplerende værktøjer til teknikken `Develop an overall modell`. For nærmere beskrivelse af selve teknikken se [Team 2's overall model her](featureDrivenDevelopment.md#An-overall-model).
 
-### Use Case Diagram {#use-case-diagram}
-
 ---
 
-## Refleksioner over FDD {#relections-on-fdd}
-skriv løbende vores refleksioner ved brugen af FDD i dette afsnit. Husk både godt og mindre godt:
+## Refleksioner FDD {#relections-on-fdd}
+### Refleksioner om arbejdet med FDD
+Feature Driven Development giver en fantastisk mulighed for at arbejde på mindre fokuserede dele af projektet af gangen - kaldet features.
+Ved at fokusere på individuelle funktioner/features får udviklingsteamet bedre kontrol over processen.
+Dette gør det lettere at identificere og løse eventuelle problemer, da ændringer ikke påvirker hele systemet på en gang. 
+
+FDD fremmer en tæt kommunikation og samarbejde mellem udviklerene.
+Ved at arbejde tæt sammen omkring individuelle features kan alle parter bedre forstå kravene og forventningerne.
+
+Set i reto-perspektiv, ville FDD nok ikke have været den optimale systemudviklingsmetode for vores team.
+FDD egner sig bedste til store udviklingsteams, hvor opdelingen i flere mindre Teams er muligt.
+Selvom vi har opdelt teamet til to mindre teams af to personer, vil vi argumentere for at størrer teams har sine fordele. 
+Særligt når det kommer til at søge ny information om en ukendt teknologi eller flere synsvinkler i forbindelse med analyse eller design.
+Derudover vurdere vi at FDD kræver udviklingsteams med en del mere erfaring end vi har, da meget af tiden i vores projekt går med at finde information om vores løsning der er præget at ukendte teknologier. 
+
+Denne opfattelse kan skyldes, at første gang vi skulle vælge en systemudviklingsmetode, var vi ikke introduceret til begreberne `Kompleksitet` og `Usikkerheder`. 
+Usikkerheder og kompleksiteter danner et grundlag for valg af procesmodel og dermed også systemudviklings metode.
+Da vi efterfølgende har identificeret mange usikkerhed, særligt om den anvendte teknologi i projektet, ville en anden systemudviklingsmetode, måske have været at fortrække som opstarts metode.
+
+Derudover blev vi også først introduceret til de forskellige typer af procesmodeller efter vi havde valgt FDD, hvilket igen giver en lidt omvendt rækkefølge af tingene.
+Med dette menes, at udviklings teamet kendte til vandfald og cyklisk procesmodel i et begrenset omfang fra tidligere semestre. Hvor udviklingsteamet her på 3.semester har tilegnet sig ny og mere viden om procesmodeller og derfor har kunne taget et mere begrundt/oplyst valg om systemudviklingsmetode nr. 2 i projektet. 
+
+### Valg af Extream Programming - XP
+På baggrund af den nye tilegnede viden, hvor et `projektbrief` først defineres, derefter udføres `foranalyserne`, hvor `kompleksiteter` og `usikkerheder` bla. defineres og samles, som grundlag for valg af procesmodel og derefter systemudviklens metode, Vælger vi i teamet at omstrukturer til en `Cyklisk - inkrementel` procesmodel og systemudviklingsmetoden `Extream Programmingen(XP)`.
+
+Dette gør vi for bla. bedre at kunne håndtere de usikkerheder, som vi på nuværende tidspunkt i projektets-situation står overfor, i form af ukendt teknologi, særligt anvendelsen af Blazor, som vi først modtager undervisning i 7 maj. Dette har også gjort det svært at gennemfører FDD fuldkommen, da det har været svært at implementere en feature i `frontend` delen af projektet. Det er lykkedes, men meget tid er gået med at finde ud af hvordan Blazor fungere.
+
+Teamet vurdere, at de 4 faser i XP og tilgangen om at tage en ting af gangen og være imødekommende over for ændringer passer godt ind i projektets situation, da projektet befinder sig på et stadie hvor der skal refactors en del.
+Den overordnede `an-overall-model` model fra FDD's tidlige fase, skal genbesøges igen og med den øgede forståelse for krav og domænet tilrettes.
+Derfor virker tilgangen om at tage en ting af gangen, planlægge, kode, teste og lytte til feedback som passende i denne større refaktoreriseringsproces. Som nævnt anvendes Cyklisk - inkrementel procesmodel til dette, da tilgangen her er at vælge en del (en eller flere sammenhængende features) og udvikle i fuld fidelity.
+Når denne del er fuldt udviklet, vælges der en ny del. Dette vurderes som passende i forhold til projektet-situation om at refactor hen i mode et mere fuldt implementeret produkt.
 
 ---
 
