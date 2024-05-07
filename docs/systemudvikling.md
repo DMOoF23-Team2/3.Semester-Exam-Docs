@@ -143,7 +143,7 @@ FDD er en agil metode, der oftest anvendes af store teams. Afgørende for denne 
 
 Features, kan anskues som `Use Cases` i RUP `(Rational Unified Process)`, og som `User's stories` i Scrum. Disse udgør grundlaget for projektets krav og planlægning og udtrykkes som `handling-resultat-objekt`.
 
-#### Best Practices in FDD
+#### Best Practices i FDD
 Der er 8 bedste praksis `(best pratices)` som bør benyttes når FDD anvendes som systemudviklingsmetode. 
 
 *   __Domain object modeling:__
@@ -172,7 +172,7 @@ Der er 8 bedste praksis `(best pratices)` som bør benyttes når FDD anvendes so
     * For at sikre at udviklingen af det færdige produkt er på rette spor, monitorerers progration i udviklingsprocessen og rapoteres.
     * Se mere dokumentation af [Team 2's Visibility of progress her](featureDrivenDevelopment.md#visibility-of-progress)
 
-#### Stages in FDD
+#### Stages i FDD
 Overordnet arbejdes der i 5 faser/`(stages)` i FDD. Undervejs gennem de 5 stages anvendes de 8 best pratices. Selvom de 5 stages er listet herunder, er det vigtigt at forstå at stages bliver genbesøgt gennem den cykliske processmodel. For hvert genbesøg dokumenteres evt. ændringer og tilføjelser.
 
 *   Stage 1 - Develop an overall model
@@ -187,13 +187,13 @@ Overordnet arbejdes der i 5 faser/`(stages)` i FDD. Undervejs gennem de 5 stages
 
 ---
 
-## Tilpasning af FDD
+#### Tilpasning af FDD
 Team 2 har udfærdiget artefaktorne `Business Case` og `Use Case Diagram` som supplerende værktøjer til teknikken `Develop an overall modell`. For nærmere beskrivelse af selve teknikken se [Team 2's overall model her](featureDrivenDevelopment.md#An-overall-model).
 
 ---
 
-## Refleksioner FDD {#relections-on-fdd}
-### Refleksioner om arbejdet med FDD
+### Refleksioner FDD {#relections-on-fdd}
+#### Refleksioner om arbejdet med FDD
 Feature Driven Development giver en fantastisk mulighed for at arbejde på mindre fokuserede dele af projektet af gangen - kaldet features.
 Ved at fokusere på individuelle funktioner/features får udviklingsteamet bedre kontrol over processen.
 Dette gør det lettere at identificere og løse eventuelle problemer, da ændringer ikke påvirker hele systemet på en gang. 
@@ -214,7 +214,7 @@ Da vi efterfølgende har identificeret mange usikkerhed, særligt om den anvendt
 Derudover blev vi også først introduceret til de forskellige typer af procesmodeller efter vi havde valgt FDD, hvilket igen giver en lidt omvendt rækkefølge af tingene.
 Med dette menes, at udviklings teamet kendte til vandfald og cyklisk procesmodel i et begrenset omfang fra tidligere semestre. Hvor udviklingsteamet her på 3.semester har tilegnet sig ny og mere viden om procesmodeller og derfor har kunne taget et mere begrundt/oplyst valg om systemudviklingsmetode nr. 2 i projektet. 
 
-### Valg af Extream Programming - XP
+#### Valg af Extream Programming - XP
 På baggrund af den nye tilegnede viden, hvor et `projektbrief` først defineres, derefter udføres `foranalyserne`, hvor `kompleksiteter` og `usikkerheder` bla. defineres og samles, som grundlag for valg af procesmodel og derefter systemudviklens metode, Vælger vi i teamet at omstrukturer til en `Cyklisk - inkrementel` procesmodel og systemudviklingsmetoden `Extream Programmingen(XP)`.
 
 Dette gør vi for bla. bedre at kunne håndtere de usikkerheder, som vi på nuværende tidspunkt i projektets-situation står overfor, i form af ukendt teknologi, særligt anvendelsen af Blazor, som vi først modtager undervisning i 7 maj. Dette har også gjort det svært at gennemfører FDD fuldkommen, da det har været svært at implementere en feature i `frontend` delen af projektet. Det er lykkedes, men meget tid er gået med at finde ud af hvordan Blazor fungere.
@@ -225,8 +225,29 @@ Derfor virker tilgangen om at tage en ting af gangen, planlægge, kode, teste og
 Når denne del er fuldt udviklet, vælges der en ny del. Dette vurderes som passende i forhold til projektet-situation om at refactor hen i mode et mere fuldt implementeret produkt.
 
 ---
+### XP - Extream Programming
 
+#### Principper i XP
+Principperne bag denne systemudviklingsmetode er kommunikation, simpelhed, feedback, mod og accept af løbende ændringer (respekter at XP lever).
 
+De 3 vigtigste principper kan beskrives således:
+
+* Feedback:
+    * Feedback indsamles/modtages ofte, der bør ikke gå lang tid mellem en release af produktet uden en præsentation af produktet for dets bruger/PO. Gennem feedback identificeres mindre fejl og mangler, som håndteres med det samme før de skaber større problemer for det samlede produkt.
+* Assuming Simplicity:
+    * XP tager en ting ad gangen. Ofte små releases vurderes at være givende for projektet, så både klienten/kunden og udviklerne er "attuned" ift. udviklingen af produktet. Dette muliggør også, at det er nemmere for både klienter og udviklere at spotte fejl og mangler i produktet.
+* Embracing Change:
+    * Ændringer er uundgåelige, og derfor omfavner XP-udviklere ændringer, når behovet for dem opstår, i stedet for at arbejde rundt om dem.
+
+#### Faser i XP
+* Planlægning:
+    * I denne periode mødes klienter og udviklere for at diskutere produktkrav, som vil blive omsat til 'brugerhistorier/user-stories'. Disse brugerhistorier konverteres til iterationer, hvor udviklere arbejder på specifik funktionalitet eller funktioner i produktet. Teamet forbereder også planen, opgaverne, tidsplanerne og omkostningerne for hver iteration.
+* Kodning:
+    * I softwareudvikling mener XP, at kodning er den vigtigste proces i projektet. Forretningsmæssigt set er dette stadiet, hvor udviklerne søger efter den bedst mulige løsning på et problem eller krav, som er fastlagt af klienterne.
+* Testning:
+    * Testning udføres inden for udviklingsfasen og ikke ved dens afslutning. Produkter præsenteres og demonstreres for kunderne, og de tester dem baseret på deres krav og produktets brugervenlighed.
+* Lytning:
+    * Efter testning, og hvis kunderne rapporterer, at produktet skal forbedres, vil udviklerne arbejde ud fra de feedback, der er indhentet. Hvis klienten allerede er tilfreds med den nuværende prototype, vil en ny iteration begynde.
 
 
 
