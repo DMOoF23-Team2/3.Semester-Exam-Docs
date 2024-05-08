@@ -192,7 +192,7 @@ Team 2 har udfærdiget artefaktorne `Business Case` og `Use Case Diagram` som su
 
 ---
 
-### Refleksioner FDD {#relections-on-fdd}
+### Refleksioner FDD {#reflections-on-fdd}
 #### Refleksioner om arbejdet med FDD
 Feature Driven Development giver en fantastisk mulighed for at arbejde på mindre fokuserede dele af projektet af gangen - kaldet features.
 Ved at fokusere på individuelle funktioner/features får udviklingsteamet bedre kontrol over processen.
@@ -209,7 +209,7 @@ Derudover vurdere vi at FDD kræver udviklingsteams med en del mere erfaring end
 
 Denne opfattelse kan skyldes, at første gang vi skulle vælge en systemudviklingsmetode, var vi ikke introduceret til begreberne `Kompleksitet` og `Usikkerheder`. 
 Usikkerheder og kompleksiteter danner et grundlag for valg af procesmodel og dermed også systemudviklings metode.
-Da vi efterfølgende har identificeret mange usikkerhed, særligt om den anvendte teknologi i projektet, ville en anden systemudviklingsmetode, måske have været at fortrække som opstarts metode.
+Da vi efterfølgende har identificeret mange usikkerhed, særligt om den anvendte teknologi i projektet, ville en anden systemudviklingsmetode, måske have været at fortrække som opstarts metode. Derudover ville et mere oplyst valg af procesmodel helt sikkert have bidraget positivit til projektet og gjort proaktiv projektstyring nemmere.
 
 Derudover blev vi også først introduceret til de forskellige typer af procesmodeller efter vi havde valgt FDD, hvilket igen giver en lidt omvendt rækkefølge af tingene.
 Med dette menes, at udviklings teamet kendte til vandfald og cyklisk procesmodel i et begrenset omfang fra tidligere semestre. Hvor udviklingsteamet her på 3.semester har tilegnet sig ny og mere viden om procesmodeller og derfor har kunne taget et mere begrundt/oplyst valg om systemudviklingsmetode nr. 2 i projektet. 
@@ -225,6 +225,7 @@ Derfor virker tilgangen om at tage en ting af gangen, planlægge, kode, teste og
 Når denne del er fuldt udviklet, vælges der en ny del. Dette vurderes som passende i forhold til projektet-situation om at refactor hen i mode et mere fuldt implementeret produkt.
 
 ---
+
 ### XP - Extream Programming
 
 #### Principper i XP
@@ -249,6 +250,7 @@ De 3 vigtigste principper kan beskrives således:
 * Lytning:
     * Efter testning, og hvis kunderne rapporterer, at produktet skal forbedres, vil udviklerne arbejde ud fra de feedback, der er indhentet. Hvis klienten allerede er tilfreds med den nuværende prototype, vil en ny iteration begynde.
 
+---
 
 
 

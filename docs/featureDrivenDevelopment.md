@@ -18,7 +18,6 @@ An overall model - som teknik:
     * Objektmodel - `OM`
     * Domænemodel - `DM`
     * Business Case - `BC`
-    * Project Scope Description - `PSD`
 *   Output:
     * Opnå viden om emner listet under formål
     * At kunne skabe en [Feature List](featureDrivenDevelopment.md#feature-list) når overall model er færdig.
@@ -263,7 +262,42 @@ beskriv brugen af milepæle `(milestones i github)`. Indsær gerne billeder af m
 lave et roademap sorteret på milepæle og indsæt billede også.
 
 ## Plan by feature {#plan-by-feature}
-Beskrive brugen af scrum og beskriv hvordan vi anvender diverse relevante github projektstyringsværktøjer. Husk at referere til at feature listen diktere hvilket features der arbejdes på.
+Denne `stage` i FDD, omhandler projektstyring. Projektstyring er også et af de 7 fokusområder en systemudviklingsmetode helst skal dække. 
+
+Hvis man anskuer fokusområdet projektstyring indeholder det følgende:
+
+* Projektbrief
+* Foranalyse
+* Valg af procesmodel
+* Valg af systemudviklingsmetode
+* Planlægning af tid, ressourcer og kommunikation
+* Løbende analyse af projektets situation
+* Tilpasning af systemudviklingsmetode og procesmodel
+
+Oftest er der en tendesn til at projektstyring for mest fokus i opstarten af et projekt og derefter forsvinder fokus væk fra projektstyring og der kan hurtigt opleves at projektets plan skrider. Derfor er det vigtigt at have fokus på `Proaktiv projektstyring`.
+
+Proaktiv projektstyring indebærer at opdatere de fortagede analyser, så de reflektere projektets aktuelle situation. Herigennem kan de udfordringer, teamet står overfor identificeres, hvis disse udfordringer ikke kan afviges, kan teamet træffe foranstaltninger til at afbøde konsekvenserne.
+
+### Projektbrief
+I team 2s proces med FDD, er der udfærdiget en [BusinessCase](systemudvikling.md#Businesscase). Der udover er der udfærdiget et [Project Scope Description](Scope.md). Disse to tilsammen udgøre `Projektbrief` for team 2.
+
+### Foranalyse
+Den udfærdiget [Foranalysen](systemudvikling.md#Foranalyse1.iteration) før valget af systemudviklingmetoden FDD er beskrevet tidligere.
+
+### Valg af procesmodel
+Der kan argumenteres for at dette valg ikke har været præcist nok i forbindelse med arbejdet med systemudviklingsmetoden FDD. Der er overordnet arbejde ud fra en cyklisk procesmodel. Mere om dette kan findes i [Reflskioner om FDD](systemudvikling.md#reflections-on-fdd)
+
+### Valg af systemudviklingsmetode
+Valget af FDD var fortaget på baggrund af interesse fra team 2 side. Da FDD blev præsenteret og Team 2 læste mere om denne, lød den spænende og det med at identificere og udvælge enkelte features, implementere disse og udvide der fra lød passende ift. projektet. Men da valget af denne ikke har været nok baseret på projektet situation, usikkerheder og kompleksiteter forbundet med projektet er der også valgt at skifte systemudviklings metode til Extream Programming XP. Mere om dette kan findes i [Reflskioner om FDD](systemudvikling.md#reflections-on-fdd)
+
+### Planlægning af tid, ressourcer og kommunikation
+
+
+<figure markdown="span">
+  ![FDD Kanban ](images/KanbanFDD.png){ width="800" }
+</figure>
+
+---
 
 ## Design by feature {#design-by-feature}
 Beskriv hvordan vores design proces af hver feature forgår i overordnede træk.
