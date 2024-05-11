@@ -229,6 +229,8 @@ Her skal der særligt lægges vægt på Stages 3-5. Hvor mening var for hver `Fe
 * Sekvensdiagram - `SD`
 * operationskontrakt - `OC`
 
+se [Design by feature](featureDrivenDevelopment.md#design-by-feature) for disse artefakter.
+
 Dernæst kunne OM og DM fra `An-overall-model` opdateres så den fælles forståelsesramme for udviklingsteamet altid var `Aligned`.
 
 Men som det tydligt fremgår af nedenstående artefaktor lykkedes det ikke udviklingsteamet at følge denne plan. Dette vurderes at skyldes `Usikkerheder` og `Kompleksiteter` i projektet som udviklingsteamet ikke var opmærksomme på ved opstarten af projektet og valget af FDD. Læs mere om dette i refleksionsafsnittet [her](systemudvikling.md#relections-on-fdd).
@@ -324,5 +326,35 @@ Kanban har bestået af følgende kolonner som også ses på billede nedenfor.
 ---
 
 ## Design by feature {#design-by-feature}
-Beskriv hvordan vores design proces af hver feature forgår i overordnede træk.
-Lav en under oversskrift med den feature du arbejder på, og dokumenter den her. Husk at indsætte billeder eller lign. af evt. artefakter der er anvendt.
+
+### Feature Create Course
+
+**Use Case**
+<figure markdown="span">
+  ![Opret Bane Use Case ](images/UseCaseOprettelseAfTræningsbane.png){ width="800" }
+</figure>
+
+**SSD**
+<figure markdown="span">
+  ![Opret Bane SSD ](images/SSDOprettelseAfTræningsBane.png){ width="800" }
+</figure>
+
+**OC**
+<figure markdown="span">
+  ![Opret Bane OC ](images/OCOprettelseAfTræningsBane.png){ width="800" }
+</figure>
+
+### Feature ShowAllSignsAndElements
+
+**Decompose**
+<figure markdown="span">
+  ![Nedbrydning af ShowAllSignsAndElement ](images/DecomposeShowAllSignsAndElements.png){ width="800" }
+</figure>
+
+**SD GetAllSigns**
+<figure markdown="span">
+  ![SD GetAllSigns ](images/SDGetAllSigns.png){ width="800" }
+</figure>
+
+
+
