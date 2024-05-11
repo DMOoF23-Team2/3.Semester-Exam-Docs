@@ -48,7 +48,19 @@ Projektet befinder sig i en situation hvor der er `høj-usikkerhed` og `mellem t
 ### Valg af procesmodel
 
 På baggrund af analysen af projektets situation vælges Cyklisk-Inkrementel
-Derudover egner Cyklisk-inkrementel sig godt til refaktorering af eksisterende implementeringer. 
+Derudover egner Cyklisk-inkrementel sig godt til refaktorering af eksisterende implementeringer.
+
+Valget af procesmodel handler om at afdække behovet for at kunne håndtere de usikkerheder og kompleksiteter, der er i vores projekt. Sagt på en anden måde, handler valget af procesmodel om at facilitere de bedste rammer for risikostyring. Nedenstående tabel viser ud fra en ”tommelfinger-regle” hver af procesmodellerne og hvilket omfang af hhv. kompleksitet og usikkerheder de er egnet til at håndtere.
+
+| Procesmodel                | Kompleksitet | Usikkerheder    |
+|----------------------------|--------------|-----------------|
+| Klassisk vandfald         | Lav          | Lav             |
+| Vandfald med overlap eller feedback | Mellem  | Lav             |
+| Inkrementel vandfald      | Høj          | Lav             |
+| Cyklisk inkrementel       | Mellem       | Mellem-Høj      |
+| Iterativ                  | Lav-mellem   | Mellem-Høj      |
+| Agil                       | Lav          | Høj             |
+| SOS                        | Høj          | Høj             |
 
 ### Valg af systemudviklingsmetode
 Extrem Programming - XP
@@ -69,7 +81,7 @@ Prioriteret plan:
 
 Github Kanban, RoadMap med milepæle
 
-### Milepæle:
+### Milepæle
 * Estimeret slut = 24-5-2024
 * Milepæl 5-5-2024 - CreateCours og ShareCourse
 * Milepæl 12-5-2024 CreateCourseByRegulations - CollaborationOnCourse
@@ -90,3 +102,20 @@ Der kan argumenteres for, at denne uddybende forklaring også kan være med til 
 <figure markdown="span">
   ![XP - DM uddybning ](images/XPUddybningAfKlasser.png){ width="800" }
 </figure>
+
+## Tilføjelser i forbindelse med XP
+Teamet har tilegnet sig ny viden som projektet er skredet frem og har på baggrund af dette, forsøgt at identificere nogle `abuse-cases`.
+Derudover er en overordnet `system-arkitektur` opstillet, så `TrusselsModellering` er muligt.
+
+### Abuse-cases
+
+<figure markdown="span">
+  ![Abuse Cases ](images/XPAbuseCases.png){ width="800" }
+</figure>
+
+### Overordnet system arkitektur
+
+<figure markdown="span">
+  ![System Arkitektur](images/OverordnetSystemArkitekturTrusselsmodellering.png){ width="800" }
+</figure>
+
