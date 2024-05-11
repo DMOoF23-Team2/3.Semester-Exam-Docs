@@ -1,6 +1,6 @@
 # Extream Programming
 
-## Foranalyse / analyse af projektets situation
+## Foranalyse / analyse af projektets situation / Projektstyring
 Som en del af den løbende analyse af projektets situation, er følgende `Usikkerheder` og `Kompleksiteter` identificeret på nuværende tidspunkt i projektet.
 
 - Projektet skal kunne håndtere flere brugere på en gang, tiltænkt teknologi til at løse dette i forbindelse med `live-shar af bane` er `SingalR`. Da udviklings teamet aldrig har arbejdet med singnalR før, er deres viden omkring implementering af dette ikke eksisterende og skal tilegnes undervejs.
@@ -45,5 +45,48 @@ Som en del af den løbende analyse af projektets situation, er følgende `Usikke
 ### Samlet vurdering af Usikkerheder og Kompleksiteter
 Projektet befinder sig i en situation hvor der er `høj-usikkerhed` og `mellem til høj - kompleksitet`.
 
+### Valg af procesmodel
 
+På baggrund af analysen af projektets situation vælges Cyklisk-Inkrementel
+Derudover egner Cyklisk-inkrementel sig godt til refaktorering af eksisterende implementeringer. 
 
+### Valg af systemudviklingsmetode
+Extrem Programming - XP
+
+Da der er identificeret flere problemer/fejl/kommende ændringer til den eksisterende implementering fra FDD og i samspil med projektets situation, vurderes en TDD-tilgang passende (test-driven-development). Derudover fokusere XP på at udvikle en ting af gangen til full-fidelity og omfavner ændringer, som håndteres inden næste nye ting påbegyndes.
+
+Der vurderes en god sammenhæng mellem Cyklisk-inkrementel og XP.
+
+### Planlægning 
+Prioriteret plan:
+
+* CreateCourse - refactor
+* CreateCourseByRegulations - refactor
+* ShareCourse - refactor
+* CollaborationOnCourse - new
+* CommentCourse - new
+* Chat - new
+
+Github Kanban, RoadMap med milepæle
+
+### Milepæle:
+* Estimeret slut = 24-5-2024
+* Milepæl 5-5-2024 - CreateCours og ShareCourse
+* Milepæl 12-5-2024 CreateCourseByRegulations - CollaborationOnCourse
+* Milepæl 19-5-2024 login/Security/deployment/hosting
+* Milepæl 24-5-2024 Finishing touch ??
+
+## Opdateret DM
+I forbindelse med skiftet til XP og de mange refatorerings opgavet, har teamet opdateret DM som en del af den løbende analyse.
+Yderligere har teamet valg at nedfælde en mere uddybende forklaring af hver `konceptuel-klasse` for at alle i teamet er `attuned`.
+Der kan argumenteres for, at denne uddybende forklaring også kan være med til at skabe klarhed om ansvarsfordelingen igennem systemet.
+
+### Opdateret DM - XP
+<figure markdown="span">
+  ![XP - DM ](images/XPDomæneModel.png){ width="800" }
+</figure>
+
+### Uddybende forklaring af konceptuelle klasser
+<figure markdown="span">
+  ![XP - DM uddybning ](images/XPUddybningAfKlasser.png){ width="800" }
+</figure>
