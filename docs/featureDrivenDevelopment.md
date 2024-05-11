@@ -252,14 +252,25 @@ Men som det tydligt fremgår af nedenstående artefaktor lykkedes det ikke udvik
 ---
 
 ## Component/Class ownership {#Component-class-ownership}
-Beskriver hvordan vi har tildelt ansvaret for bestemte features til mindre teams. Nævn gerne brugen af `github Kanban eller nogle af de andre` og vores Assignet TO: ... Husk at beskriv hvordan vi anvender `Feature Teams`, lige som har delt os op i grupperne, hvor BC og KFM har feature alle skilte og JJ og KKN har vis en tom bane.
+Når GitHub Projects anvendes, kan der i hver task `tagges` folk ved brugen af `@brugernavn`. Teamet har i hver task anvendt denne notations form under titlen `Assigned To`. På denne måde, har teamet forsøgt, at dele sig op i mindre udviklings-teams/feature-teams. Dette skulle være en almindelig praksis når der arbejdes efter FDD.
 
-## Inspctions and quality assurance {#inspections}
-Beskriv vores Kvalitetssikrings protokoller og aktiviteter. Beskriv hvordan vi til vores gruppemøder har afholdt peer-reviewa mellem de to mindre feature-teams.
+## Inspections and quality assurance {#inspections}
+
 
 ## Visibility of progress {#visibility-of-progress}
-beskriv brugen af milepæle `(milestones i github)`. Indsær gerne billeder af milepæle.
-lave et roademap sorteret på milepæle og indsæt billede også.
+Udover [Kanban](featureDrivenDevelopment.md#planlægning-af-tid-fdd) har teamet anvende `RoadMap` og labels til at udfærdige et `feature-board`. Disse giver til sammen et overblik over hvilken status hver feature har og om teamet overholder tidsplanen.
+
+### RoadMap
+
+<figure markdown="span">
+  ![FDD RoadMap ](images/RoadmapFDD.png){ width="800" }
+</figure>
+
+### Brugen af labels - Feature overview
+
+<figure markdown="span">
+  ![FDD Feature overview ](images/FeaturesFDD.png){ width="800" }
+</figure>
 
 ## Plan by feature {#plan-by-feature}
 Denne `stage` i FDD, omhandler projektstyring. Projektstyring er også et af de 7 fokusområder en systemudviklingsmetode helst skal dække. 
@@ -290,7 +301,20 @@ Der kan argumenteres for at dette valg ikke har været præcist nok i forbindels
 ### Valg af systemudviklingsmetode
 Valget af FDD var fortaget på baggrund af interesse fra team 2 side. Da FDD blev præsenteret og Team 2 læste mere om denne, lød den spænende og det med at identificere og udvælge enkelte features, implementere disse og udvide der fra lød passende ift. projektet. Men da valget af denne ikke har været nok baseret på projektet situation, usikkerheder og kompleksiteter forbundet med projektet er der også valgt at skifte systemudviklings metode til Extream Programming XP. Mere om dette kan findes i [Reflskioner om FDD](systemudvikling.md#reflections-on-fdd)
 
-### Planlægning af tid, ressourcer og kommunikation
+### Planlægning af tid, ressourcer og kommunikation {#planlægning-af-tid-fdd}
+Teamet har som visuel metode anvendt bla. Kanban som en integrerat del af den cykliske proces, til at styre arbejdsprocessen.
+Kanban har bestået af følgende kolonner som også ses på billede nedenfor.
+
+* Backlog
+    * Her er all task i forbindelse med projektet lists - det har primært været features fra den prioriterede [feature list](featureDrivenDevelopment.md#feature-list).
+* To Do
+    * Når en task fra backloggen vælges for den pågældende iteration placeres denne i TO DO.
+* In Progress
+    * Når et udviklings-team er blevet `assigned to` den pågældende task og påbegynder arbejdet med denne placeres tasken i denne kolonne.
+* Write Docs
+    * Når en task rent kode-mæssiget er færdig, placeres tasken i denne kolonne. Dernæst udfærdiges nødvendig dokumentation om den pågældende task. Dette kan være opdatering af design artefakter, sikring af sporbarhed eller dokumentation på denne site.
+* Done
+    * først når dokumentationen er skrevet placeres en task i kolonne Done, som markere at denne task er `færdig`.
 
 
 <figure markdown="span">
