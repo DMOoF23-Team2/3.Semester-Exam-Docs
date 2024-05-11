@@ -257,7 +257,7 @@ Men som det tydligt fremgår af nedenstående artefaktor lykkedes det ikke udvik
 Når GitHub Projects anvendes, kan der i hver task `tagges` folk ved brugen af `@brugernavn`. Teamet har i hver task anvendt denne notations form under titlen `Assigned To`. På denne måde, har teamet forsøgt, at dele sig op i mindre udviklings-teams/feature-teams. Dette skulle være en almindelig praksis når der arbejdes efter FDD.
 
 ## Inspections and quality assurance {#inspections}
-
+Teamet har hver søndag mødtes og afholde code reviews af hvorlangt de forskellige feature-teams er kommet med deres task. Her har der været gennemgang af kode og feedback fra resten af teamet er blevet givet på feature-teamets arbejde.
 
 ## Visibility of progress {#visibility-of-progress}
 Udover [Kanban](featureDrivenDevelopment.md#planlægning-af-tid-fdd) har teamet anvende `RoadMap` og labels til at udfærdige et `feature-board`. Disse giver til sammen et overblik over hvilken status hver feature har og om teamet overholder tidsplanen.
