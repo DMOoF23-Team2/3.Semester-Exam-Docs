@@ -1,0 +1,128 @@
+# Teknologi
+---
+
+## OSI modellen {#osi-modellen}
+
+Hvorfor er `OSI Modellen` vigtig?
+For en datamatiker/programør er det vigtig at forstå OSI-modellen, da den:
+
+*   Strukturer komplksiteten:
+    * Deler netværksfunktioner i lag, hvilket gør det nemmere at fejlsøge og designe netværk.
+*   Standardisere Kommunikation:
+    * Sikrer, at forskellige systemer og enheder kan kommunikere effektivt.
+*   Forbedre sikkerhed:
+    * Hjælper med at identificere og afbøde sikkerhedstrusler på forskellige lag.
+
+At have en grundlæggende forståelse af OSI-modellen gør det lettere at arbejde med netværksrelaterede programmeringsopgaver og forstå, hvordan data bevæger sig gennem et netværk.
+
+OSI-modellen også kalder `Open Systems Interconnection Model`. Består af 7 lag.
+Følgende huske regl kan anvendes:
+**P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way
+
+### Physical layer: {#osi-physical-layer}
+Data på dette lag er i form af bits 0 og 1-taller
+Dette lag er ansvarlig for de specifikationerne af den fysisk hardware der bliver brugt til at kommunikere over netværket med.
+
+Dette lag definere også standarden for kommunikation. Der arbejdes med tre typer af kommunikation.
+
+*   Simplex - one way only
+*   Half Duplex - two way, but only send or receive at a time
+*   Full duplex - two way, send or receive at the same time
+
+Eksempler på enheder der befinder sig i dette lag er
+
+*   Hubs
+*   Network interface cards
+*   Repeaters
+
+### Data Link Layer: {#osi-data-link-layer}
+Bits modtaget fra det fysiske lag `(Physical Layer)` bliver transformerede til `frames` i Data Link Layer. Dette lag er ansvarligt for kommunikationen over lokale netværk `LAN - (Local Area Network)`. Det sørger for at organisere data i mindre enheder kaldet frames, hvilket gør det nemmere at håndtere og transmittere information effektivt.
+
+En af de primære opgaver for Data Link Layer er `fysisk adressering`, bedre kendt som `MAC-adresser - (Media Access Control)`. Hver enhed, der kan tilsluttes et netværk, har en unik MAC-adresse, som sikrer, at data rammer den korrekte destination. For eksempel, når du sender en fil fra din computer til en printer på det samme netværk, bruger Data Link Layer MAC-adresser til at identificere både computeren og printeren, og sørger for, at filen bliver sendt til den rigtige enhed.
+
+Derudover håndterer Data Link Layer `fejlkontrol - (error control)` og `flowkontrol - (flow control)`. Fejlkontrol sikrer, at eventuelle fejl, der opstår under transmissionen af data, bliver opdaget og rettet. Flowkontrol synkroniserer sendelse og modtagelse på netværket, så afsenderen ikke overvælder modtageren med for mange data på én gang. Dette er vigtigt for at sikre, at netværkstrafikken forbliver effektiv og uden tab af data.
+
+Som et konkret eksempel, forestil dig at du sender en stor video fra din bærbare computer til en ven via Wi-Fi. Data Link Layer opdeler videoen i mindre frames og tilføjer en header, der inkluderer MAC-adressen for både din bærbare computer og din vens enhed. Under transmissionen overvåger Data Link Layer for fejl, og hvis der opdages en fejl, vil den forsøge at rette den eller anmode om genudsendelse af de korrupte frames. Samtidig sørger flowkontrol for, at din bærbare computer ikke sender data hurtigere, end din vens enhed kan modtage og behandle dem. Dette koordinerede samspil gør, at videoen bliver overført korrekt og effektivt.
+
+Protokoller på Data Link Layer:
+
+*   **Ethernet:** En af de mest anvendte teknologier til lokale netværks (LANs). Ethernet specificere, hvordan data skal pakkes ind i frames og adressers ved hjælp af MAC-adresser.
+*   **Frame Relay:** En teknik til at sende data over brede netværk (WANs) ved at bruge et virtuelt kredsløb.
+*   **Token Ring.** En netværksprotokol, hvor en token cirkulere i et ring-topologi netværk, og kun den enhed, der har tokenen, kan sende data.
+*   **Fiber Distributed Data Interface (FDDI):** Bruges til at overfører data over fiberoptiske kabler i et LAN eller MAN - (Metropolitan Area Network). Det anvender en dobbelt ring-topologi for at sikre redudans og pålidelighed.
+*   **Token Bus:** En netværksprotokol, hvor en token cirkulere i en bus-topologi, hvilket giver en retfærdig adgangsmetode til netværket.
+*   **PPP (Point-to-point protocol):** Bruges til at etablere en direkte forbindelse mellem to noder og overfører data over serielle forbindelser som telefonlinjer.
+
+Enheder på Data Link Layer:
+
+*   Briges
+    *   Enheder, der forbinder to eller flere netværk og filtrerer trafik for at reducere kollisionsdomøner ved at segmentere netværket. De opererer på MAC-adresse niveau.
+*   Layer 2 Switches
+    * Enheder, der opererer på Data Link Layer og bruger MAC-adresser til at videresende data til den korrekte port. De tilbyder bedre ydeevne og sikkerhed end simple hubs.
+
+### Network Layer {#osi-network-layer}
+Network Layer er ansvarlig for flere funktioner, der sikre, at data bliver leveret fra en kilde til en destination, uanset hvor de befinder sig i et netværk. 
+
+*   **Pakkedannelse:** Når frames fra Data Link Layer når Network Layer, tilføjer Network Layer en header til hver frame. Denne proces kaldes `indkapsling`. Headeren indeholder vigtig information, såsom afsenderens og modtagerens IP-adresser. Når en fram får tilføjet en Network Layer header, bliver den til en `pakke`.
+*   **Routing:** Newtwork Layer er ansvarlig for routing, hvilket betyder at bestemme den bedste vej for pakken at tage fra kilde til destinationen. Dette involvere brug af routingptotokoller som `OSPF - (Open Shortest Path First)`, `BGP - (Border Gateway Protocol)` og `RIP - (Routing Information Protocol)`. Routing gør det muligt for data at bevæge sig mellem forskellige netværk - (subnets), hvilket er essentielt for kommunikation i større netværk, herunder internettet.
+*   **Fragmentering og Reassembly:** Newtwork Layer håndtere også `fragmentering` af pakker. Hvis en pakke er for stor til at blive sendt i én enkelt frame, `(baseret på MTU - Maximum Transmission Unit)`, bliver den opdelt i mindre fragmenter. Når disse fragmenter når destinationen, bliver de genskabt til den oprindelige pakke. Denne proces sikrer, at store mængder data kan transporteres effektivit over netværk med forskellige MTU-størrelser.
+*   **Fejlhåndtering og Diagnostik:** Network layer kan også inkludere funktioner til fejlhåndtering og diagnostik. For eksempel bruges `ICMP - (Internet Control Message Protocol)` til at sende fejlinformation og udføre netværksdiagnostik som `Ping og Traceroute`.
+
+Som et konkret eksempel, forstil dig, at du sender en e-mail fra din computer i Danmark til en ven i USA. Når du klikker på send, bliver e-mailen opdelt i dataenheder (frames) på Data Link Layer. Når disse frames når Network Layer:
+
+1. Bliver hver frame til en pakke ved at tilføje en header, der indeholder din IP-adresse og din vens IP-adresse.
+2. Netværksudtyr (som router) bruger denne information til at bestemme den bedste vej gennem internettet for at levere pakken til din vens computer.
+3. Hvis nogen af pakkerne er for store til at passere gennem et netværkssegment, bliver de fragmenteret i mindre stykker.
+4. Når alle pakkerne når destinationen, bliver de rekonstrueret til den oprindelige e-mail på din vens computer.
+
+Protokoller på Network Layer:
+
+* IPv4 - internet protocol version4:
+    * Den mest anvendte protokol til at sende data over internettet. IPv4 bruger 32-bit adresser.
+* IPv6 - internet protocol version 6:
+    * Efterfølgereen til IPv4, som bruger 128-bit adresser for at håndtere det voksende antal internet-enheder.
+* ICMP - internet control message protocol
+    * Bruges til fejldiagnostik og kontrol, som f.eks. at sende fejlmeddelser og udfører netværksdiagnostik `(Ping og Traceroute)`.
+* IPsec - internet protocol security:
+    * En protokol suite, der sikrer IP-kommunikation ved at autentificere og kryptere hver IP-pakke i en datastream.
+* OSPF - Open shorrtest path first:
+    * En routing-protokol, der bruges til at finde den bedste vej for data gennem et IP-netværk.
+* EIGRP - enhanced interior gateway routing protocol:
+    * En avanceret distance-vector routing-protokol, der hjælper med at finde den optimale rute til data.
+
+Enheder på Netværk Layer:
+
+* Layer 3 Switches
+    * Disse enheder kan udfører routing-funktioner ud over almindelig switching. De kan forwarde pakker baseret på IP-adresser, hvilket gør dem idelle til komplekse netværk.
+* Routers
+    * Grundlæggende enhed i et netværk, der bestemmer den bedste vej for at sende data mellem forskellige netværk baseret på IP-adresser.
+* Firewalls
+    * Sikkerhedsenheder, der overvåger og kontrollere netværkstrafik baseret på foruddefinerede sikkerhedsregler. De kan operer på flere lag, men typisk filtrerer de trafik baseret på IP-adresser og portnumre
+
+### Transport Layer {#osi-transport-layer}
+Når pakkerne fra Newtwork Layer kommer op på Transport Layer, bliver der tilføjert yderligere headers, og pakkerne bliver til `segments`. Trasport Layer er ansvarlig for en meget vigtig funktion, da det er dette lag, som definere `transport protocol`. En transportprotokol kan være `TCP` eller `UDP`.
+
+**TCP (Transmission Control Protocol)**
+
+*   Pålidelig og forbindelsesorienteret:
+    * TCP etablere en forbindelse mellem afsender og modtager gennem `3-way-handshake`. Denne proces sikrer, at begge parter er klar til dataoverførsel.
+*   Fejlkontrol, sekvensering og gendannelse:
+    * TCP sørger for, at alle segmenter ankommer korrekt ved at nummerere dem og kvittere for modtagelsen. Hvis et segment går tabt, bliver det sendt igen.
+*   Flowkontrol: 
+    * TCP bruger mekanismer som `sliding window` for at kontrollere mængden af data, der sendes, før modtageren skal kvittere for dem. Dette forhindrer netværksbelastning.
+*   Brugsscenarier
+    * TCP er ideelt for applikationer, hvor dataenes integritet er kritisk, såsom webbrowsing `(HTTP/HTTPS)`, e-mail `(SMTP, IMAP)` og filoverførsel `(FTP)`.
+
+**UDP (User Datagram Protocol)**
+
+* Upålidlig og forbindelseløs:
+    * UDP sender data uden at etablere en forbindelse og uden at sikre, at dataene når frem til destinationen.
+* Ingen fejlkontrol eller flowkontrol:
+    * UDP implementere ingen mekanismer til at kontrollere eller rette fejl i dataene, hvilket gør det lettere og hurtigere end TCP.
+* Lav overhed og hurtig transmission:
+    * På grund af den lave overhed er UDP velegnet til applikationer, hvor hastighed er vigtigere end pålidelighed, som f.eks. live video- og lydstreaming `(VoIP, IPTV)`, online gaming og DNS-opslag.
+* Pakkehpntering
+    * UDP-pakker `(datagrammer)` sendes uafhængigt af hinanden, hvilket betyder, at de kan ankomme i en anden rækkeføkge end de blev sendt.
+
+
+
