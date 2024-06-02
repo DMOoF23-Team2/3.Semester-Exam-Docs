@@ -124,5 +124,84 @@ Når pakkerne fra Newtwork Layer kommer op på Transport Layer, bliver der tilf�
 * Pakkehpntering
     * UDP-pakker `(datagrammer)` sendes uafhængigt af hinanden, hvilket betyder, at de kan ankomme i en anden rækkeføkge end de blev sendt.
 
+Transport Layer er også ansvarlig for en vigtig funktion kaldet `process separation`. Denne funktion tillader flere programmer på sammen enhed at kommunikere samtidg ved hjælp af `port numbers`. Hver applikation får tildelt en unik portnummer, der brugres til at identificere den specifikke applikation på netværket.
+
+* portnumre:
+    * **well-known ports:** Disse er portnumre fra 0 til 1023 og bruges af velkendte protojoller som `HTTP - Port 80`, `HTTPs - port 443`, `FTP - port 21` og `SMTP - port 25`.
+    * **Registered ports:** Disse porte er portnumre fra 1024 til 49151 og bruges af applikationer registreret hos `IANA - Internet Assigned Numbers Authority`. Det er en organisation der er ansvarlig for at koortinere nogle af de centrale elementer, der holder internettet kørende.
+    * **Dynamic/Private ports:** Disse er portnumre fra 49152 til 65535 og bruges til dynamiske eller private forbindelser.
+
+Som et konkret eksempel, forstil dig, at su streamer en live sportsbegivenhed online:
+
+* TCP: hvis webstedet bruger TCP, sikre det, at hver del af videoen ankommer korrekt og i rækkefølge, men kan føre til `buffering`, hvis netværket er langsomt.
+* UDP: hvis webstedet bruger UDP, får du en jævn streamingoplevelse uden buffering, men nogle dele af videoen kan gå tabt, hvilket kan resultere i mindlertidige udfald eller lavere kvalitet.
+
+### Session Layer {#osi-session-layer}
+Session Layer er ansvarlig for at etablere, administrere og afslutte sessioner mellem applikationer på forskellige enheder. Dette lag styrer dialogen mellem to kommunikerende enheder ved at organisere og synkronisere dataudvekslingen.
+
+Funktioner i Session Layer:
+
+* Etablering af Sessioner:
+    * Session Layer starter og vedligeholder kommunikationssessioner mellem applikationer på to forskellige computere. En session kan beskrives som en tidsbegrænset forbindelse, hvor data kan udveksles.
+* Kontrol og Vedligeholdelse af Sessioner:
+    * Dette lag styrer dialogen ved at fastlægge, hvilken side der kan sende data på et givet tidspunkt, hvilket kaldes dialogkontrol. Det kan understøtte både `fuld duplex (samtidig tovejskommunikation)` og `halv duplex (vekselvis tovejskommunikation)`.
+* Synkronisering:
+    * Session Layer bruger synkroniseringspunkter, også kendt som `checkpoints` eller `synk points`, for at sikre, at data kan gendannes i tilfælde af en afbrydelse. Hvis en session afbrydes, kan transmissionen genoptages fra det sidste synkroniseringspunkt i stedet for fra starten.
+* Sekvenskontrol:
+    * Ved brug af sekvensnumre kan Session Layer spore dataenhederne og sikre, at de ankommer i den korrekte rækkefølge. Dette hjælper med at organisere data, så applikationerne får den rigtige sekvens af meddelelser.
+
+Protokoller i Session Layer:
+
+* NetBIOS (Network Basic Input/Output System):
+    * NetBIOS er en API, der giver applikationer på forskellige computere mulighed for at kommunikere i et `lokalnetværk (LAN)`. Det håndterer session og transporttjenester såsom navnefortolkning og datatransmission.
+* SOCKS (Socket Secure): 
+    * SOCKS er en internetprotokol, der ruter netværkspakker mellem klient og server gennem en `proxyserver`. Det kan bruges til at omgå firewalls og maskere brugernes IP-adresser.
+* NFS (Network File System):
+    * NFS tillader en computer at få adgang til filer over et netværk, som om de var på dens lokale diske. Session Layer håndterer etablering, vedligeholdelse og afslutning af filoverførselsessioner.
+
+Som konkret eksempel på Session Layer
+Forestil dig, at du deltager i en online videokonference:
+
+* Etablering af Session:
+    * Når du deltager i videokonferencen, etablerer Session Layer en session mellem din computer og serveren, der hoster konferencen.
+* Kontrol og Vedligeholdelse af Session:
+    * Session Layer styrer, hvornår du kan tale og hvornår du kan modtage data (video og lyd), ved at styre dialogen mellem din computer og serveren.
+* Synkronisering:
+    * Under konferencen kan synkroniseringspunkter sættes, så hvis forbindelsen afbrydes, kan sessionen genoptages fra det punkt, hvor den blev afbrudt, i stedet for at starte forfra.
+* Sekvenskontrol:
+    * Ved brug af sekvensnumre sørger Session Layer for, at video- og lydpakkerne ankommer i den rigtige rækkefølge, hvilket sikrer en korrekt og sammenhængende afspilning.
+
+Session Layer spiller en kritisk rolle i netværkskommunikation ved at sikre, at applikationer kan opretholde en pålidelig og organiseret forbindelse. Dette lag er især vigtigt i komplekse netværksapplikationer, hvor kontinuitet og rækkefølge af data er afgørende for korrekt funktionalitet.
+
+### Presentation Layer {#osi-presentation-layer}
+Presentation Layer er ansvarlig for datarepræsentation, konvertering og kruptering, hvilket sikrer, at data sendes fra afsenderen i et format, som modtageren kan forstå. Dette lag fungere som et oversætterlag mellem applikationer og netværk.
+
+Funktioner i presentation layer:
+
+1. Datarepræsentation og Konvertering:
+    * Presentation Layer håndtere konvertering af data mellem forskellige formater. Dette sikrer, at data kan forstås på tværs af forskellige systmer og applikationer. Eksempler på dataformater inkludere:
+        * ASCII - American Standard Code for Information Interchange
+        * EBCDIC - Extended Binary Code Decimal Interchange Code
+        * JPEG  Joint Photographic Experts Groups - for billeddata
+        * MPEG - Moving Picture Experts Group - for videodata
+2. Kryptering og Dekruptering:
+    * Her sikres datasikkerhed ved at kryptere data før transmission og dekryptere data ved modtagelse. Kryptering beskytter data mod uautoriseret adgang under transmissionen.
+3. Komprimering og Dekompressering:
+    * Presentation Layer komprimere data for at reducere båndbreddeforbruget under transmission. Ved modtagelse dekomprimeres data for at gendanne deres oprindelige format. Dette er især nyttigt til mediefiler som billeder, video og lyd.
+
+Som konkret eksempel:
+Forstil dig, at su sender en JPEG-billedefil via e-mail
+
+1. Datarepræsentation:
+    * Presentation Layer konvertere billedet til JPEG-format, som modtagerens system kan forstå.
+2. Kryptering:
+    * For at beskytte billedet under tensmissionen krypteres der.
+3. Komprimering:
+    * Billedet komprimeres for at minimere båndbreddeforbruget.
+4. Dekryptering og Dekompressering:
+    * Ved modtagelse dekrypteres og dekomprimeres billedet, og det konverteres tilbage til det oprindelige format for visning.
+
+### Application Layer {#osi-application-layer}
+
 
 
