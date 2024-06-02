@@ -3,6 +3,10 @@
 
 ## OSI modellen {#osi-modellen}
 
+<figure markdown="span">
+  ![osi modellen ](images/osimodellen.png){ width="800" }
+</figure>
+
 Hvorfor er `OSI Modellen` vigtig?
 For en datamatiker/programør er det vigtig at forstå OSI-modellen, da den:
 
@@ -202,6 +206,28 @@ Forstil dig, at su sender en JPEG-billedefil via e-mail
     * Ved modtagelse dekrypteres og dekomprimeres billedet, og det konverteres tilbage til det oprindelige format for visning.
 
 ### Application Layer {#osi-application-layer}
+ Application Layer er det øverste lag i OSI-modellen, der fungere som grænsefladen mellem applikationerne og netværket. Det levere netværkstjenester direkte til applikationerne og brugerne.
+
+ Funktioner i Application Layer:
+
+ 1. Netværkstjenester og Protokoller:
+    * Application Layer tilbyder forskellige tjenester og protojoller, som tillader applikationer at kommunikere med netværket. Nogle almindelige protojoller inkluderer:
+        * DNS - domain name system: Konverterer domænenavne til IP-adresser.
+        * HTTP - HyperText Transfer Protocol: Bruges til overførsel af webindhold.
+        * FTP - File Transfer Protocol: Bruges til filoverførsler mellem klient og server.
+        * SMTP - Simple Mail Transfer Protocol: Bruges til e-mail transmission.
+        * POP3/IMP: Bruges til hentning af e-mails fra en server
+ 2. Tjenester til Brugerapplikationer:
+    * Dette lag leverer funktionalitet, som gør det muligt for brugerapplikationer at anvende netværkstjenester. Det giver brugergrænseflader `(GUI'er)` til applikationer som webbrowsere, e-mail-klienter og filoverførselsprogrammer.
+ 3. Funktionalitet og Produktivitet:
+    * Application Layer spiller en central rolle i at levere funktionalitet, produktivitet og brugervenlighed i netværksmiljøet. Det giver brugerne adgang til forskellige applikationer og tjenester, som de bruger til at udføre deres opgaver.
+
+Som konkret eksempel:
+Når du besøger en hjemmeside ved hjælp af en webbrowser:
+
+1. DNS: Browseren bruger DNS til at kovertere webadressen til en IP-adresse.
+2. HTTP: Browseren bruger HTTP til at anmode om websidens indhold fra webserveren.
+3. FTP: hvis du downloader en fil fra hjemmesiden, kan FTP anvendes til at overføre filen til din computer.
 
 
 
