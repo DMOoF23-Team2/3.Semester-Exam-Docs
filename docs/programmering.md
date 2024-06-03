@@ -3,11 +3,51 @@
 ---
 
 ## Et distribueret system
-I forhold til at opnå læringsmålene for 3. semester har teamet valgt at fokusere på at lave et distribueret system.<br/>
-Team 2 har gjort dette ved at ved at oprette flere projects i den samlet solution.
-De fire projekter er som følger:
+Distribuerede systemer er en samling af autonome computerenheder, der samarbejder for at opnå et følles mål. Disse systemer er kendetegnet ved:
 
-### overordnet arkitektur {#overordnet-arkitektur}
+* Deres komponenter er geografisk adskilte
+* Komponenterne kommunikere over netværk
+    * Protokoller som HTTP/HTTPS, TCP/IP
+* Ressoucer deles og opgaver kan fordeles mellem flere computere, hvilket forvedre både ydeevne og pålidelighed
+    * Fejlrolerance: Systemet kan fortsætte med at fungere korrekt, selvom en eller flere komponenter fejler.
+
+
+### Overordnet arkitektur {#overordnet-arkitektur}
+
+Arkitekturen i projekt `RallyObedience` kan beskrives i termer af lagdelt arkitektur, som typisk opdeles i præsentationslag, forretninglogiklag og datalag.
+
+<figure markdown="span">
+  ![System Arkitektur](images/overordnetarkitekturprogrammering.png){ width="800" }
+</figure>
+
+**Præsentationslag: Frontend Blazor**
+Dette lag er ansvarlig for at inteagere med brugeren. Det viser brugergrænsefladen og sender brugerens input videre til backend-tjenesterne.
+
+* Komponent: `rally-blazor`
+* Funktion: Viser data til brugeren og sender brugerens input som HTTP-request til API'en
+
+**Forretningslogiklag: API og Data Backend**
+Dette lag håndtere applikationens kernefunktionalitet. Det modtager `requests` fra præsentationslaget, nehnadler forretningslogik gennem implementerede `controllers` og `services` og kommunikere med datalaget.
+
+* Komponent: `rally-webapi`
+* Funktion: Behandler forretningslogi og regler, validere input, udfører beregninger og sender `requests` til datalaget.
+
+**Datalag: Database MSSQL**
+Dette lag er ansvarlig for at gemme og hente data. Det modtager `requests` fra forretningslogiklaget og sender `respons` med de nødvendige data retur.
+
+* Komponent: sqlpreview
+* Funktion: Håndtere lagring, hentning og administration af data.
+
+#### Samspil mellem lagene
+
+1. Præsentaionslager: Brugeren interagere med Blazor-applikationen, som sender en HTTP-anmodning til API'en for at udfører en given funktionalitet (f.eks. valider bane med id x ud fra niveau begynder).
+2. Forretningslogiklag: API'en modtager anmodningen `controlleren`, behandler forretningslogikken `services`. Og sender en SQL-forespørgsel til databasen gennem `repo`.
+3. Datalag: MSSQL-databasen udfører forespørgslen og returnere resultatet til API'en (information om bane med id-x).
+4. Forretninglogiklaget: API'en behnadler de modtagne data og sender et svar tilbage til Blazor-applikationen.
+5. Præsentationslag: Blazor-applikationen modtager svaret og viser dataene til brugeren (udfører et validerings tjek på banens information, om dens collection af skilter overholder reglementet for niveau begynder og returnere en besked med information om hvad den mangler for at opfylde eller OK - den er valideret).
+
+Ved at opdele systemet i disse lag forsøge der at opnå klar `separation of concerns`, hvilket gør det lettere at udvikle, vedligholde og skalere systemet.
+
 
 #### Hvordan Containerization Illustere Vores Distribuerede System {#vores-brug-af-docker}
 I projekt `RallyObedience` har vi anvendt `Docker` til at containerisere tre hovedkomponenter:
