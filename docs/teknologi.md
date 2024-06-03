@@ -247,5 +247,51 @@ se afsnittet [Tilføjelse ved xp](extreamProgramming.md#tilføjelse-ved-xp) for 
 ### Risikoanalyse {#teknologi-Risikoanalyse}
 Risikoanalyse involvere vurdering af sandsynligheden for forskellige trusler samt deres potentielle konsekvenser. Formålet er at prioritere trusler baseret på deres risiko og derefter træffe beslutninger om, hvilke sikkerhedsforanstaltninger der skal implementeres.
 
-I system `RallyObedience`
+I system `RallyObedience` kan vi gennemføre en risikoanalyse ved at identificere truslerne for hver use case, men også for hver komponent der indgår i det distribuerede system og vurdere deres risiko:
+
+1. Frontend (Klient - Browser med Blazor)
+    * Trusler: 
+        * Cross-Site Scripting `XSS`
+        * Man-in-the-Middle `MitM`
+    * Sikkerhedsforanstaltninger:
+        * Blazor encoder output automatisk for at beskytte mod XSS.
+        * Brug af HTTPS forhindre MitM angreb ved at sikre kryptering.
+
+2. Backend (API-server)
+    * Trusler:
+        * Denial of Service `Dos` angreb. Uatoriseret adgang, datainterception.
+    * Sikkerhedsforanstaltninger:
+        * Rate limiting for at fordinre Dos
+        * Authentication og Authorization for at beskytte mod uatoriseret adgang
+        * Kryptering af data i transit, input validering og firewalls
+
+3. * Trusler:
+        * Uatoriseret adgang
+        * `Datatab`
+        * `SQL-injektion`
+    * Sikkerhedsforanstaltninger:
+        * Reglmæssige backups for at forhindre datatab
+        * Adgangskontrolmekanismer (Identity)
+        * Brug af prepared statements eller Stored procedures for at beskytte mod SQL-injektion
+
+#### Identificering af Arbejdsprocesser og Aktiver
+For at sikre en effektiv trusselmodellering og risiko analyse er det vigtigt at identificere de forskellige arbejdsprocesser og aktiver i systemet:
+
+arbejdsprocesser:
+* Autentifikation og Autorisation: Håndtering af brugerlogin og adgangskontrol
+* Datahåndtering: Opslag, opdatering og lagring af data
+* Kommunikation: udveksling af data mellem klient og server
+
+Aktiver:
+* Brugeroplysninger: Personlige data, loginoplysninger
+* Systemdata: Bane designs, kommentarer, chatbeskeder
+* Kommunikationskanaler: HTTPS-forbindelser mellem klient og server
+* API-Endpoints: Funktioner til databehandling og -hentning
+
+### CIA-Triaden
+CIA-Triaden er en fundamental sikkerhedsmodel, der bruges inden for trusselsmodellering til at evaluere og sikre sytemer. 
+Den består af tre nøgleprincipper:
+
+
+    
 
