@@ -265,7 +265,8 @@ I system `RallyObedience` kan vi gennemføre en risikoanalyse ved at identificer
         * Authentication og Authorization for at beskytte mod uatoriseret adgang
         * Kryptering af data i transit, input validering og firewalls
 
-3. * Trusler:
+3. 
+    * Trusler:
         * Uatoriseret adgang
         * `Datatab`
         * `SQL-injektion`
@@ -278,11 +279,13 @@ I system `RallyObedience` kan vi gennemføre en risikoanalyse ved at identificer
 For at sikre en effektiv trusselmodellering og risiko analyse er det vigtigt at identificere de forskellige arbejdsprocesser og aktiver i systemet:
 
 arbejdsprocesser:
+
 * Autentifikation og Autorisation: Håndtering af brugerlogin og adgangskontrol
 * Datahåndtering: Opslag, opdatering og lagring af data
 * Kommunikation: udveksling af data mellem klient og server
 
 Aktiver:
+
 * Brugeroplysninger: Personlige data, loginoplysninger
 * Systemdata: Bane designs, kommentarer, chatbeskeder
 * Kommunikationskanaler: HTTPS-forbindelser mellem klient og server
@@ -300,6 +303,7 @@ Den består af tre nøgleprincipper:
 Fortrolighed sikrer, at information kun er tilgængelig for autoriserede personer og systemer. Dette beskytter data mod uatoriseret adgang og afsløring. I trusselsmodellering handler det om at identificere og beskytte data, der kan være følsomme, såsom brugeroplysninger og kommunikation.
 
 Eksempler på sikkerhedsforanstaltninger:
+
 * Kryptering af data i hvile og under transmission
 * Implementering af adgangskontrolmekanismer som autentifikation og autorisation
 * Brug af sikre kommunikationsprotokoller som HTTPS
@@ -308,18 +312,47 @@ Eksempler på sikkerhedsforanstaltninger:
 Interitet sikrer, at information ikke kan ændres eller sltees på en uatoriseret måde. Det handler om at beskytte data mod manipulation og sikre, at de forbliver nøjagtige og konsistent.
 
 Eksempler på sikkerhedsforanstaltninger:
+
 * Brug af hash-funktioner og digitale signaturer for at sikre dataintegritet.
 * Implementering af input validering for at beskytte mod angrab som SQL-injektion.
 * Logging og overvågning af systemaktiviteter for at opdage og reagere på uatoriserede ændringer.
 
-### Availability - Tilgængelighed
+#### Availability - Tilgængelighed
 Tilgængelighed sikre, at information og systmer er tilgængelige for autoriserede brugere, når de har brug for det. Dette handler om at beskytte systemet mod angreb og fejl, der kan forårsage nedetid eller forhindre brugere i at få adgang til de nødvendige ressourcer.
 
 Eksempler på sikkerhedsforantaltninger:
+
 * Implementering af redundans og failover-mekanismer
 * Beskyttelse mod DoS angreb gennem rate limiting og firewalls
 * Reglmæssige sikkerhedskopier for at sikre data tilgængelighed i tilfælde af systemfejl.
 
 ### STRIDE {#teknologi-STRIDE}
+`STRIDE` er en metode udviklet af Microsoft til systematisk identifikation og kategorisering af sikkerhedstrusler i software og informationssystemer. 
+Det står for seks kategorier af trusler:
+
+1. Sppofing
+    * En angriver udgiver sig for at være en anden bruger eller en enhed for at få uatoriseret adgang til et system.
+2. Tampering
+    * En angriber ændrer data eller kode i systemet, enten under transmission eller i hvile
+3. Repudiation
+    * Også kalder afvisning - En bruger nægter at have udført en handling, og systemet har ikke tilstrækkelig beviser til at modbevise denne påstand.
+4. Information Discolosure
+    * Uatoriseret adgang til information, der burde være beskyttet
+5. Denial og Services DOS
+    * Et angreb, der forhindre legitime brugere i at få adgang til systemet eller dets ressourcer.
+6. Elevation of Privilege
+    * En brugere opnår højere adgangsrettigheder end autoriseret, hvilket giver dem mulighed for at udføre handlinger, de normalt ikke har adgang til.
+
+STRIDE bruges til at gennemgå systemets forskellige dele og identificere potentielle trusler inden for hver kategori. Ved at analysere truslerne på denne måde kan udviklere og sikkerhedsspecialister:
+
+* Systematisk identificere trusler:
+    * ved at anvendes STRIDE-modellen sikres det at alle relevante typer af trusler overvejes.
+* Forstå truslers natur:
+    * Kategoriseringen hjælper med at forstå, hvilke type trusler systemet står overfor, og hvorfan de kan manifestere/opstå.
+* Prioritere sikkerhedsforanstaltninger / sikkerhedskrav
+    * Ved at forstå truslernes type og konsekvens kan man prioritere indsatsen på at beskytte systemet mod de mest alvorlige trusler.
+* Dokumentere sikkerhedsarbejde:
+    * STRIDE-modellen giver en struktureret tilgang til at dokumentere trusselsidentifikation og de tilførende afbødende foranstaltninger.
+
 
 
