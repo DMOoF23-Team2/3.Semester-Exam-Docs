@@ -1,0 +1,1164 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../programmering/">
+      
+      
+        <link rel="next" href="../teknologi/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Systemudvikling - Rally Obedience Docs.</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#systemudvikling" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rally Obedience Docs." class="md-header__button md-logo" aria-label="Rally Obedience Docs." data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rally Obedience Docs.
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Systemudvikling
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Scope/" class="md-tabs__link">
+        
+  
+    
+  
+  Project Scope
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../extreamProgramming/" class="md-tabs__link">
+        
+  
+    
+  
+  Extream Programming
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../featureDrivenDevelopment/" class="md-tabs__link">
+        
+  
+    
+  
+  Feature Driven Development
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../programmering/" class="md-tabs__link">
+        
+  
+    
+  
+  Programmering
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Systemudvikling
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../teknologi/" class="md-tabs__link">
+        
+  
+    
+  
+  Teknologi
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rally Obedience Docs." class="md-nav__button md-logo" aria-label="Rally Obedience Docs." data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rally Obedience Docs.
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extreamProgramming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extream Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featureDrivenDevelopment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Driven Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programmering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Systemudvikling
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Systemudvikling
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#opstarts-fasen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opstarts fasen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Foranalyse1.iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foranalyse - 1.iteration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Foranalyse - 1.iteration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#krav-til-systemet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Krav til systemet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Krav til systemet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bane-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bane system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat system
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Businesscase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Businesscase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Businesscase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beskrivelse-af-problemomradet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beskrivelse af problemområdet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kravspecifikation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kravspecifikation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interessenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interessenter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kerneinteressenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kerneinteressenter:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nre-primrer-interessenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nære Primærer interessenter:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenarie-oversigt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenarie oversigt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0-scenariet" class="md-nav__link">
+    <span class="md-ellipsis">
+      0-scenariet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-scenariet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1-scenariet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprogbrug-i-domnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprogbrug i domænet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemudviklingsmetoder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systemudviklingsmetoder
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Systemudviklingsmetoder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fdd-feature-driven-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      FDD - Feature Driven Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FDD - Feature Driven Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-i-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices i FDD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stages-i-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stages i FDD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tilpasning-af-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tilpasning af FDD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflections-on-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refleksioner FDD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Refleksioner FDD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refleksioner-om-arbejdet-med-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refleksioner om arbejdet med FDD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valg-af-extream-programming-xp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valg af Extream Programming - XP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xp-extream-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      XP - Extream Programming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XP - Extream Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principper-i-xp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principper i XP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faser-i-xp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Faser i XP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teknologi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teknologi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="systemudvikling">Systemudvikling</h1>
+<hr />
+<p>Team 2 på 3. semester skal vælge og arbejde med mindst 2 systemudviklingsmetoder til deres eksamensprojekt. De vil reflektere over fordele og ulemper ved hver metode og tilpasse dem til projektet efter behov. Denne side vil give et overblik over de valgte metoder, samt dokumentere deres anvendelse i projektet <code>Rally Obedience</code>.</p>
+<hr />
+<h2 id="opstarts-fasen">Opstarts fasen</h2>
+<p>Inden den første systemudviklingsmetode vælges er der udfærdiget en foranalyse, som indeholder:</p>
+<ul>
+<li>Businesscase</li>
+<li>Krav til systemet</li>
+<li>Sprogbrug i domænet</li>
+</ul>
+<p>Denne foranalyse er udfærdigt med baggrund i en præsentation af projektet som PO afholdte i starten af 3.semester og dermed i opstartsfasen af projektet.
+Det betyder også at den første iteration af foranalysen tager udgangspunkt i 2.semester stof, da Team 2 på dette tidspunkt i projektet ikke var introduceret til nye begreber eller ikke har tilegnet sig mere viden siden 2.semester om begreberne:</p>
+<ul>
+<li>Procesmodeller</li>
+<li>Fokusområder</li>
+<li>Systemudviklingsmetoder</li>
+<li>Teknikker</li>
+<li>Værktøjer</li>
+<li>Usikkerhedder</li>
+<li>Kompleksitet</li>
+</ul>
+<hr />
+<h2 id="Foranalyse1.iteration">Foranalyse - 1.iteration</h2>
+<h3 id="krav-til-systemet">Krav til systemet</h3>
+<p>Overordnet kan systemet deles op i to sub-systemet. Et Bane system og et Chat system.
+Følgende lister de identificerede krav til hvert af de to systemer.</p>
+<h4 id="bane-system">Bane system</h4>
+<ul>
+<li>Automatisk skiltenummer, pile og udfyldelse af skilteoversigt</li>
+<li>Mærker på baner, niveau, tema og antal skilte</li>
+<li>Lave baner, der overholder reglementet</li>
+<li>Lave baner, til træning, som ikke nødvendigvis overholder relementet</li>
+<li>Samarbejde om bane design i reltid</li>
+<li>Oprette interaktivt baner, trække og slippe skilte ind på banen</li>
+<li>Dele baner med andre instukrtører/dommer plus tildele dem rettigheder som ReadOnly eller Edit</li>
+</ul>
+<h4 id="chat-system">Chat system</h4>
+<ul>
+<li>oprette en trå mellem to instruktører</li>
+<li>oprette en gruppechat mellem flere instruktører</li>
+<li>evt. udvide de to ovenstående til at inkludere dommere</li>
+</ul>
+<h3 id="Businesscase">Businesscase</h3>
+<h4 id="beskrivelse-af-problemomradet">Beskrivelse af problemområdet</h4>
+<p><strong>Forretningsmæssig baggrund</strong> - Nordfyns Civile Hundeførerforening (NcH) er en del af organisationen Danmarks Civile hundeførerforening (DCH). 
+DcH tilbyder undervisning i forskellige typer af hundesport, heriblandt Rally lydighed. 
+NcH har en række frivillige instruktører som står for denne undervisning af ekvipage (hund og fører). En del af instruktørens rolle er at designe baner som ekvipage skal gennemføres i træning. 
+På nuværende tidspunkt anvender instruktørerne et PowerPoint (PPT) til at designe disse baner og Facebook som kommunikationsplatform. 
+Ved afholdelse af konkurrencer står en landsdækkende dommer for at designe banen. Det antages at dommerne anvender samme PPT som instruktørerne i denne proces.</p>
+<p><strong>Forretningsmæssig problemstilling</strong> - På nuværende tidspunkt, er der ikke ét dedikeret værktøj som rummer alle NcH og Dommeres behov.
+Den nuværende praksis for planlægning, design og deling af træningsbaner står dog overfor flere væsentlige udfordringer. 
+Disse inkluderer ineffektivitet i oprettelse og deling af baner, manglende evne til let at tilpasse baner til specifikke niveauer eller temaer, og vanskeligheder ved at sikre overensstemmelse med officielle regler. 
+Den eksisterende løsning baseret på PowerPoint og Facebook tilbyder begrænset funktionalitet og understøtter ikke effektivt samarbejde mellem instruktører eller kommunikation med engagerede hundeførere.</p>
+<h4 id="kravspecifikation">Kravspecifikation</h4>
+<p>Idet at NcH skal bruge et værktøj, der skal kunne fungere som en platform, hvor flere intressenter skal kunne samarbejde omkring en bane, både samtidig, men også forskudt, er det blevet fastlagt, at en webbaseret løsningen ville passe bedst til NcHs krav.
+I og med at de allerede bruger Facebook og Powerpoint, skal de heller ikke invistere i nyt udstyr, men de kan bruge de enheder, som de allerede har til rådighed.</p>
+<h4 id="interessenter">Interessenter</h4>
+<h4 id="kerneinteressenter">Kerneinteressenter:</h4>
+<ol>
+<li>Nordfyns Civile Hundeførerforening (NcH)</li>
+<li>Instruktører</li>
+</ol>
+<h4 id="nre-primrer-interessenter">Nære Primærer interessenter:</h4>
+<ol>
+<li>Danmarks Civile Hundeførerforening (DcH)</li>
+<li>Dommere</li>
+<li>Hundefører</li>
+</ol>
+<h4 id="scenarie-oversigt">Scenarie oversigt</h4>
+<h4 id="0-scenariet">0-scenariet</h4>
+<p>NcH fortsætter med at bruge PowerPoint og Facebook til oprettelse af baner og kommunikarion</p>
+<ul>
+<li><strong>Fordele</strong>: Der skal ikke investeres i et nyt system. Ingen tidskrævende overgangsfase eller introduktion til det nye system.</li>
+<li><strong>Ulemper</strong>: Den nuværende ineffektive og tidskrævende proces ved banedesign fortsættes uændret.</li>
+</ul>
+<h4 id="1-scenariet">1-scenariet</h4>
+<p><strong>Formålet</strong> - At tilbyde en platform for NcH, der giver deres instruktører mulighed for at samarbejde om design af baner, mulighed for at dele, gemme og genbruge oprettede baner. 
+Derudover skal instruktørerne have mulighed for at kommunikere med hinanden gennem platformen. Både i form af chat funktionalitet, så de instruktørerende kan vidensdele og andet, og så de kan kommunikere omkring bane design.</p>
+<p><strong>Forretningsmæssig løsningsbeskrivelse</strong> - Løsningen skal dels sikre, at design og deling af rally lydighed baner foregår mere effektivt og struktureret, og dels muliggøre realtidssamarbejde og feedback mellem instruktører.</p>
+<p>Den nuværende praksis med manuelt at tegne baner i PowerPoint og dele dem i en Facebook-gruppe, hvor feedback gives i kommentarfeltet, erstattes af en integreret webbaseret platform. Denne platform vil gøre det muligt for instruktører at designe baner, validere dem automatisk mod reglementet, dele dem med specifikke personer eller grupper, og modtage og give feedback direkte i systemet.</p>
+<p>I første omgang er løsningen tiltænkt rally lydighed instruktører, men med potentiale for senere at udvide til dommer. 
+Det vurderes, at løsningen umiddelbart kan forbedre kvaliteten og effektiviteten af træning betydeligt og fremme et tættere samarbejde og vidensdeling mellem instruktører og evt. dommere.</p>
+<p><strong>it-mæssig løsningsbeskrivelse</strong> - Rally Lydighed udvikles som en webapplikation ved brug af Blazor for front-end, for at visualisere data og funktionaliteter på en dynamisk og interaktiv måde. </p>
+<p>Back-end delen bygges i ASP.NET med C# i en objektorienteret, lagdelt arkitektur, som kommunikerer med databasen og sender respons til front-end. </p>
+<p>Databasen håndteres via SQL Server Management Studio (SSMS) for robust og effektiv dataopbevaring. </p>
+<p>Disse komponenter arbejder sammen for at danne et distribueret system, som tilsammen sikrer en modulær og fremtidssikret løsning, hvor det er muligt at udvide med yderligere funktionalitet og let at vedligeholde systemet.</p>
+<p><strong>Forretningsmæssige effekter</strong> - <strong>Økonomiske effekter</strong> - Bedre vilkår og mere effektivt at være intruktør, hvilket kan gøre det mere attraktivt at være instruktør.
+hvis Nch opnår flere instruktører kan der oprettes flere træningshold og med flere træningshold vil der opstå en øget indtægt.</p>
+<p><strong>Gevinster</strong> - En webapplikation vil give NcH en mere effektiv metode at designe baner.
+Gennem bedre kommunikation og samarbejde, vil disse baner blive forbedret i forhold til fællesskabets feedback.
+Det vil give instruktørerne en større glæde og lyst til at oprette baner og dele dem med hinanden. Samtidig er der et katalog over alle banerne, der alt sammen vil være med til at øge fællesskabet og kvaliteten af baner og træning.</p>
+<p><strong>Implementering og opfølgning</strong> - Platformen skal implementeres gennem oplæring og opfølgning ved at gå igennem følgende:</p>
+<ul>
+<li><strong>Platformen og dokumentation overdrages til Product Owner (PO)</strong> - PO får en detaljeret gennemgang af opsætning og brug af platformen. Der skal aftales faste tidspunkter til gennemgang og feedback.</li>
+<li><strong>Test og validering</strong> - NcH medlemmer får i første omgang, som de eneste adgang til systemet. Dette skal ses som en demo. I en given periode får de lov at anvende og teste platformen. De afgiver feedback til PO.</li>
+<li><strong>Feedback og tilpasning</strong> - Den feedback NcH har videregivet PO gennemgås mellem udviklingsteamet og PO. Platformen tilpasses i forhold til feedbacken, så ønsker bliver implementeret og fejl tilrettes.</li>
+</ul>
+<p>Dette skal ses som en cyklisk proces, der fortsætter indtil NcH oplever det produkt som de efterspørger. Herefter kan platformen udgives som en færdig version, hvor DcHs dommer får adgang.</p>
+<p><strong>KPI'er</strong></p>
+<ul>
+<li>Antal aktive brugere på platformen.</li>
+<li>Gennemsnitlig tid brugt på at designe en bane.</li>
+<li>Brugertilfredshedsmålinger</li>
+<li>Overholdelse af regler i banedesign</li>
+<li>Antallet af oprettede baner (x% forøgelse,i forhold til hvad der er nu)</li>
+<li>Aktivitet på oprettede baner (Kommentarer, delinger)</li>
+<li>En tilfredshedscore på 8/10, laver på baggrund af brugerundersøgelser</li>
+</ul>
+<h4 id="sprogbrug-i-domnet">Sprogbrug i domænet</h4>
+<ul>
+<li><strong>Klasse</strong>: Sværhedsgrad / niveau for en bane</li>
+<li><strong>Øvelse/Momenter</strong>: Det som hunden skal udføre. Det kan være et spring, stå, højre handlet etc.</li>
+<li><strong>Ekvipage</strong>: Hund og hundefører</li>
+<li><strong>Skilt</strong>: Det skilt på banen, hvor der står angivet hvad ekvipage skal udføre</li>
+<li><strong>Rally lydighed</strong>: Hundesport</li>
+<li><strong>Reglementet</strong>: De officelle regler/retningslinjer fra Landsforeningen Danmarks Civilie Hundeførerforering, anvendes i forbindelse med konkurrence baner.</li>
+<li><strong>Instruktør</strong>: frivillige underviser i de lokale foreninger.</li>
+</ul>
+<hr />
+<h2 id="systemudviklingsmetoder">Systemudviklingsmetoder</h2>
+<h3 id="fdd-feature-driven-development">FDD - Feature Driven Development</h3>
+<p>Team 2 har valgt <code>Feature Driven Development</code>, også kaldet <code>FDD</code>, som den første systemudviklingsmetode at arbejde ud fra.</p>
+<p>FDD er en agil metode, der oftest anvendes af store teams. Afgørende for denne tilgang er oprettelsen af en liste over funktioner <a href="../featureDrivenDevelopment/#feature-list">Feature List</a> for at identificere projektets krav og håndtere opgaver relateret til udviklingen af produktet.</p>
+<p>Features, kan anskues som <code>Use Cases</code> i RUP <code>(Rational Unified Process)</code>, og som <code>User's stories</code> i Scrum. Disse udgør grundlaget for projektets krav og planlægning og udtrykkes som <code>handling-resultat-objekt</code>.</p>
+<h4 id="best-practices-i-fdd">Best Practices i FDD</h4>
+<p>Der er 8 bedste praksis <code>(best pratices)</code> som bør benyttes når FDD anvendes som systemudviklingsmetode. </p>
+<ul>
+<li><strong>Domain object modeling:</strong><ul>
+<li>En overordnet domænemodel <code>(An overall model)</code> opbygges, der fungere som et rammeværk og fællesforståelses ramme for udvikling af features.</li>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#An-overall-model">Team 2's overall model her</a>.</li>
+</ul>
+</li>
+<li><strong>Developing by feature:</strong><ul>
+<li>Features-sæt bliver nedbrudt, indtil de når det mindste punkt, der er håndterbart nok til at levere resultater.
+Dette indbærer at opdele de overordnede systemkrav i mindre, mere håndterbare features, som derefter kan fungere som de grundlæggende opgaver <code>(Tasks)</code>, som systemet skal kunne udfører, og yderligere opdele dem i mindre dele, der kan udvikles individuelt.</li>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#Developing-by-feature">Team 2's Developing by feature her</a></li>
+</ul>
+</li>
+<li><strong>Component/Class Ownership:</strong><ul>
+<li>Ansvaret for en given feature der skal udvikles, tildeles én udvikler eller ét udviklingsteam, som bliver holdt til ansvar for kode-konsistensen, ydeevne og integritet til det overordnede projekts mål og krav overholders i forhold til processejeren.</li>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#Component-class-ownership">Team 2's Component/Class Ownership her</a></li>
+</ul>
+</li>
+<li><strong>Feature Teams:</strong><ul>
+<li>Dette er mindre udviklings grupper/teams, som dynamisk bliver formet, opløst og formet igen, alt efter hvilke features der skal udvikles.</li>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#Component-class-ownership">Team 2's Feature Teams her</a></li>
+</ul>
+</li>
+<li><strong>Inspections:</strong><ul>
+<li>Indarbejd regelmæssige inspektionsaktiviteter i udviklingsprocessen. Dette kan omfatte <code>peer reviews</code> og <code>systemgennemgang</code>. Det kan også omfatte <code>kvalitetssikringsaktiviteter</code> i udviklingsprocessen, da FDD er en <code>iterativ udviklingsmetode</code> som gør brug af af en <code>cyklisk procesmodel</code>.</li>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#inspections">Team 2's Inspections her</a></li>
+</ul>
+</li>
+<li><strong>Configuration Management:</strong><ul>
+<li>Ændringer i produktet/systemet dokumenteres og vedligeholdes til fremtidige referencer.</li>
+<li>Det er formålet med denne website at fungere som dokumentation af hele <code>projekt Rally Obedience</code>.</li>
+</ul>
+</li>
+<li><strong>Regular Builds:</strong><ul>
+<li>For at sikre produktet er relevant og brugbart, udgives mindre dele af produktet reglmæssigt indtil hele projektet er færdigt.</li>
+<li>Disse mindre udgivelser af produktet, anvendes til reviews med PO, hvor feedback og evt. ændringer defineres og tages i betragtning i den videre udviklingsproces.</li>
+</ul>
+</li>
+<li><strong>Visibility of progress and results:</strong><ul>
+<li>For at sikre at udviklingen af det færdige produkt er på rette spor, monitorerers progration i udviklingsprocessen og rapoteres.</li>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#visibility-of-progress">Team 2's Visibility of progress her</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="stages-i-fdd">Stages i FDD</h4>
+<p>Overordnet arbejdes der i 5 faser/<code>(stages)</code> i FDD. Undervejs gennem de 5 stages anvendes de 8 best pratices. Selvom de 5 stages er listet herunder, er det vigtigt at forstå at stages bliver genbesøgt gennem den cykliske processmodel. For hvert genbesøg dokumenteres evt. ændringer og tilføjelser.</p>
+<ul>
+<li>Stage 1 - Develop an overall model<ul>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#An-overall-model">Team 2's overall model her</a>.</li>
+</ul>
+</li>
+<li>Stage 2 - Build a features list<ul>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#feature-list">Team 2's Feature List her</a></li>
+</ul>
+</li>
+<li>Stage 3 - Plan by feature<ul>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#plan-by-feature">Team 2's Plan by feature her</a></li>
+</ul>
+</li>
+<li>Stage 4 - Design by feature<ul>
+<li>Se mere dokumentation af <a href="../featureDrivenDevelopment/#design-by-feature">Team 2's Design by features</a></li>
+</ul>
+</li>
+<li>Stage 5 - Build by feature</li>
+</ul>
+<hr />
+<h4 id="tilpasning-af-fdd">Tilpasning af FDD</h4>
+<p>Team 2 har udfærdiget artefaktorne <code>Business Case</code> og <code>Use Case Diagram</code> som supplerende værktøjer til teknikken <code>Develop an overall modell</code>. For nærmere beskrivelse af selve teknikken se <a href="../featureDrivenDevelopment/#An-overall-model">Team 2's overall model her</a>.</p>
+<hr />
+<h3 id="reflections-on-fdd">Refleksioner FDD</h3>
+<h4 id="refleksioner-om-arbejdet-med-fdd">Refleksioner om arbejdet med FDD</h4>
+<p>Feature Driven Development giver en fantastisk mulighed for at arbejde på mindre fokuserede dele af projektet af gangen - kaldet features.
+Ved at fokusere på individuelle funktioner/features får udviklingsteamet bedre kontrol over processen.
+Dette gør det lettere at identificere og løse eventuelle problemer, da ændringer ikke påvirker hele systemet på en gang. </p>
+<p>FDD fremmer en tæt kommunikation og samarbejde mellem udviklerene.
+Ved at arbejde tæt sammen omkring individuelle features kan alle parter bedre forstå kravene og forventningerne.</p>
+<p>Set i reto-perspektiv, ville FDD nok ikke have været den optimale systemudviklingsmetode for vores team.
+FDD egner sig bedste til store udviklingsteams, hvor opdelingen i flere mindre Teams er muligt.
+Selvom vi har opdelt teamet til to mindre teams af to personer, vil vi argumentere for at størrer teams har sine fordele. 
+Særligt når det kommer til at søge ny information om en ukendt teknologi eller flere synsvinkler i forbindelse med analyse eller design.
+Derudover vurdere vi at FDD kræver udviklingsteams med en del mere erfaring end vi har, da meget af tiden i vores projekt går med at finde information om vores løsning der er præget at ukendte teknologier. </p>
+<p>Denne opfattelse kan skyldes, at første gang vi skulle vælge en systemudviklingsmetode, var vi ikke introduceret til begreberne <code>Kompleksitet</code> og <code>Usikkerheder</code>. 
+Usikkerheder og kompleksiteter danner et grundlag for valg af procesmodel og dermed også systemudviklings metode.
+Da vi efterfølgende har identificeret mange usikkerhed, særligt om den anvendte teknologi i projektet, ville en anden systemudviklingsmetode, måske have været at fortrække som opstarts metode. Derudover ville et mere oplyst valg af procesmodel helt sikkert have bidraget positivit til projektet og gjort proaktiv projektstyring nemmere.</p>
+<p>Derudover blev vi også først introduceret til de forskellige typer af procesmodeller efter vi havde valgt FDD, hvilket igen giver en lidt omvendt rækkefølge af tingene.
+Med dette menes, at udviklings teamet kendte til vandfald og cyklisk procesmodel i et begrenset omfang fra tidligere semestre. Hvor udviklingsteamet her på 3.semester har tilegnet sig ny og mere viden om procesmodeller og derfor har kunne taget et mere begrundt/oplyst valg om systemudviklingsmetode nr. 2 i projektet. </p>
+<h4 id="valg-af-extream-programming-xp">Valg af Extream Programming - XP</h4>
+<p>På baggrund af den nye tilegnede viden, hvor et <code>projektbrief</code> først defineres, derefter udføres <code>foranalyserne</code>, hvor <code>kompleksiteter</code> og <code>usikkerheder</code> bla. defineres og samles, som grundlag for valg af procesmodel og derefter systemudviklens metode, Vælger vi i teamet at omstrukturer til en <code>Cyklisk - inkrementel</code> procesmodel og systemudviklingsmetoden <code>Extream Programmingen(XP)</code>.</p>
+<p>Dette gør vi for bla. bedre at kunne håndtere de usikkerheder, som vi på nuværende tidspunkt i projektets-situation står overfor, i form af ukendt teknologi, særligt anvendelsen af Blazor, som vi først modtager undervisning i 7 maj. Dette har også gjort det svært at gennemfører FDD fuldkommen, da det har været svært at implementere en feature i <code>frontend</code> delen af projektet. Det er lykkedes, men meget tid er gået med at finde ud af hvordan Blazor fungere.</p>
+<p>Teamet vurdere, at de 4 faser i XP og tilgangen om at tage en ting af gangen og være imødekommende over for ændringer passer godt ind i projektets situation, da projektet befinder sig på et stadie hvor der skal refactors en del.
+Den overordnede <code>an-overall-model</code> model fra FDD's tidlige fase, skal genbesøges igen og med den øgede forståelse for krav og domænet tilrettes.
+Derfor virker tilgangen om at tage en ting af gangen, planlægge, kode, teste og lytte til feedback som passende i denne større refaktoreriseringsproces. Som nævnt anvendes Cyklisk - inkrementel procesmodel til dette, da tilgangen her er at vælge en del (en eller flere sammenhængende features) og udvikle i fuld fidelity.
+Når denne del er fuldt udviklet, vælges der en ny del. Dette vurderes som passende i forhold til projektet-situation om at refactor hen i mode et mere fuldt implementeret produkt.</p>
+<hr />
+<h3 id="xp-extream-programming">XP - Extream Programming</h3>
+<h4 id="principper-i-xp">Principper i XP</h4>
+<p>Principperne bag denne systemudviklingsmetode er kommunikation, simpelhed, feedback, mod og accept af løbende ændringer (respekter at XP lever).</p>
+<p>De 3 vigtigste principper kan beskrives således:</p>
+<ul>
+<li>Feedback:<ul>
+<li>Feedback indsamles/modtages ofte, der bør ikke gå lang tid mellem en release af produktet uden en præsentation af produktet for dets bruger/PO. Gennem feedback identificeres mindre fejl og mangler, som håndteres med det samme før de skaber større problemer for det samlede produkt.</li>
+</ul>
+</li>
+<li>Assuming Simplicity:<ul>
+<li>XP tager en ting ad gangen. Ofte små releases vurderes at være givende for projektet, så både klienten/kunden og udviklerne er "attuned" ift. udviklingen af produktet. Dette muliggør også, at det er nemmere for både klienter og udviklere at spotte fejl og mangler i produktet.</li>
+</ul>
+</li>
+<li>Embracing Change:<ul>
+<li>Ændringer er uundgåelige, og derfor omfavner XP-udviklere ændringer, når behovet for dem opstår, i stedet for at arbejde rundt om dem.</li>
+</ul>
+</li>
+</ul>
+<h4 id="faser-i-xp">Faser i XP</h4>
+<ul>
+<li>Planlægning:<ul>
+<li>I denne periode mødes klienter og udviklere for at diskutere produktkrav, som vil blive omsat til 'brugerhistorier/user-stories'. Disse brugerhistorier konverteres til iterationer, hvor udviklere arbejder på specifik funktionalitet eller funktioner i produktet. Teamet forbereder også planen, opgaverne, tidsplanerne og omkostningerne for hver iteration.</li>
+</ul>
+</li>
+<li>Kodning:<ul>
+<li>I softwareudvikling mener XP, at kodning er den vigtigste proces i projektet. Forretningsmæssigt set er dette stadiet, hvor udviklerne søger efter den bedst mulige løsning på et problem eller krav, som er fastlagt af klienterne.</li>
+</ul>
+</li>
+<li>Testning:<ul>
+<li>Testning udføres inden for udviklingsfasen og ikke ved dens afslutning. Produkter præsenteres og demonstreres for kunderne, og de tester dem baseret på deres krav og produktets brugervenlighed.</li>
+</ul>
+</li>
+<li>Lytning:<ul>
+<li>Efter testning, og hvis kunderne rapporterer, at produktet skal forbedres, vil udviklerne arbejde ud fra de feedback, der er indhentet. Hvis klienten allerede er tilfreds med den nuværende prototype, vil en ny iteration begynde.</li>
+</ul>
+</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2024 <a href="https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs" target="_blank" rel="noopener"> Team 2 </a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1239 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../featureDrivenDevelopment/">
+      
+      
+        <link rel="next" href="../systemudvikling/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Programmering - Rally Obedience Docs.</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#programmering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rally Obedience Docs." class="md-header__button md-logo" aria-label="Rally Obedience Docs." data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rally Obedience Docs.
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Programmering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Scope/" class="md-tabs__link">
+        
+  
+    
+  
+  Project Scope
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../extreamProgramming/" class="md-tabs__link">
+        
+  
+    
+  
+  Extream Programming
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../featureDrivenDevelopment/" class="md-tabs__link">
+        
+  
+    
+  
+  Feature Driven Development
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Programmering
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../systemudvikling/" class="md-tabs__link">
+        
+  
+    
+  
+  Systemudvikling
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../teknologi/" class="md-tabs__link">
+        
+  
+    
+  
+  Teknologi
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rally Obedience Docs." class="md-nav__button md-logo" aria-label="Rally Obedience Docs." data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rally Obedience Docs.
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extreamProgramming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extream Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featureDrivenDevelopment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feature Driven Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Programmering
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Programmering
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#et-distribueret-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Et distribueret system
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Et distribueret system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overordnet-arkitektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overordnet arkitektur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overordnet arkitektur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#samspil-mellem-lagene" class="md-nav__link">
+    <span class="md-ellipsis">
+      Samspil mellem lagene
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vores-brug-af-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hvordan Containerization Illustere Vores Distribuerede System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-files-og-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker files og Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blazor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blazor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-opret-bane-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      API: Opret bane (Backend)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API: Opret bane (Backend)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flowet-for-opret-bane" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flowet for Opret Bane
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemudvikling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systemudvikling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teknologi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teknologi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="programmering">Programmering</h1>
+<hr />
+<h2 id="et-distribueret-system">Et distribueret system</h2>
+<p>Distribuerede systemer er en samling af autonome computerenheder, der samarbejder for at opnå et følles mål. Disse systemer er kendetegnet ved:</p>
+<ul>
+<li>Deres komponenter er geografisk adskilte</li>
+<li>Komponenterne kommunikere over netværk<ul>
+<li>Protokoller som HTTP/HTTPS, TCP/IP</li>
+</ul>
+</li>
+<li>Ressoucer deles og opgaver kan fordeles mellem flere computere, hvilket forvedre både ydeevne og pålidelighed<ul>
+<li>Fejlrolerance: Systemet kan fortsætte med at fungere korrekt, selvom en eller flere komponenter fejler.</li>
+</ul>
+</li>
+</ul>
+<h3 id="overordnet-arkitektur">Overordnet arkitektur</h3>
+<p>Arkitekturen i projekt <code>RallyObedience</code> kan beskrives i termer af lagdelt arkitektur, som typisk opdeles i præsentationslag, forretninglogiklag og datalag.</p>
+<figure>
+  <img alt="System Arkitektur" src="../images/overordnetarkitekturprogrammering.png" width="800" />
+</figure>
+<p><strong>Præsentationslag: Frontend Blazor</strong>
+Dette lag er ansvarlig for at inteagere med brugeren. Det viser brugergrænsefladen og sender brugerens input videre til backend-tjenesterne.</p>
+<ul>
+<li>Komponent: <code>rally-blazor</code></li>
+<li>Funktion: Viser data til brugeren og sender brugerens input som HTTP-request til API'en</li>
+</ul>
+<p><strong>Forretningslogiklag: API og Dataadgang Backend</strong>
+Dette lag håndtere applikationens kernefunktionalitet. Det modtager <code>requests</code> fra præsentationslaget, nehnadler forretningslogik gennem implementerede <code>controllers</code> og <code>services</code> og kommunikere med datalaget.</p>
+<ul>
+<li>Komponent: <code>rally-webapi</code></li>
+<li>Funktion: Behandler forretningslogi og regler, validere input, udfører beregninger og sender <code>requests</code> til datalaget.</li>
+</ul>
+<p><strong>Datalag: Database MSSQL</strong>
+Dette lag er ansvarlig for at gemme og hente data. Det modtager <code>requests</code> fra forretningslogiklaget og sender <code>respons</code> med de nødvendige data retur.</p>
+<ul>
+<li>Komponent: sqlpreview</li>
+<li>Funktion: Håndtere lagring, hentning og administration af data.</li>
+</ul>
+<h4 id="samspil-mellem-lagene">Samspil mellem lagene</h4>
+<ol>
+<li>Præsentaionslager: Brugeren interagere med Blazor-applikationen, som sender en HTTP-anmodning til API'en for at udfører en given funktionalitet (f.eks. valider bane med id x ud fra niveau begynder).</li>
+<li>Forretningslogiklag: API'en modtager anmodningen <code>controlleren</code>, behandler forretningslogikken <code>services</code>. Og sender en SQL-forespørgsel til databasen gennem <code>repo</code>.</li>
+<li>Datalag: MSSQL-databasen udfører forespørgslen og returnere resultatet til API'en (information om bane med id-x).</li>
+<li>Forretninglogiklaget: API'en behnadler de modtagne data og sender et svar tilbage til Blazor-applikationen.</li>
+<li>Præsentationslag: Blazor-applikationen modtager svaret og viser dataene til brugeren (udfører et validerings tjek på banens information, om dens collection af skilter overholder reglementet for niveau begynder og returnere en besked med information om hvad den mangler for at opfylde eller OK - den er valideret).</li>
+</ol>
+<p>Ved at opdele systemet i disse lag forsøge der at opnå klar <code>separation of concerns</code>, hvilket gør det lettere at udvikle, vedligholde og skalere systemet.</p>
+<h4 id="vores-brug-af-docker">Hvordan Containerization Illustere Vores Distribuerede System</h4>
+<p>I projekt <code>RallyObedience</code> har vi anvendt <code>Docker</code> til at containerisere tre hovedkomponenter:</p>
+<ol>
+<li>Frontend - Blazor</li>
+<li>API og Dataadgang</li>
+<li>Database</li>
+</ol>
+<p>Hver af disse komponenter kører i sin egen container, hvilket giver flere fordele:</p>
+<ul>
+<li>Frontend Blazor Container:<ul>
+<li>Indeholder vores Blazor applikation, som præsentere brugergrænsefladen</li>
+</ul>
+</li>
+<li>API og Data Container:<ul>
+<li>Indeholder vores backend API, som håndtere forretningslogi og dataadgang</li>
+</ul>
+</li>
+<li>Database Container:<ul>
+<li>Indeholder vores MSSQL database, som gemmer alle data for systemet</li>
+</ul>
+</li>
+</ul>
+<p>Ved at kører hver komponent i sin egen container sikrer vi isolering og uafhængighed mellem dem. Dette gør det lettere at udvikle, teste og deployere hver komponent separat. Desuden kan vi hurtigt oprette nye miljøer eller skalere individuelle komponenter efter behov.
+læs mere om <a href="../teknologi/#teknologi-containerization">containerization</a> på teknologisiden.</p>
+<h4 id="docker-files-og-docker-compose">Docker files og Docker Compose</h4>
+<p>Ved at bruge Docker files og Docker Compose kan vi definere og køre vores distribuerede systm som et sæt af sammenhængende tjenester <code>(Multicontainer applikation)</code>, hvilket gør det nemt at opsætte og administrer miljøet.</p>
+<p>Blazor Docker File
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>WORKDIR /app
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>EXPOSE 8080
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>EXPOSE 8081
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>ARG BUILD_CONFIGURATION=Release
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>WORKDIR /src
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>COPY [&quot;RallyObedience.Blazor/RallyObedience.Blazor.csproj&quot;, &quot;RallyObedience.Blazor/&quot;]
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>RUN dotnet restore &quot;./RallyObedience.Blazor/RallyObedience.Blazor.csproj&quot;
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>COPY . .
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>WORKDIR &quot;/src/RallyObedience.Blazor&quot;
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>RUN dotnet build &quot;./RallyObedience.Blazor.csproj&quot; -c $BUILD_CONFIGURATION -o /app/build
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>FROM build AS publish
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>ARG BUILD_CONFIGURATION=Release
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>RUN dotnet publish &quot;./RallyObedience.Blazor.csproj&quot; -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>FROM base AS final
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>WORKDIR /app
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>COPY --from=publish /app/publish .
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>ENTRYPOINT [&quot;dotnet&quot;, &quot;RallyObedience.Blazor.dll&quot;]
+</code></pre></div></p>
+<p>API og Data Docker File
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>WORKDIR /src
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>COPY [&quot;RallyObedienceCourse.API/RallyObedienceCourse.API.csproj&quot;, &quot;RallyObedienceCourse.API/&quot;]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>COPY [&quot;RallyObedience.Data/RallyObedience.Data.csproj&quot;, &quot;RallyObedience.Data/&quot;]
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>RUN dotnet restore &quot;RallyObedienceCourse.API/RallyObedienceCourse.API.csproj&quot;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>COPY . .
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>WORKDIR &quot;/src/RallyObedienceCourse.API&quot;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>RUN dotnet build &quot;RallyObedienceCourse.API.csproj&quot; -c Release -o /app/build
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>RUN dotnet publish &quot;RallyObedienceCourse.API.csproj&quot; -c Release -o /app/publish /p:UseAppHost=false
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>WORKDIR /app
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>COPY --from=build /app/publish .
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>ENTRYPOINT [&quot;dotnet&quot;, &quot;RallyObedienceCourse.API.dll&quot;]
+</code></pre></div></p>
+<p>Docker Compose File:<br>
+<em>bemærk at der i denne visning er maskeret vigtige inputs ved brug af <code>${}</code> notationsformen</em>
+Hvis du rent faktisk skal stukturer din Docker compose fil på denne måde og ikke indsætte væriderne direkte skal der oprettes en <code>.env</code> - fil som tillader brugen af miljøvariabler. Denne skal placeres i samme mappe som din <code>docker-compose</code>-fil og definere variablerne der.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>version: &#39;3.8&#39;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>services:
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  sqlpreview:
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    image: mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    environment:
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      - ACCEPT_EULA=Y
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>      - MSSQL_PID=Evaluation
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    ports:
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>      - &quot;1433:1433&quot;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  rally-webapi:
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    image: rally-webapi:latest
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    environment:
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>      - ConnectionStrings__connectionDev=Server=sqlpreview,1433;Database=${DATABASE_NAME};User Id=${DB_USER};Password=${DB_PASSWORD};Trusted_Connection=True;MultipleActiveResultSets=True;
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    ports:
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>      - &quot;8080:80&quot;
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    depends_on:
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>      - sqlpreview
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  rally-blazor:
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    image: rally-blazor:latest
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    environment:
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>      - ASPNETCORE_URLS=http://+:80
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    ports:
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>      - &quot;5000:80&quot;
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>    depends_on:
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>      - rally-webapi
+</code></pre></div>
+<p><strong>Forklaring af docker compose</strong></p>
+<ul>
+<li>sqlpreview:<ul>
+<li>Denne container kører en MSSQL databse. Miljøvariabler bruges til at konfigurer databasen, og port 1433 eksporneres for adgang.</li>
+</ul>
+</li>
+<li>rally-webapi:<ul>
+<li>denne container kører API'en. Den er afhænig af <code>sqlreview</code> containeren for databaseadgang. Miljøvariabler bruges til at konfigurere databaseforbindelsen, og port 8080 eksporneres for adgang.</li>
+</ul>
+</li>
+<li>rally-blazor:<ul>
+<li>Denne container kører Blazor frontend applikationen. Den er afhæning af <code>rally-webapi</code> container for at kunne kommunikere med backend API'en. Port 5000 eksporneres for adgang.</li>
+</ul>
+</li>
+</ul>
+<h3 id="blazor">Blazor</h3>
+<p>Under projektet blazor ligger alt frontend koden.</p>
+<h3 id="data">Data</h3>
+<p>I projektet <b>data</b> er data-laget. Der ligger alt forbindelse til databasen.
+<br/>
+I mappen <b>entities</b>, indholder den alle de klasser, der bliver brugt til at lave migrations til databasen.
+Herigennem er der også C# attributes, for eks. at fortælle databasen om der er tale om en Primary key eller ForeignKey
+<br/>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[Key]
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>public int Id { get; set; }
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>...
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>[ForeignKey(&quot;Creator&quot;)]
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>public string CreatorId { get; set; }
+</code></pre></div>
+Disse relationer får betydning, når tabeller bliver oprettet i databasen.</p>
+<p>I mappen <b>DbContexts</b> finder vi context til databasen.
+Vi ser først at ROContext arver fra IdentityDbContext:<br/>
+<code>public class ROContext : IdentityDbContext&lt;User&gt;</code> 
+<br/>
+Det betyder at der er brugt ASP.NET Cores metode for at oprette og autorisere brugere.
+<br/><br/>
+Herefter ser vi nogle properties, hvor de forskellige tables bliver sat i databasen.<br/>
+<i>De tabeller der bliver oprettet igennem Identity, er dog ikke vist her.</i></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>public DbSet&lt;Item&gt; Items { get; set; }
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>public DbSet&lt;Course&gt; Courses { get; set; }
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>public DbSet&lt;UserCourse&gt; UserCourses { get; set; }
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>public DbSet&lt;CourseItem&gt; courseItems { get; set; }
+</code></pre></div>
+<p>Under metoden <code>protected override void OnModelCreating(ModelBuilder modelBuilder)</code>, bliver der oprettet alle de relationer, der i databasen imellem de forskellige tabeller. 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>modelBuilder.Entity&lt;UserCourse&gt;()
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    .HasOne(uc =&gt; uc.User)
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    .WithMany(u =&gt; u.UserCourses)
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    .HasForeignKey(utc =&gt; utc.UserId)
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    .OnDelete(DeleteBehavior.Restrict);
+</code></pre></div>
+Her  oprettes der tabellen <code>UserCourse</code>. Tabellen har et one-to-many relationship.
+Den tabel har en relation til én User med Mange UserCourses.
+De er relateret hinanden igennem UserId.</p>
+<p>Slutligt bliver der seedet data til databasen.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>modelBuilder.Entity&lt;Item&gt;()
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>.HasData(
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>new Item()
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>{
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    Id = 1,
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    Name = &quot;Start&quot;,
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    Description = &quot;...&quot;,
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>},
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>....
+</code></pre></div></p>
+<h4 id="repositories">Repositories</h4>
+<p>Under repositories, har vi de steder hvor vi sender vores metoder til databasen.
+Det kunne f.eks være når vi skal have alle baner fra en bestemt user:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>public async Task&lt;List&lt;Course&gt;&gt; GetAllCoursesByUserIdAsync(string userId)
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>{
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    // Get all TrainingCourses by UserId from the database
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    var courses = await _context.UserCourses
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        .Where(utc =&gt; utc.UserId == userId)
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        .Select(utc =&gt; utc.Course)
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        .ToListAsync();
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    return courses;
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>}
+</code></pre></div>
+<p>På den måde har vi seperation of concern, hvor vi delt vores kode op i mindre dele og vores metoder ikke overlapper hinanden.<br/>
+Det gør det nemmere at vedligeholde, fejlfinde og teste.</p>
+<h2 id="api-opret-bane-backend">API: Opret bane (Backend)</h2>
+<p>I API projektet er der hvor størstedelen logikken er samlet, og hvor der bliver lavet diverse kald til databasen.
+<br/>
+API projektet har følgende hovedmapper:
+<br/><br/>
+<b>Controllers:</b> I API laget er arkitekturen opsat ved at vi har en controller, dens rolle er at forbinde brugerens input med APIens business logic.
+<br/><br/>
+<b>Services: </b> For at indkapsle logikken er der oprettet services.
+<br/><br/>
+<b>Models / DTOs: </b> De forskellige klasser, brugerne har tilgang til, er oprettet sig DTOs.
+<br/>
+DTOs har også den fordel at de kan mappes til data klasser. Derved er der kontrol over, hvilke data vores brugere skal kunne se og ændre.
+<br/><br/>
+<b>MappingProfiles: </b> Her kan vi mappe DTOs til dataklasser.</p>
+<h4 id="flowet-for-opret-bane">Flowet for Opret Bane</h4>
+<p>Herunder vil der gennemgå hvordan der bliver oprettet en bane, igennem backend, fra når bruger trykker opret, til der bliver gemt i databasen.
+<br/>
+Det skal nævnes at frontend står for en række andre dele. Det kan læses i nedståede <a href="./#oprettelse-af-kursus">"Oprettelse af kursus"</a></p>
+<p><br/>
+Når bruger klikker "Opret Bane", vil metoden <code>CreateEmptyCourse?</code> blive kaldt.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>private async Task CreateEmptyCourse()
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>{
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    ...
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    apiEndPoint = Configuration.GetSection(&quot;APIEndpoint&quot;)[&quot;Url&quot;];
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    string apiUrl = $&quot;{apiEndPoint}/api/course/create-course/{userId}&quot;;
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    ...
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>}
+</code></pre></div>
+<p>Den metode vil kalde endpointet i API laget, i vores CourseController  <code>/api/course/create-course/{userId}</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[HttpPost(&quot;create-course/{userId}&quot;)]
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>public async Task&lt;IActionResult&gt; CreateCourse(string userId)
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>{
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    var courseToReturn = await _courseService.CreateCourse(userId);
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    if (courseToReturn == null) 
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    {
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        return BadRequest(&quot;Failed to create course or unauthorized access.&quot;);
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    }
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    return Ok(courseToReturn);
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>}
+</code></pre></div>
+I overstående ses det at der er indsat en attribute <code>[HttpPost("create-course/{userId}")]</code>
+Her bliver der fortalt at der bliver brugt af en HTTP POST method, og URi til det endpoint vi bruger.
+Derudover så bliver den nuværendes bruger id, indsat som en parameter. Dette ID skal vi bruge til at oprette en bane.
+<br/>
+Derudover er metod async, og vi venter på metoden <code>CreateCourse</code> fra <code>courseService</code> på at blive færdig før vi fortsætter.
+<br/>
+Async er brugt, da der skal ventes på databasen om at blive færdig.
+<br/>
+Fra Controller kommer vi over til service laget, til <code>CreateCourse</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>public async Task&lt;CourseDto&gt; CreateCourse(string userID)
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>{
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    var course = _courseRepo.CreateCourse(userID);
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    if (course == null || course.Value.CreatorId == null)
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    {
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        return null;
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    }
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>    if (userID != course.Value.CreatorId)
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    {
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>        return null;
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    }
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    var userIds = new List&lt;string&gt; { userID };
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    await _courseRepo.ShareCourseAsync(course.Value.Id, userIds);
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    var courseDto = _mapper.Map&lt;CourseDto&gt;(course.Value);
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>    return courseDto;
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>}
+</code></pre></div>
+Først forlader vi faktisk API laget og går over til Data laget til 'Repositories'. Som beskrevet tidligere, håndterer 'Repositories' kaldene til databasen.
+<br/>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>public ActionResult&lt;Course&gt; CreateCourse(string userId)
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>{    
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    string name = $&quot;Untitled Course&quot;;
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    Course course = new Course 
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    {
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        Name = name,
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        CreatorId = userId                
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    };
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    // Save the new TrainingCourse to the database
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    _context.Courses.Add(course);
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    _context.SaveChanges();
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    return course;
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>}
+</code></pre></div>
+Igennem her bliver der her sat at default navn: <code>string name = $"Untitled Course";</code>
+<br/>
+Og derefter bliver der instatieret et nye <code>Course</code> objekt, med det default navn og id'et på den bruger vi fik fra parameteret tilbage fra <code>CourseController</code>
+<br/>
+Denne bane bliver så oprettet i databasen i tabellen Course '_context.Courses.Add(course);'
+<br/>
+Slutligt bliver denne bane retureret tilbage til <code>CourseService</code> og vi kan kigge nærmere på næste skridt:
+<br/>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>if (course == null || course.Value.CreatorId == null)
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>{
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    return null;
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>}
+</code></pre></div>
+Her bliver der tjekket om der er sat en bane/course og om denne bane også har et <code>CreatorId</code> (Det er brugerns ID).
+<br/>
+Herfra bliver der oprettet en liste med <code>userIds</code>, listen her skal bruges til at dele banen.
+<br/>
+Første gang banen bliver oprettet er den delt med den bruger der har oprettet banen (Creator)
+<br/>
+Vi går igen ind til <code>CourseRepo</code> til metoden <code>ShareCourseAsync</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>var userIds = new List&lt;string&gt; { userID };
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>await _courseRepo.ShareCourseAsync(course.Value.Id, userIds);
+</code></pre></div>
+Først bliver der tjekket om banen existerer, og om alle brugere eksisterer og dernæst indsætter dem i tabellen <code>UserCourses</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>public async Task&lt;ActionResult&gt; ShareCourseAsync(int courseId, List&lt;string&gt; userIds)
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>{
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    try
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    {
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        // Find the course by ID
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>        var course = await _context.Courses.FindAsync(courseId);
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>        if (course == null)
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>        {
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>            return new NotFoundResult();
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>        }
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>        foreach (var userId in userIds)
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>        {
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>            // Check if the user exists
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>            var user = await _context.Users.FindAsync(userId);
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>            if (user == null)
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>            {
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>                // Handle invalid user ID
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>                continue;
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>            }
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>            // Add a new entry to the UserTrainingCourse table
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>            _context.UserCourses.Add(new UserCourse { UserId = userId, CourseId = courseId, CreatorId = course.CreatorId });
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>        }
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>        // Save changes to the database
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>        SaveChangesAsync();
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>        return new OkResult();
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>    }
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>    catch (Exception ex)
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>    {
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>        // Handle any exceptions and return an appropriate error response
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>        return new StatusCodeResult(500);
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>    }
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>}
+</code></pre></div>
+Vi afventer at <code>await _courseRepo.ShareCourseAsync(course.Value.Id, userIds);</code> er færdig går vi videre til næste skridt i `CourseService``</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>var courseDto = _mapper.Map&lt;CourseDto&gt;(course.Value);
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>return courseDto;
+</code></pre></div>
+<p>Her mapper vi den oprettet <code>Course</code> til en <code>CourseDto</code> - Det er dén datatype vi returnerer til <code>CourseController</code>
+<br/>
+Den vil til sidst tjekke om <code>Course</code> er oprettet og give vores bruger besked på dette
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>if (courseToReturn == null) 
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>{
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    return BadRequest(&quot;Failed to create course or unauthorized access.&quot;);
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>}
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>return Ok(courseToReturn);
+</code></pre></div>
+Er banen oprettet vil der giver en status code 200, men de værdier, vi mappede fra <code>Course</code> til <code>CourseDto</code>, som samtidig vil blive serialized til JSON.
+<br/>
+Dette JSON objekt kan så bruges videre til at arbejde med frontend.</p>
+<h3 id="test">Test</h3>
+<p>Igennem projektets <a href="../systemudvikling/">systemudviklingsmetoder</a> er der blevet skrevet tests.
+<br/>
+Her vil vi gennemgå test for <code>CreateCourse</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>public CourseControllerTests()
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>{
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    _mockService = new Mock&lt;ICourseService&gt;();
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    _mockMapper = new Mock&lt;IMapper&gt;();
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    _controller = new CourseController(_mockService.Object, _mockMapper.Object);
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>}
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>[TestMethod]
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>public void CreateCourse_ShouldReturnCreatedCourse()
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>{
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    // Arrange: Setup mock repository and test course
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>    var course = new CourseDto { Id = 1, Name = &quot;Untitled Course&quot;, CourseItems = new List&lt;CourseItemDto&gt;() };
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>    var course1 = new CourseDto { Id = 1, Name = &quot;Untitled Course&quot;, CourseItems = new List&lt;CourseItemDto&gt;() };
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>    _mockService.Setup(Service =&gt; Service.CreateCourse(&quot;1&quot;)).ReturnsAsync(course);
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>    // Act: Call CreateCourse method
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>    var result = _controller.CreateCourse(&quot;1&quot;);
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>    // Assert: Check if the returned course is as expected
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>    var okResult = result.Result as OkObjectResult;
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>    var returnValue = okResult.Value as CourseDto;
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>    Assert.AreEqual(course1.Id, returnValue.Id);
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>    Assert.AreEqual(course1.Name, returnValue.Name);
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>    Assert.AreEqual(course1.CourseItems.ToString(), returnValue.CourseItems.ToString());
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>}
+</code></pre></div>
+Teamet har brugt samme struktur for alle test: Arrange, Act og Assert (AAA).
+<br/><br/>
+<b>Arrange:</b> Vi arranger dataen først ved at instatiere de objekter (<code>CourseDto</code>), der bliver returnet igenem den metode vi tester:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>var course = new CourseDto { Id = 1, Name = &quot;Untitled Course&quot;, CourseItems = new List&lt;CourseItemDto&gt;() };
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>var course1 = new CourseDto { Id = 1, Name = &quot;Untitled Course&quot;, CourseItems = new List&lt;CourseItemDto&gt;() };
+</code></pre></div></p>
+<p>Under arrange bliver der også Mocking, så vores kode har de metoder der skal bruges.
+<code>_mockService.Setup(Service =&gt; Service.CreateCourse("1")).ReturnsAsync(course);</code></p>
+<p>Her er der sagt at <code>CreateCourse</code> er en del af interfacet <code>iCourseService</code>, som set i constructor.
+Derudover at vi vil køre metoden <code>CreateCourse</code> med id = 1, som parameter.
+<br/><br/>
+<b>Act: </b> Der bliver arrageret som den metoden, der skal testes: <code>CreateCourse</code> fra <code>CourseController</code> og vi gemmer det i en variabel:
+<br/>
+<code>var result = _controller.CreateCourse("1");</code>
+<br/><br/>
+<b>Assert:</b> Til sidst kan vi se om der bliver returneret det vi forventer:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>var okResult = result.Result as OkObjectResult;
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>var returnValue = okResult.Value as CourseDto;
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Assert.AreEqual(course1.Id, returnValue.Id);
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>Assert.AreEqual(course1.Name, returnValue.Name);
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Assert.AreEqual(course1.CourseItems.ToString(), returnValue.CourseItems.ToString());
+</code></pre></div>
+Vi forventer først at der bliver returneret et HTTP response 200 og vi får <code>CourseDto</code> data.
+<br/>
+I den CourseDto data, skal id'et være det samme som <code>course1.id</code>
+<br/>
+Det samme gælder navnet og den tomme <code>CourseItems</code> liste.</p>
+<hr />
+<h1 id="oprettelse-af-bane">Oprettelse af bane</h1>
+<p>For at oprette et kursus i vores system, skal brugeren først registrere sig og logge ind. Dette er nødvendigt for at sikre, at kun autoriserede brugere kan oprette kurser.</p>
+<h2 id="registrering">Registrering</h2>
+<p>For at registrere, skal brugeren udfylde en formular med følgende felter:</p>
+<ul>
+<li>Fornavn</li>
+<li>Efternavn</li>
+<li>Brugernavn</li>
+<li>Adgangskode</li>
+</ul>
+<p>Når formularen er udfyldt, sendes dataen til vores backend via en HTTP POST-anmodning til <code>/api/Auth/Register</code> endpointet.</p>
+<h2 id="login">Login</h2>
+<p>Efter registrering kan brugeren logge ind ved at indtaste deres brugernavn og adgangskode i login-formularen. Disse oplysninger sendes til vores backend via en HTTP POST-anmodning til <code>/api/Auth/Login</code> endpointet. Hvis login er succesfuldt, returnerer backenden en token, som gemmes i lokal lagring for senere brug.</p>
+<h2 id="oprettelse-af-kursus">Oprettelse af kursus</h2>
+<p>Når brugeren er logget ind, kan de oprette et nyt kursus ved at klikke på "Opret bane" knappen. Dette udløser en HTTP POST-anmodning til <code>/api/course/create-course/{userId}</code> endpointet, hvor <code>{userId}</code> er brugerens unikke ID. Hvis oprettelsen er succesfuld, returnerer backenden detaljerne for det nyoprettede kursus.</p>
+<h2 id="ekstraktion-af-userid-fra-token">Ekstraktion af userId fra Token</h2>
+<p>Når en bruger logger ind, genererer vores backend en token, som indeholder brugerens unikke ID (<code>userId</code>). Dette <code>userId</code> er indlejret i token som en af dens claims.</p>
+<p>Når vi skal oprette et nyt kursus, har vi brug for at kende <code>userId</code> for den aktuelt logget ind bruger. Dette <code>userId</code> er gemt i token, som vi har gemt i lokal lagring efter brugeren loggede ind.</p>
+<p>For at få <code>userId</code> fra token, gør vi følgende:</p>
+<ol>
+<li>Vi henter token fra lokal lagring.</li>
+<li>Vi parser token ved hjælp af en <code>JwtSecurityTokenHandler</code>. Dette giver os et <code>JwtSecurityToken</code> objekt.</li>
+<li>Vi finder "nameidentifier" claim i <code>JwtSecurityToken</code> objektet. Værdien af denne claim er <code>userId</code>, som vi har brug for.</li>
+</ol>
+<p>Her er en kodebid, der viser, hvordan det gøres:</p>
+<figure>
+  <img alt="Code snippet: UserId extraction" src="../images/UserIdFraToken.png" width="600" />
+</figure>
+<p>Nu har vi <code>userId</code> for den aktuelt logget ind bruger, som vi kan bruge til at oprette et nyt kursus.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2024 <a href="https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs" target="_blank" rel="noopener"> Team 2 </a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>

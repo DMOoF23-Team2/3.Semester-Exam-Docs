@@ -1,0 +1,1478 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../extreamProgramming/">
+      
+      
+        <link rel="next" href="../programmering/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Feature Driven Development - Rally Obedience Docs.</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#feature-driven-development" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rally Obedience Docs." class="md-header__button md-logo" aria-label="Rally Obedience Docs." data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rally Obedience Docs.
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Feature Driven Development
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Scope/" class="md-tabs__link">
+        
+  
+    
+  
+  Project Scope
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../extreamProgramming/" class="md-tabs__link">
+        
+  
+    
+  
+  Extream Programming
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Feature Driven Development
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../programmering/" class="md-tabs__link">
+        
+  
+    
+  
+  Programmering
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../systemudvikling/" class="md-tabs__link">
+        
+  
+    
+  
+  Systemudvikling
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../teknologi/" class="md-tabs__link">
+        
+  
+    
+  
+  Teknologi
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rally Obedience Docs." class="md-nav__button md-logo" aria-label="Rally Obedience Docs." data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rally Obedience Docs.
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extreamProgramming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extream Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Feature Driven Development
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Feature Driven Development
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#An-overall-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      An overall model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="An overall model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#Use-case-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases - UC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Use-case-diagram-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Diagram - UCD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objekt Modeller - OM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objekt Modeller - OM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#om-chat-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      OM Chat-system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#om-bane-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      OM Bane-system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1iteration-om-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. iterations OM Bane-system
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dm-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domæne Modeller - DM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Domæne Modeller - DM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dm-chat-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      DM Chat-system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-iterations-dm-bane-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. iterations DM Bane-system
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Developing-by-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developing by features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Developing by features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-iterations-om-og-dm-bane-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. iterations OM og DM Bane-system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-iterations-dm-bane-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. iterations DM Bane-system
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Component-class-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component/Class ownership
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspections and quality assurance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visibility-of-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visibility of progress
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visibility of progress">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      RoadMap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brugen-af-labels-feature-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brugen af labels - Feature overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-by-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan by feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan by feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projektbrief" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projektbrief
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foranalyse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foranalyse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valg-af-procesmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valg af procesmodel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valg-af-systemudviklingsmetode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valg af systemudviklingsmetode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planlægning-af-tid-fdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planlægning af tid, ressourcer og kommunikation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-by-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design by feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design by feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-create-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Create Course
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-showallsignsandelements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature ShowAllSignsAndElements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programmering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemudvikling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systemudvikling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teknologi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teknologi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="feature-driven-development">Feature Driven Development</h1>
+<h2 id="An-overall-model">An overall model</h2>
+<p>Her defineres det overodnede <code>scope</code> for <code>Rally Obedience</code> projektet. Dette er både en del a best pratices og Stage 1 når FDD anvendes som systemudviklingsmetode.</p>
+<p>En systemudviklingsmetode består af en række sammenhængende teknikker, der hver især udføres ved hjælp af et eller flere værktøjer. En teknik er en generisk beskrivelse af aktiviteter, samt målet med denne aktivitet. Et værktøj er en specifik angivelse af hvad man vil benytte for at udfører aktiviteten i teknikken. For at sikre sammenhængen mellem teknikkerne i metoden, bliver <code>outputtet</code> fra den ene teknik anvendt som <code>input</code> til den næste teknik.</p>
+<p>An overall model - som teknik:</p>
+<ul>
+<li>Formål: <ul>
+<li>At skabe en fællesforståelse ramme for udviklingsteamet.</li>
+<li>At skabe en overordnet domæne model.</li>
+<li>At identificere systemkrav til at skabe en <code>Feature List</code>.</li>
+<li>At identificere interessenter/<code>stackholders</code>.</li>
+</ul>
+</li>
+<li>Værktøjer:<ul>
+<li>Use Cases - <code>UC</code></li>
+<li>Use Case Diagram - <code>UCD</code></li>
+<li>Objektmodel - <code>OM</code></li>
+<li>Domænemodel - <code>DM</code></li>
+<li>Business Case - <code>BC</code></li>
+</ul>
+</li>
+<li>Output:<ul>
+<li>Opnå viden om emner listet under formål</li>
+<li>At kunne skabe en <a href="./#feature-list">Feature List</a> når overall model er færdig.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Use-case-fdd">Use Cases - UC</h3>
+<p><strong>Bane-system</strong></p>
+<figure>
+  <img alt="Use Case: Oprettelse af træningsbane" src="../images/UseCaseOprettelseAfTr%C3%A6ningsbane.png" width="600" />
+</figure>
+<figure>
+  <img alt="Use Case: Oprettelse af bane ifølge DCH reglement" src="../images/UseCaseOprettelseBaneReglement.png" width="600" />
+</figure>
+<figure>
+  <img alt="Use Case: Deling af bane med anden instruktør " src="../images/UseCaseDelingBaneInstrukt%C3%B8r.png" width="600" />
+</figure>
+<figure>
+  <img alt="Use Case: Tilgå og kommentere en delt bane " src="../images/UseCaseTilg%C3%A5KommenterBane.png" width="600" />
+</figure>
+<figure>
+  <img alt="Use Case: Live samarbejde ved oprettelse af bane " src="../images/UseCaseLiveSamarbejdeBane.png" width="600" />
+</figure>
+<p><strong>Chat-system</strong></p>
+<figure>
+  <img alt="Use Case: Chat mellem to instruktører " src="../images/UseCaseChatToInstrukt%C3%B8rer.png" width="600" />
+</figure>
+<figure>
+  <img alt="Use Case: Opret gruppechat for instruktører " src="../images/UseCaseOpretGruppeChatInstrukt%C3%B8rer.png" width="600" />
+</figure>
+<figure>
+  <img alt="Use Case: Kommunikation i gruppechat " src="../images/UseCaseKommunikationGruppeChat.png" width="600" />
+</figure>
+<hr />
+<h3 id="Use-case-diagram-fdd">Use Case Diagram - UCD</h3>
+<p>Notationsformer i Use Case diagrammet:</p>
+<ul>
+<li><strong>Aktør</strong> - Aktører repræsenteres med stick-figurer.</li>
+<li><strong>Use Case</strong> - reprøsenteres med ellipser.</li>
+<li><strong>System Boundary</strong> - Systemgrænsen er en boks, der omgriveuse cases for at angive systemets omfang.</li>
+</ul>
+<p>Relationer mellem Use Cases:</p>
+<ul>
+<li><strong>Inklusion</strong> - Etiketten <code>&lt;&lt;include&gt;&gt;</code> - Bruges, når en use case inkludere (kalder) en anden use case for at udfører en del af dens funktionalitet. Repræsenteres med en solid linje med en trekantet pil, der peger mod den inkluderede use case.</li>
+<li><strong>Udvidelse</strong> - Etiketten <code>&lt;&lt;extend&gt;&gt;</code> - Bruges, når en use case kan udvides (optionelt) med ekstra funktionalitet under visse betingelser. Repræsenteres med en stiplet linje med en åben trekantet pil, der peger mod den udvidede use case.</li>
+<li><strong>Association</strong> - Bruges til at vise en almindelig forbindelse eller relation mellem to use cases. Repræsenteres med en simpel linje uden nogen markører eller etiketter.</li>
+</ul>
+<p>Notation for Pile:</p>
+<ul>
+<li><strong>Solid linje</strong> - Bruges til at repræsentere direktet forbindelser eller inklusioner.</li>
+<li><strong>Stiplet linje</strong> - Bruges til at repræsentet valgfri forbindelser eller udvidelser. </li>
+</ul>
+<figure>
+  <img alt="Use Case Diagram " src="../images/UseCaseDiagramFDD.png" width="800" />
+</figure>
+<hr />
+<h3 id="om-fdd">Objekt Modeller - OM</h3>
+<p>Som tidligere beskrevet i <a href="../systemudvikling/#Foranalyse1.iteration">foranalyse 1 iteration</a> kan systemet deles op i to sub-systemer <code>bane-system</code> og <code>chat-system</code>.</p>
+<h4 id="om-chat-system">OM Chat-system</h4>
+<p>Nedenstående viser første iteration af chat-systemets OM. Da selve chat funktionaliteterne ikke har haft særlig høj prioritet fra PO's side, se den prioriteret <a href="./#feature-list">Feature List her</a>. Findes der i skrivende stund (05-05-2024) kun denne udgave af chat-systemets OM.</p>
+<figure>
+  <img alt="Chat-system OM " src="../images/ChatSystemOM.png" width="800" />
+</figure>
+<h4 id="om-bane-system">OM Bane-system</h4>
+<p>Da selve bane funktionaliteterne har haft høj prioritet fra PO's side, er der itereraret hen over denne OM i forbindelse med de forskellige sprints udviklingsteamet har haft. Hvor den første iteration skal ses som værende en del af <code>An overall model</code> og derfor har været med til at skabe den fælles forståelsesramme for udviklingsteamet.</p>
+<p>Se afsnittet <a href="./#Developing-by-feature">Developing by features</a> for hvordan nedenstående OM tilpasse/ændres undervejs i udviklingsprocessen.</p>
+<h4 id="1iteration-om-fdd">1. iterations OM Bane-system</h4>
+<figure>
+  <img alt="Bane-system OM 1.iteration " src="../images/BaneSystemOM1Iteration.png" width="800" />
+</figure>
+<hr />
+<h3 id="dm-fdd">Domæne Modeller - DM</h3>
+<p>Ud fra de to OM's er følgende to DM's udfærdiget. </p>
+<h4 id="dm-chat-system">DM Chat-system</h4>
+<p>Som tidligere beskrevet er Chat-systemet ikke videreudviklet under arbejdet med FDD, da disse funktionaliteter har haft lavere prioritet.
+Derfor er denne DM's formål blot at være en del af <code>An-overall-model</code> og den er med til at skabe den fælles forståelses ramme for udviklingsteamet.
+Denne DM vil blive refactoreret i en videre udviklingsproces, når udviklingen af chat funktionaliteterne påbegyndes. </p>
+<figure>
+  <img alt="Chat-system DM " src="../images/ChatSystemDM.png" width="800" />
+</figure>
+<h4 id="1-iterations-dm-bane-system">1. iterations DM Bane-system</h4>
+<p>Denne DM har lige som <a href="./#1iteration-om-fdd">OM bane-system</a> været itereraret hen over flere gange i forbindelse med <a href="./#Developing-by-feature">Developing by features</a>. Derfor kan denne <code>1. iterations DM Bane-system</code> ses som værende en del af <code>an-overall-model</code> og den har haft til formål at skabe den fælles forståelse ramme for udviklingsteamet inden selve udviklingsprocessen påbegyndes.</p>
+<figure>
+  <img alt="Chat-system DM " src="../images/BaneSystemDM1Iteration.png" width="800" />
+</figure>
+<hr />
+<h2 id="feature-list">Feature list</h2>
+<p>Igennem problemstillingen ved <a href="../systemudvikling/#Businesscase">BusinessCase</a> er der defineret en række features, der kan opfylde NcHs behov.
+På baggrund af denne businesscase, er der udfærdiget en række <a href="./#Use-case-fdd">use cases</a> og deres sammenhæng/relationer er defineret og illustreret i <a href="./#Use-case-diagram-fdd">use case diagrammet</a>.
+De definerede features og deres sammenhæng illusteret gennem use case og use case diagrammet fungere som hjælpende værktøjer til at prioritere features.
+Feature listen er blevet prioriteret på et møde med PO. Denne prioriterede feature list vil fungere som udviklingsteamets <code>Backlog</code>.</p>
+<p>Listen i prioriteret rækkefølge:</p>
+<table>
+<thead>
+<tr>
+<th>Opret trænings bane</th>
+<th>klik på opret bane --&gt; klik på til træning --&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Viser en tom template.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Vise alle skilte og elementer (kegler, pile med betydning som gå i ring mm.).</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Trække og slippe skilte og andre elementer ind i som udgør bane designet.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet generer automatisk skilte numre "på banen".</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet genere automatisk en tabel med skilterækkefølgen og deres ID</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet generer automatisk pile som viser vejen gennem banen.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opret bane til reglement</th>
+<th>klik på opret bane --&gt; klik på efter reglement--&gt; Vælg klasse banen skal være til --&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Viser en tom template.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Vise alle skilte og elementer (kegler, pile med betydning som gå i ring mm.) til den valgte klasse.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet validere antal skilte, rækkefølgen af skilte ift. reglement</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet generer automatisk skilte numre "på banen".</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet genere automatisk en tabel med skilterækkefølgen og deres ID</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet generer automatisk pile som viser vejen gennem banen.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Deling af træningsbane med anden instruktør</th>
+<th>klik på del bane --&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Viser en liste med alle instruktører</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Del knap - systemet håndtere/opretter associationer</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>En notifikationer om en bane er blevet del med dig</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Tilgå og kommentere en delt bane</th>
+<th>klik på baner --&gt; Delte baner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Viser en liste med alle baner der er delt med useren (instruktøren).</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>en valgte bane vises.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>En notifikationer om en bane er blevet del med dig</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Tilføje en kommentar til banen.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Vise kommentar historikken i et kommentarspor.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Live samarbejde ved oprettelse af træningsbane</th>
+<th>Klik på opret bane --&gt; klik på til træning --&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Viser en tom template.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Viser alle skilte og elementer (kegler, pile med betydning som gå i ring mm.).</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Viser en "Live share" knap.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet skal kunne håndtere RealTime samarbejde mellem to users (muligvis gennem et link der bliver delt)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Chat mellem to instruktører</th>
+<th>Klik på Instruktører --&gt; Vælg instruktør --&gt; Klik start chat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Liste over instruktør</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Vælg start chat med en instruktør</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Vis tom chat vindue</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Skriv besked</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Send besked</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Chat historik bliver gemt</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Slet en besked - systemet skal kunne fjerne en besked fra visningen (måske skal den gemmes i en log - sikkerhed).</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Rediger en besked - systemet skal kunne håndtere at en user ønsker at redigere i sin egen allerede postede besked.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Chat mellem to instruktører</th>
+<th>Klik på Instruktører --&gt; Vælg instruktør --&gt; Klik start chat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Liste over instruktører</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Vælg start chat med en instruktør</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Vis tom chat vindue</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Skriv besked</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Send besked</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Chat historik bliver gemt</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Slet en besked - systemet skal kunne fjerne en besked fra visningen (måske skal den gemmes i en log - sikkerhed)</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Rediger en besked - systemet skal kunne håndtere at en bruger ønsker at redigere i sin egen allerede postede besked</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opret gruppechat for instruktører</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Viser en liste med alle instruktører</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet tilknytter en bruger til den oprettede gruppe</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Tilføj bruger efter gruppechatten er oprettet</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Forlad gruppen</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Slet gruppechat</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Visning over alle medlemmer af gruppechatten</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Visning over alle "mine" grupper</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Viser et tekstfelt til oprettelse af besked</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Send/post besked - systemet gemmer beskeden, så den er synlig for de andre medlemmer af gruppen</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Systemet viser beskedhistorikken, så der er styr på hvem der skrev hvad hvornår i visningen af alle beskeder</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Slet en besked - systemet skal kunne fjerne en besked fra visningen (måske skal den gemmes i en log - sikkerhed)</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Rediger en besked - systemet skal kunne håndtere at en bruger ønsker at redigere i sin egen allerede postede besked</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Kommunikation i gruppechat</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Der skal være et tekstfelt, hvor der kan skrives en besked</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Der skal være en 'send knap' som sender teksten i tekstfeltet til modtagerne</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Der skal være en feedback der viser at modtagerne har modtaget beskeden, og når modtagerne har læst beskeden</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Der skal være mulighed for at redigere eller slette en tidligere besked eller tekst</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Der skal være mulighed for at svare direkte på en besked i chatten</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Der skal være en visning af hvem der er afsender på de enkelte beskeder</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>Der skal være 'time stamps' på alle de beskeder der bliver sendt</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="Developing-by-feature">Developing by features</h2>
+<p>Den overordnede plan for at følge denne <code>Best pratices in FDD</code> er forsøgt illustreret på nedenstående billede.</p>
+<figure>
+  <img alt="Overview Developing by features " src="../images/DevelopingByFeatures.png" width="600" />
+</figure>
+<p>Her skal der særligt lægges vægt på Stages 3-5. Hvor mening var for hver <code>Feature</code> som har en tilhørende <code>Use Case</code> skulle der udfærdiges </p>
+<ul>
+<li>Systemsekvensdiagram - <code>SSD</code></li>
+<li>Sekvensdiagram - <code>SD</code></li>
+<li>operationskontrakt - <code>OC</code></li>
+</ul>
+<p>se <a href="./#design-by-feature">Design by feature</a> for disse artefakter.</p>
+<p>Dernæst kunne OM og DM fra <code>An-overall-model</code> opdateres så den fælles forståelsesramme for udviklingsteamet altid var <code>Aligned</code>.</p>
+<p>Men som det tydligt fremgår af nedenstående artefaktor lykkedes det ikke udviklingsteamet at følge denne plan. Dette vurderes at skyldes <code>Usikkerheder</code> og <code>Kompleksiteter</code> i projektet som udviklingsteamet ikke var opmærksomme på ved opstarten af projektet og valget af FDD. Læs mere om dette i refleksionsafsnittet <a href="../systemudvikling/#relections-on-fdd">her</a>.</p>
+<h3 id="2-iterations-om-og-dm-bane-system">2. iterations OM og DM Bane-system</h3>
+<figure>
+  <img alt="Bane-system OM 2.iteration " src="../images/BaneSystemOM2Iteration.png" width="800" />
+</figure>
+<figure>
+  <img alt="Bane-system DM 2.iteration " src="../images/BaneSystemDM2Iteration.png" width="800" />
+</figure>
+<h3 id="3-iterations-dm-bane-system">3. iterations DM Bane-system</h3>
+<figure>
+  <img alt="Bane-system DM 3.iteration " src="../images/BaneSystemDM3Iteration.png" width="800" />
+</figure>
+<hr />
+<h2 id="Component-class-ownership">Component/Class ownership</h2>
+<p>Når GitHub Projects anvendes, kan der i hver task <code>tagges</code> folk ved brugen af <code>@brugernavn</code>. Teamet har i hver task anvendt denne notations form under titlen <code>Assigned To</code>. På denne måde, har teamet forsøgt, at dele sig op i mindre udviklings-teams/feature-teams. Dette skulle være en almindelig praksis når der arbejdes efter FDD.</p>
+<h2 id="inspections">Inspections and quality assurance</h2>
+<p>Teamet har hver søndag mødtes og afholde code reviews af hvorlangt de forskellige feature-teams er kommet med deres task. Her har der været gennemgang af kode og feedback fra resten af teamet er blevet givet på feature-teamets arbejde.</p>
+<h2 id="visibility-of-progress">Visibility of progress</h2>
+<p>Udover <a href="./#planlægning-af-tid-fdd">Kanban</a> har teamet anvende <code>RoadMap</code> og labels til at udfærdige et <code>feature-board</code>. Disse giver til sammen et overblik over hvilken status hver feature har og om teamet overholder tidsplanen.</p>
+<h3 id="roadmap">RoadMap</h3>
+<figure>
+  <img alt="FDD RoadMap " src="../images/RoadmapFDD.png" width="800" />
+</figure>
+<h3 id="brugen-af-labels-feature-overview">Brugen af labels - Feature overview</h3>
+<figure>
+  <img alt="FDD Feature overview " src="../images/FeaturesFDD.png" width="800" />
+</figure>
+<h2 id="plan-by-feature">Plan by feature</h2>
+<p>Denne <code>stage</code> i FDD, omhandler projektstyring. Projektstyring er også et af de 7 fokusområder en systemudviklingsmetode helst skal dække. </p>
+<p>Hvis man anskuer fokusområdet projektstyring indeholder det følgende:</p>
+<ul>
+<li>Projektbrief</li>
+<li>Foranalyse</li>
+<li>Valg af procesmodel</li>
+<li>Valg af systemudviklingsmetode</li>
+<li>Planlægning af tid, ressourcer og kommunikation</li>
+<li>Løbende analyse af projektets situation</li>
+<li>Tilpasning af systemudviklingsmetode og procesmodel</li>
+</ul>
+<p>Oftest er der en tendesn til at projektstyring for mest fokus i opstarten af et projekt og derefter forsvinder fokus væk fra projektstyring og der kan hurtigt opleves at projektets plan skrider. Derfor er det vigtigt at have fokus på <code>Proaktiv projektstyring</code>.</p>
+<p>Proaktiv projektstyring indebærer at opdatere de fortagede analyser, så de reflektere projektets aktuelle situation. Herigennem kan de udfordringer, teamet står overfor identificeres, hvis disse udfordringer ikke kan afviges, kan teamet træffe foranstaltninger til at afbøde konsekvenserne.</p>
+<h3 id="projektbrief">Projektbrief</h3>
+<p>I team 2s proces med FDD, er der udfærdiget en <a href="../systemudvikling/#Businesscase">BusinessCase</a>. Der udover er der udfærdiget et <a href="../Scope/">Project Scope Description</a>. Disse to tilsammen udgøre <code>Projektbrief</code> for team 2.</p>
+<h3 id="foranalyse">Foranalyse</h3>
+<p>Den udfærdiget <a href="../systemudvikling/#Foranalyse1.iteration">Foranalysen</a> før valget af systemudviklingmetoden FDD er beskrevet tidligere.</p>
+<h3 id="valg-af-procesmodel">Valg af procesmodel</h3>
+<p>Der kan argumenteres for at dette valg ikke har været præcist nok i forbindelse med arbejdet med systemudviklingsmetoden FDD. Der er overordnet arbejde ud fra en cyklisk procesmodel. Mere om dette kan findes i <a href="../systemudvikling/#reflections-on-fdd">Reflskioner om FDD</a></p>
+<h3 id="valg-af-systemudviklingsmetode">Valg af systemudviklingsmetode</h3>
+<p>Valget af FDD var fortaget på baggrund af interesse fra team 2 side. Da FDD blev præsenteret og Team 2 læste mere om denne, lød den spænende og det med at identificere og udvælge enkelte features, implementere disse og udvide der fra lød passende ift. projektet. Men da valget af denne ikke har været nok baseret på projektet situation, usikkerheder og kompleksiteter forbundet med projektet er der også valgt at skifte systemudviklings metode til Extream Programming XP. Mere om dette kan findes i <a href="../systemudvikling/#reflections-on-fdd">Reflskioner om FDD</a></p>
+<h3 id="planlægning-af-tid-fdd">Planlægning af tid, ressourcer og kommunikation</h3>
+<p>Teamet har som visuel metode anvendt bla. Kanban som en integrerat del af den cykliske proces, til at styre arbejdsprocessen.
+Kanban har bestået af følgende kolonner som også ses på billede nedenfor.</p>
+<ul>
+<li>Backlog<ul>
+<li>Her er all task i forbindelse med projektet lists - det har primært været features fra den prioriterede <a href="./#feature-list">feature list</a>.</li>
+</ul>
+</li>
+<li>To Do<ul>
+<li>Når en task fra backloggen vælges for den pågældende iteration placeres denne i TO DO.</li>
+</ul>
+</li>
+<li>In Progress<ul>
+<li>Når et udviklings-team er blevet <code>assigned to</code> den pågældende task og påbegynder arbejdet med denne placeres tasken i denne kolonne.</li>
+</ul>
+</li>
+<li>Write Docs<ul>
+<li>Når en task rent kode-mæssiget er færdig, placeres tasken i denne kolonne. Dernæst udfærdiges nødvendig dokumentation om den pågældende task. Dette kan være opdatering af design artefakter, sikring af sporbarhed eller dokumentation på denne site.</li>
+</ul>
+</li>
+<li>Done<ul>
+<li>først når dokumentationen er skrevet placeres en task i kolonne Done, som markere at denne task er <code>færdig</code>.</li>
+</ul>
+</li>
+</ul>
+<figure>
+  <img alt="FDD Kanban " src="../images/KanbanFDD.png" width="800" />
+</figure>
+<hr />
+<h2 id="design-by-feature">Design by feature</h2>
+<h3 id="feature-create-course">Feature Create Course</h3>
+<p><strong>Use Case</strong></p>
+<figure>
+  <img alt="Opret Bane Use Case " src="../images/UseCaseOprettelseAfTr%C3%A6ningsbane.png" width="800" />
+</figure>
+<p><strong>SSD</strong></p>
+<figure>
+  <img alt="Opret Bane SSD " src="../images/SSDOprettelseAfTr%C3%A6ningsBane.png" width="800" />
+</figure>
+<p><strong>OC</strong></p>
+<figure>
+  <img alt="Opret Bane OC " src="../images/OCOprettelseAfTr%C3%A6ningsBane.png" width="800" />
+</figure>
+<h3 id="feature-showallsignsandelements">Feature ShowAllSignsAndElements</h3>
+<p><strong>Decompose</strong></p>
+<figure>
+  <img alt="Nedbrydning af ShowAllSignsAndElement " src="../images/DecomposeShowAllSignsAndElements.png" width="800" />
+</figure>
+<p><strong>SD GetAllSigns</strong></p>
+<figure>
+  <img alt="SD GetAllSigns " src="../images/SDGetAllSigns.png" width="800" />
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2024 <a href="https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs" target="_blank" rel="noopener"> Team 2 </a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/DMOoF23-Team2/3.Semester-Exam-Docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>
