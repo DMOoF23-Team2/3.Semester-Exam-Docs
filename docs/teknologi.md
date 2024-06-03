@@ -288,10 +288,38 @@ Aktiver:
 * Kommunikationskanaler: HTTPS-forbindelser mellem klient og server
 * API-Endpoints: Funktioner til databehandling og -hentning
 
-### CIA-Triaden
+### CIA-Triaden {#teknologi-CIA}
 CIA-Triaden er en fundamental sikkerhedsmodel, der bruges inden for trusselsmodellering til at evaluere og sikre sytemer. 
 Den består af tre nøgleprincipper:
 
+1. Confidentiality `Fortrolighed`
+2. Integrity `Integritet`
+3. Availability `Tilgængelighed`
 
-    
+#### Confidentiality - Fortrolighed
+Fortrolighed sikrer, at information kun er tilgængelig for autoriserede personer og systemer. Dette beskytter data mod uatoriseret adgang og afsløring. I trusselsmodellering handler det om at identificere og beskytte data, der kan være følsomme, såsom brugeroplysninger og kommunikation.
+
+Eksempler på sikkerhedsforanstaltninger:
+* Kryptering af data i hvile og under transmission
+* Implementering af adgangskontrolmekanismer som autentifikation og autorisation
+* Brug af sikre kommunikationsprotokoller som HTTPS
+
+#### Integrity - Integritet
+Interitet sikrer, at information ikke kan ændres eller sltees på en uatoriseret måde. Det handler om at beskytte data mod manipulation og sikre, at de forbliver nøjagtige og konsistent.
+
+Eksempler på sikkerhedsforanstaltninger:
+* Brug af hash-funktioner og digitale signaturer for at sikre dataintegritet.
+* Implementering af input validering for at beskytte mod angrab som SQL-injektion.
+* Logging og overvågning af systemaktiviteter for at opdage og reagere på uatoriserede ændringer.
+
+### Availability - Tilgængelighed
+Tilgængelighed sikre, at information og systmer er tilgængelige for autoriserede brugere, når de har brug for det. Dette handler om at beskytte systemet mod angreb og fejl, der kan forårsage nedetid eller forhindre brugere i at få adgang til de nødvendige ressourcer.
+
+Eksempler på sikkerhedsforantaltninger:
+* Implementering af redundans og failover-mekanismer
+* Beskyttelse mod DoS angreb gennem rate limiting og firewalls
+* Reglmæssige sikkerhedskopier for at sikre data tilgængelighed i tilfælde af systemfejl.
+
+### STRIDE {#teknologi-STRIDE}
+
 
