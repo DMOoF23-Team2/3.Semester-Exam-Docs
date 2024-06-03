@@ -354,5 +354,6 @@ STRIDE bruges til at gennemgå systemets forskellige dele og identificere potent
 * Dokumentere sikkerhedsarbejde:
     * STRIDE-modellen giver en struktureret tilgang til at dokumentere trusselsidentifikation og de tilførende afbødende foranstaltninger.
 
+### Containerization og Docker {#teknologi-containerization}
 
 
