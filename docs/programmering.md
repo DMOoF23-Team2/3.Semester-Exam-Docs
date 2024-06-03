@@ -26,7 +26,7 @@ Dette lag er ansvarlig for at inteagere med brugeren. Det viser brugergrænsefla
 * Komponent: `rally-blazor`
 * Funktion: Viser data til brugeren og sender brugerens input som HTTP-request til API'en
 
-**Forretningslogiklag: API og Data Backend**
+**Forretningslogiklag: API og Dataadgang Backend**
 Dette lag håndtere applikationens kernefunktionalitet. Det modtager `requests` fra præsentationslaget, nehnadler forretningslogik gennem implementerede `controllers` og `services` og kommunikere med datalaget.
 
 * Komponent: `rally-webapi`
