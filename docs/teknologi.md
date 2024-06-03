@@ -355,5 +355,18 @@ STRIDE bruges til at gennemgå systemets forskellige dele og identificere potent
     * STRIDE-modellen giver en struktureret tilgang til at dokumentere trusselsidentifikation og de tilførende afbødende foranstaltninger.
 
 ### Containerization og Docker {#teknologi-containerization}
+Containerization er en teknologi, der gør det muligt at pakke en applikation sammen med alle dens afhængigheder og køre den isoleret fra andre applikationer på samme system. Docker er en populær platform til containerization, der tillader udviklere at automatisere deployment af applikarioner i letvægtscontainere.
+
+#### Hvorfor Containerization er smart
+
+**Isolering of Konsistens:** - Hver container kører isoleret fra andre, hvilket sikrer, at en applikations miljø er ensartet uanset, hvor den køres. Dette eliminere problemer med afhængigheder og `it works on my machine` - secnarier.
+
+**Ressourceeffektivitet:** - Containere dele operativsystmets kerne, hvilket gør dem lettere og mere ressourceeffektive end traitionelle viruelle maskiner `(VM'er)`.
+
+**Skalerbarhed:** - Det er nemt at skalere applikationer ved at tilføje flere containere baseret på behov. `Load balancing` og `orchestration` værktøjer som Kubernetes kan bruges til at håndtere skalringskrav.
+
+**Protabilitet:** - Container kan køres på enhver platform, der understøtter Docker, hvilket gør dem meget bærbare mellem udviklings- test- og produktionsmiljøer.
+
+**Kontinuerlig Integration og Deployment:** - Docker gør det nemt at integrere med `CI/CD piplines`, hvilket forbedrer udviklingseffektiviteten og reducerer `time-to-market`.
 
 

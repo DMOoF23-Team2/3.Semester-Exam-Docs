@@ -9,6 +9,118 @@ De fire projekter er som følger:
 
 ### overordnet arkitektur {#overordnet-arkitektur}
 
+#### Hvordan Containerization Illustere Vores Distribuerede System {#vores-brug-af-docker}
+I projekt `RallyObedience` har vi anvendt `Docker` til at containerisere tre hovedkomponenter:
+
+1. Frontend - Blazor
+2. API og Dataadgang
+3. Database
+
+Hver af disse komponenter kører i sin egen container, hvilket giver flere fordele:
+
+* Frontend Blazor Container:
+    * Indeholder vores Blazor applikation, som præsentere brugergrænsefladen
+* API og Data Container:
+    * Indeholder vores backend API, som håndtere forretningslogi og dataadgang
+* Database Container:
+    * Indeholder vores MSSQL database, som gemmer alle data for systemet
+
+Ved at kører hver komponent i sin egen container sikrer vi isolering og uafhængighed mellem dem. Dette gør det lettere at udvikle, teste og deployere hver komponent separat. Desuden kan vi hurtigt oprette nye miljøer eller skalere individuelle komponenter efter behov.
+læs mere om [containerization](teknologi.md#teknologi-containerization) på teknologisiden.
+
+#### Docker files og Docker Compose
+
+Ved at bruge Docker files og Docker Compose kan vi definere og køre vores distribuerede systm som et sæt af sammenhængende tjenester `(Multicontainer applikation)`, hvilket gør det nemt at opsætte og administrer miljøet.
+
+Blazor Docker File
+```
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 8080
+EXPOSE 8081
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY ["RallyObedience.Blazor/RallyObedience.Blazor.csproj", "RallyObedience.Blazor/"]
+RUN dotnet restore "./RallyObedience.Blazor/RallyObedience.Blazor.csproj"
+COPY . .
+WORKDIR "/src/RallyObedience.Blazor"
+RUN dotnet build "./RallyObedience.Blazor.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./RallyObedience.Blazor.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "RallyObedience.Blazor.dll"]
+```
+
+API og Data Docker File
+```
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["RallyObedienceCourse.API/RallyObedienceCourse.API.csproj", "RallyObedienceCourse.API/"]
+COPY ["RallyObedience.Data/RallyObedience.Data.csproj", "RallyObedience.Data/"]
+RUN dotnet restore "RallyObedienceCourse.API/RallyObedienceCourse.API.csproj"
+COPY . .
+WORKDIR "/src/RallyObedienceCourse.API"
+RUN dotnet build "RallyObedienceCourse.API.csproj" -c Release -o /app/build
+RUN dotnet publish "RallyObedienceCourse.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "RallyObedienceCourse.API.dll"]
+```
+
+Docker Compose File:<br>
+*bemærk at der i denne visning er maskeret vigtige inputs ved brug af `${}` notationsformen*
+Hvis du rent faktisk skal stukturer din Docker compose fil på denne måde og ikke indsætte væriderne direkte skal der oprettes en `.env` - fil som tillader brugen af miljøvariabler. Denne skal placeres i samme mappe som din `docker-compose`-fil og definere variablerne der.
+
+```
+version: '3.8'
+
+services:
+  sqlpreview:
+    image: mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+      - MSSQL_PID=Evaluation
+    ports:
+      - "1433:1433"
+
+  rally-webapi:
+    image: rally-webapi:latest
+    environment:
+      - ConnectionStrings__connectionDev=Server=sqlpreview,1433;Database=${DATABASE_NAME};User Id=${DB_USER};Password=${DB_PASSWORD};Trusted_Connection=True;MultipleActiveResultSets=True;
+    ports:
+      - "8080:80"
+    depends_on:
+      - sqlpreview
+
+  rally-blazor:
+    image: rally-blazor:latest
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "5000:80"
+    depends_on:
+      - rally-webapi
+```
+
+**Forklaring af docker compose**
+
+* sqlpreview:
+    * Denne container kører en MSSQL databse. Miljøvariabler bruges til at konfigurer databasen, og port 1433 eksporneres for adgang.
+* rally-webapi:
+    * denne container kører API'en. Den er afhænig af `sqlreview` containeren for databaseadgang. Miljøvariabler bruges til at konfigurere databaseforbindelsen, og port 8080 eksporneres for adgang.
+* rally-blazor:
+    * Denne container kører Blazor frontend applikationen. Den er afhæning af `rally-webapi` container for at kunne kommunikere med backend API'en. Port 5000 eksporneres for adgang.
+
 ### Blazor
 Under projektet blazor ligger alt frontend koden.
 
