@@ -7,6 +7,8 @@ I forhold til at opnå læringsmålene for 3. semester har teamet valgt at fokus
 Team 2 har gjort dette ved at ved at oprette flere projects i den samlet solution.
 De fire projekter er som følger:
 
+### overordnet arkitektur {#overordnet-arkitektur}
+
 ### Blazor
 Under projektet blazor ligger alt frontend koden.
 

@@ -103,9 +103,10 @@ Der kan argumenteres for, at denne uddybende forklaring også kan være med til 
   ![XP - DM uddybning ](images/XPUddybningAfKlasser.png){ width="800" }
 </figure>
 
-## Tilføjelser i forbindelse med XP
+## Tilføjelser i forbindelse med XP {#tilføjelse-ved-xp}
 Teamet har tilegnet sig ny viden som projektet er skredet frem og har på baggrund af dette, forsøgt at identificere nogle `abuse-cases`.
-Derudover er en overordnet `system-arkitektur` opstillet, så `TrusselsModellering` er muligt.
+Derudover er en overordnet `system-arkitektur` opstillet, så [TrusselsModellering](teknologi.md#trusselsmodellering) er muligt.
+Se også [risikoanalyse](teknologi.md#teknologi-Risikoanalyse) som er den del af trusselsmodellering, for at kunne prioritere de identificerede trsuler / sikkerhedskrav.
 
 ### Abuse-cases
 
@@ -114,6 +115,7 @@ Derudover er en overordnet `system-arkitektur` opstillet, så `TrusselsModelleri
 </figure>
 
 ### Overordnet system arkitektur
+Læs mere om tankerne bag den overordnede system arkitektur [her](programmering.md#overordnet-arkitektur)
 
 <figure markdown="span">
   ![System Arkitektur](images/OverordnetSystemArkitekturTrusselsmodellering.png){ width="800" }

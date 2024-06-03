@@ -229,5 +229,23 @@ Når du besøger en hjemmeside ved hjælp af en webbrowser:
 2. HTTP: Browseren bruger HTTP til at anmode om websidens indhold fra webserveren.
 3. FTP: hvis du downloader en fil fra hjemmesiden, kan FTP anvendes til at overføre filen til din computer.
 
+## Trusselsmodellering {#trusselsmodellering}
+Trusselsmodellering er en proces, hvor potentielle trusler mod et system identificeres, forstås og prioriteres. Denne proces hjælper med at afdække sikkerhedsrisici tidligt i udviklingsprocessen, hvilket gør det muligt at implementere passende sikkerhedsforanstaltninger. For at kunne gennemføre en effektiv trusselsmodellering skal man forstå systemets arkitektur og de interaktioner, der finder sted mellem dets forskellige komponenter.
 
+Se afsnittet [overordnet arkitektur](programmering.md#overordnet-arkitektur) under programmering.
+
+### Abuse Cases baseret på Use Cases {#teknologi-abuse-cases}
+Use cases beskriver, hvordan brugeren interagere med systemet for at opnå et specifikt mål. `Abuse Cases` er derimod scenarier, hvor en `angiber / ondsindet aktør` udnytter systemet. Ved at analysere abuse cases kan systemet forbedres på at forsvare sig mod disse angreb.
+
+Eksempel på use case og tilførende abuse case:
+
+* Use Case: En bruger ligger ind på systemet for at få adgang til sin data og se sin samling af baner.
+* Abuse Case: En angriber forsøger at logge ind ved hjælp af brute force eller stjålne legitimationsoplysninger.
+
+se afsnittet [Tilføjelse ved xp](extreamProgramming.md#tilføjelse-ved-xp) for flere eksempler på abuse cases til det udviklede system i projekt `RallyObedience`.
+
+### Risikoanalyse {#teknologi-Risikoanalyse}
+Risikoanalyse involvere vurdering af sandsynligheden for forskellige trusler samt deres potentielle konsekvenser. Formålet er at prioritere trusler baseret på deres risiko og derefter træffe beslutninger om, hvilke sikkerhedsforanstaltninger der skal implementeres.
+
+I system `RallyObedience`
 
