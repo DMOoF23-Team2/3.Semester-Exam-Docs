@@ -229,5 +229,144 @@ Når du besøger en hjemmeside ved hjælp af en webbrowser:
 2. HTTP: Browseren bruger HTTP til at anmode om websidens indhold fra webserveren.
 3. FTP: hvis du downloader en fil fra hjemmesiden, kan FTP anvendes til at overføre filen til din computer.
 
+## Trusselsmodellering {#trusselsmodellering}
+Trusselsmodellering er en proces, hvor potentielle trusler mod et system identificeres, forstås og prioriteres. Denne proces hjælper med at afdække sikkerhedsrisici tidligt i udviklingsprocessen, hvilket gør det muligt at implementere passende sikkerhedsforanstaltninger. For at kunne gennemføre en effektiv trusselsmodellering skal man forstå systemets arkitektur og de interaktioner, der finder sted mellem dets forskellige komponenter.
+
+Se afsnittet [overordnet arkitektur](programmering.md#overordnet-arkitektur) under programmering.
+
+### Abuse Cases baseret på Use Cases {#teknologi-abuse-cases}
+Use cases beskriver, hvordan brugeren interagere med systemet for at opnå et specifikt mål. `Abuse Cases` er derimod scenarier, hvor en `angiber / ondsindet aktør` udnytter systemet. Ved at analysere abuse cases kan systemet forbedres på at forsvare sig mod disse angreb.
+
+Eksempel på use case og tilførende abuse case:
+
+* Use Case: En bruger ligger ind på systemet for at få adgang til sin data og se sin samling af baner.
+* Abuse Case: En angriber forsøger at logge ind ved hjælp af brute force eller stjålne legitimationsoplysninger.
+
+se afsnittet [Tilføjelse ved xp](extreamProgramming.md#tilføjelse-ved-xp) for flere eksempler på abuse cases til det udviklede system i projekt `RallyObedience`.
+
+### Risikoanalyse {#teknologi-Risikoanalyse}
+Risikoanalyse involvere vurdering af sandsynligheden for forskellige trusler samt deres potentielle konsekvenser. Formålet er at prioritere trusler baseret på deres risiko og derefter træffe beslutninger om, hvilke sikkerhedsforanstaltninger der skal implementeres.
+
+I system `RallyObedience` kan vi gennemføre en risikoanalyse ved at identificere truslerne for hver use case, men også for hver komponent der indgår i det distribuerede system og vurdere deres risiko:
+
+1. Frontend (Klient - Browser med Blazor)
+    * Trusler: 
+        * Cross-Site Scripting `XSS`
+        * Man-in-the-Middle `MitM`
+    * Sikkerhedsforanstaltninger:
+        * Blazor encoder output automatisk for at beskytte mod XSS.
+        * Brug af HTTPS forhindre MitM angreb ved at sikre kryptering.
+
+2. Backend (API-server)
+    * Trusler:
+        * Denial of Service `Dos` angreb. Uatoriseret adgang, datainterception.
+    * Sikkerhedsforanstaltninger:
+        * Rate limiting for at fordinre Dos
+        * Authentication og Authorization for at beskytte mod uatoriseret adgang
+        * Kryptering af data i transit, input validering og firewalls
+
+3. 
+    * Trusler:
+        * Uatoriseret adgang
+        * `Datatab`
+        * `SQL-injektion`
+    * Sikkerhedsforanstaltninger:
+        * Reglmæssige backups for at forhindre datatab
+        * Adgangskontrolmekanismer (Identity)
+        * Brug af prepared statements eller Stored procedures for at beskytte mod SQL-injektion
+
+#### Identificering af Arbejdsprocesser og Aktiver
+For at sikre en effektiv trusselmodellering og risiko analyse er det vigtigt at identificere de forskellige arbejdsprocesser og aktiver i systemet:
+
+arbejdsprocesser:
+
+* Autentifikation og Autorisation: Håndtering af brugerlogin og adgangskontrol
+* Datahåndtering: Opslag, opdatering og lagring af data
+* Kommunikation: udveksling af data mellem klient og server
+
+Aktiver:
+
+* Brugeroplysninger: Personlige data, loginoplysninger
+* Systemdata: Bane designs, kommentarer, chatbeskeder
+* Kommunikationskanaler: HTTPS-forbindelser mellem klient og server
+* API-Endpoints: Funktioner til databehandling og -hentning
+
+### CIA-Triaden {#teknologi-CIA}
+CIA-Triaden er en fundamental sikkerhedsmodel, der bruges inden for trusselsmodellering til at evaluere og sikre sytemer. 
+Den består af tre nøgleprincipper:
+
+1. Confidentiality `Fortrolighed`
+2. Integrity `Integritet`
+3. Availability `Tilgængelighed`
+
+#### Confidentiality - Fortrolighed
+Fortrolighed sikrer, at information kun er tilgængelig for autoriserede personer og systemer. Dette beskytter data mod uatoriseret adgang og afsløring. I trusselsmodellering handler det om at identificere og beskytte data, der kan være følsomme, såsom brugeroplysninger og kommunikation.
+
+Eksempler på sikkerhedsforanstaltninger:
+
+* Kryptering af data i hvile og under transmission
+* Implementering af adgangskontrolmekanismer som autentifikation og autorisation
+* Brug af sikre kommunikationsprotokoller som HTTPS
+
+#### Integrity - Integritet
+Interitet sikrer, at information ikke kan ændres eller sltees på en uatoriseret måde. Det handler om at beskytte data mod manipulation og sikre, at de forbliver nøjagtige og konsistent.
+
+Eksempler på sikkerhedsforanstaltninger:
+
+* Brug af hash-funktioner og digitale signaturer for at sikre dataintegritet.
+* Implementering af input validering for at beskytte mod angrab som SQL-injektion.
+* Logging og overvågning af systemaktiviteter for at opdage og reagere på uatoriserede ændringer.
+
+#### Availability - Tilgængelighed
+Tilgængelighed sikre, at information og systmer er tilgængelige for autoriserede brugere, når de har brug for det. Dette handler om at beskytte systemet mod angreb og fejl, der kan forårsage nedetid eller forhindre brugere i at få adgang til de nødvendige ressourcer.
+
+Eksempler på sikkerhedsforantaltninger:
+
+* Implementering af redundans og failover-mekanismer
+* Beskyttelse mod DoS angreb gennem rate limiting og firewalls
+* Reglmæssige sikkerhedskopier for at sikre data tilgængelighed i tilfælde af systemfejl.
+
+### STRIDE {#teknologi-STRIDE}
+`STRIDE` er en metode udviklet af Microsoft til systematisk identifikation og kategorisering af sikkerhedstrusler i software og informationssystemer. 
+Det står for seks kategorier af trusler:
+
+1. Sppofing
+    * En angriver udgiver sig for at være en anden bruger eller en enhed for at få uatoriseret adgang til et system.
+2. Tampering
+    * En angriber ændrer data eller kode i systemet, enten under transmission eller i hvile
+3. Repudiation
+    * Også kalder afvisning - En bruger nægter at have udført en handling, og systemet har ikke tilstrækkelig beviser til at modbevise denne påstand.
+4. Information Discolosure
+    * Uatoriseret adgang til information, der burde være beskyttet
+5. Denial og Services DOS
+    * Et angreb, der forhindre legitime brugere i at få adgang til systemet eller dets ressourcer.
+6. Elevation of Privilege
+    * En brugere opnår højere adgangsrettigheder end autoriseret, hvilket giver dem mulighed for at udføre handlinger, de normalt ikke har adgang til.
+
+STRIDE bruges til at gennemgå systemets forskellige dele og identificere potentielle trusler inden for hver kategori. Ved at analysere truslerne på denne måde kan udviklere og sikkerhedsspecialister:
+
+* Systematisk identificere trusler:
+    * ved at anvendes STRIDE-modellen sikres det at alle relevante typer af trusler overvejes.
+* Forstå truslers natur:
+    * Kategoriseringen hjælper med at forstå, hvilke type trusler systemet står overfor, og hvorfan de kan manifestere/opstå.
+* Prioritere sikkerhedsforanstaltninger / sikkerhedskrav
+    * Ved at forstå truslernes type og konsekvens kan man prioritere indsatsen på at beskytte systemet mod de mest alvorlige trusler.
+* Dokumentere sikkerhedsarbejde:
+    * STRIDE-modellen giver en struktureret tilgang til at dokumentere trusselsidentifikation og de tilførende afbødende foranstaltninger.
+
+### Containerization og Docker {#teknologi-containerization}
+Containerization er en teknologi, der gør det muligt at pakke en applikation sammen med alle dens afhængigheder og køre den isoleret fra andre applikationer på samme system. Docker er en populær platform til containerization, der tillader udviklere at automatisere deployment af applikarioner i letvægtscontainere.
+
+#### Hvorfor Containerization er smart
+
+**Isolering of Konsistens:** - Hver container kører isoleret fra andre, hvilket sikrer, at en applikations miljø er ensartet uanset, hvor den køres. Dette eliminere problemer med afhængigheder og `it works on my machine` - secnarier.
+
+**Ressourceeffektivitet:** - Containere dele operativsystmets kerne, hvilket gør dem lettere og mere ressourceeffektive end traitionelle viruelle maskiner `(VM'er)`.
+
+**Skalerbarhed:** - Det er nemt at skalere applikationer ved at tilføje flere containere baseret på behov. `Load balancing` og `orchestration` værktøjer som Kubernetes kan bruges til at håndtere skalringskrav.
+
+**Protabilitet:** - Container kan køres på enhver platform, der understøtter Docker, hvilket gør dem meget bærbare mellem udviklings- test- og produktionsmiljøer.
+
+**Kontinuerlig Integration og Deployment:** - Docker gør det nemt at integrere med `CI/CD piplines`, hvilket forbedrer udviklingseffektiviteten og reducerer `time-to-market`.
 
 

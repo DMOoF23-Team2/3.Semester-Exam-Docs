@@ -3,9 +3,163 @@
 ---
 
 ## Et distribueret system
-I forhold til at opnå læringsmålene for 3. semester har teamet valgt at fokusere på at lave et distribueret system.<br/>
-Team 2 har gjort dette ved at ved at oprette flere projects i den samlet solution.
-De fire projekter er som følger:
+Distribuerede systemer er en samling af autonome computerenheder, der samarbejder for at opnå et følles mål. Disse systemer er kendetegnet ved:
+
+* Deres komponenter er geografisk adskilte
+* Komponenterne kommunikere over netværk
+    * Protokoller som HTTP/HTTPS, TCP/IP
+* Ressoucer deles og opgaver kan fordeles mellem flere computere, hvilket forvedre både ydeevne og pålidelighed
+    * Fejlrolerance: Systemet kan fortsætte med at fungere korrekt, selvom en eller flere komponenter fejler.
+
+
+### Overordnet arkitektur {#overordnet-arkitektur}
+
+Arkitekturen i projekt `RallyObedience` kan beskrives i termer af lagdelt arkitektur, som typisk opdeles i præsentationslag, forretninglogiklag og datalag.
+
+<figure markdown="span">
+  ![System Arkitektur](images/overordnetarkitekturprogrammering.png){ width="800" }
+</figure>
+
+**Præsentationslag: Frontend Blazor**
+Dette lag er ansvarlig for at inteagere med brugeren. Det viser brugergrænsefladen og sender brugerens input videre til backend-tjenesterne.
+
+* Komponent: `rally-blazor`
+* Funktion: Viser data til brugeren og sender brugerens input som HTTP-request til API'en
+
+**Forretningslogiklag: API og Dataadgang Backend**
+Dette lag håndtere applikationens kernefunktionalitet. Det modtager `requests` fra præsentationslaget, nehnadler forretningslogik gennem implementerede `controllers` og `services` og kommunikere med datalaget.
+
+* Komponent: `rally-webapi`
+* Funktion: Behandler forretningslogi og regler, validere input, udfører beregninger og sender `requests` til datalaget.
+
+**Datalag: Database MSSQL**
+Dette lag er ansvarlig for at gemme og hente data. Det modtager `requests` fra forretningslogiklaget og sender `respons` med de nødvendige data retur.
+
+* Komponent: sqlpreview
+* Funktion: Håndtere lagring, hentning og administration af data.
+
+#### Samspil mellem lagene
+
+1. Præsentaionslager: Brugeren interagere med Blazor-applikationen, som sender en HTTP-anmodning til API'en for at udfører en given funktionalitet (f.eks. valider bane med id x ud fra niveau begynder).
+2. Forretningslogiklag: API'en modtager anmodningen `controlleren`, behandler forretningslogikken `services`. Og sender en SQL-forespørgsel til databasen gennem `repo`.
+3. Datalag: MSSQL-databasen udfører forespørgslen og returnere resultatet til API'en (information om bane med id-x).
+4. Forretninglogiklaget: API'en behnadler de modtagne data og sender et svar tilbage til Blazor-applikationen.
+5. Præsentationslag: Blazor-applikationen modtager svaret og viser dataene til brugeren (udfører et validerings tjek på banens information, om dens collection af skilter overholder reglementet for niveau begynder og returnere en besked med information om hvad den mangler for at opfylde eller OK - den er valideret).
+
+Ved at opdele systemet i disse lag forsøge der at opnå klar `separation of concerns`, hvilket gør det lettere at udvikle, vedligholde og skalere systemet.
+
+
+#### Hvordan Containerization Illustere Vores Distribuerede System {#vores-brug-af-docker}
+I projekt `RallyObedience` har vi anvendt `Docker` til at containerisere tre hovedkomponenter:
+
+1. Frontend - Blazor
+2. API og Dataadgang
+3. Database
+
+Hver af disse komponenter kører i sin egen container, hvilket giver flere fordele:
+
+* Frontend Blazor Container:
+    * Indeholder vores Blazor applikation, som præsentere brugergrænsefladen
+* API og Data Container:
+    * Indeholder vores backend API, som håndtere forretningslogi og dataadgang
+* Database Container:
+    * Indeholder vores MSSQL database, som gemmer alle data for systemet
+
+Ved at kører hver komponent i sin egen container sikrer vi isolering og uafhængighed mellem dem. Dette gør det lettere at udvikle, teste og deployere hver komponent separat. Desuden kan vi hurtigt oprette nye miljøer eller skalere individuelle komponenter efter behov.
+læs mere om [containerization](teknologi.md#teknologi-containerization) på teknologisiden.
+
+#### Docker files og Docker Compose
+
+Ved at bruge Docker files og Docker Compose kan vi definere og køre vores distribuerede systm som et sæt af sammenhængende tjenester `(Multicontainer applikation)`, hvilket gør det nemt at opsætte og administrer miljøet.
+
+Blazor Docker File
+```
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 8080
+EXPOSE 8081
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY ["RallyObedience.Blazor/RallyObedience.Blazor.csproj", "RallyObedience.Blazor/"]
+RUN dotnet restore "./RallyObedience.Blazor/RallyObedience.Blazor.csproj"
+COPY . .
+WORKDIR "/src/RallyObedience.Blazor"
+RUN dotnet build "./RallyObedience.Blazor.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./RallyObedience.Blazor.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "RallyObedience.Blazor.dll"]
+```
+
+API og Data Docker File
+```
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["RallyObedienceCourse.API/RallyObedienceCourse.API.csproj", "RallyObedienceCourse.API/"]
+COPY ["RallyObedience.Data/RallyObedience.Data.csproj", "RallyObedience.Data/"]
+RUN dotnet restore "RallyObedienceCourse.API/RallyObedienceCourse.API.csproj"
+COPY . .
+WORKDIR "/src/RallyObedienceCourse.API"
+RUN dotnet build "RallyObedienceCourse.API.csproj" -c Release -o /app/build
+RUN dotnet publish "RallyObedienceCourse.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "RallyObedienceCourse.API.dll"]
+```
+
+Docker Compose File:<br>
+*bemærk at der i denne visning er maskeret vigtige inputs ved brug af `${}` notationsformen*
+Hvis du rent faktisk skal stukturer din Docker compose fil på denne måde og ikke indsætte væriderne direkte skal der oprettes en `.env` - fil som tillader brugen af miljøvariabler. Denne skal placeres i samme mappe som din `docker-compose`-fil og definere variablerne der.
+
+```
+version: '3.8'
+
+services:
+  sqlpreview:
+    image: mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+      - MSSQL_PID=Evaluation
+    ports:
+      - "1433:1433"
+
+  rally-webapi:
+    image: rally-webapi:latest
+    environment:
+      - ConnectionStrings__connectionDev=Server=sqlpreview,1433;Database=${DATABASE_NAME};User Id=${DB_USER};Password=${DB_PASSWORD};Trusted_Connection=True;MultipleActiveResultSets=True;
+    ports:
+      - "8080:80"
+    depends_on:
+      - sqlpreview
+
+  rally-blazor:
+    image: rally-blazor:latest
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "5000:80"
+    depends_on:
+      - rally-webapi
+```
+
+**Forklaring af docker compose**
+
+* sqlpreview:
+    * Denne container kører en MSSQL databse. Miljøvariabler bruges til at konfigurer databasen, og port 1433 eksporneres for adgang.
+* rally-webapi:
+    * denne container kører API'en. Den er afhænig af `sqlreview` containeren for databaseadgang. Miljøvariabler bruges til at konfigurere databaseforbindelsen, og port 8080 eksporneres for adgang.
+* rally-blazor:
+    * Denne container kører Blazor frontend applikationen. Den er afhæning af `rally-webapi` container for at kunne kommunikere med backend API'en. Port 5000 eksporneres for adgang.
 
 ### Blazor
 Under projektet blazor ligger alt frontend koden.
